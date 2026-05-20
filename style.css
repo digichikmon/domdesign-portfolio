@@ -844,3 +844,40 @@ main > section:first-child { border-top: 0; }
     animation: none !important;
   }
 }
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.contact-links a {
+  color: #111;
+  font-size: 1.4rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.contact-links a:hover {
+  opacity: 0.6;
+  transform: translateY(-2px);
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.contact-links a {
+  color: #111;
+  font-size: 1.4rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.contact-links a:hover {
+  opacity: 0.6;
+  transform: translateY(-2px);
+}
