@@ -531,26 +531,99 @@ main > section:first-child { border-top: 0; }
 
 .project-card { display: block; }
 
-.project-image {
-  display: block;
+/* Project carousel */
+.project-carousel {
+  position: relative;
   background: var(--c-paper-2);
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border: 1px solid var(--c-faint);
 }
 
-.project-image img {
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 320ms ease;
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.carousel-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* gentle hover — restrained */
-  transition: opacity var(--t-med), transform 400ms ease;
+  display: block;
+  transition: opacity var(--t-med);
 }
 
-.project-card:hover .project-image img {
-  opacity: 0.85;
-  transform: scale(1.01);
+.project-card:hover .carousel-slide img { opacity: 0.88; }
+
+/* Prev / next buttons — fade in on hover */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background: var(--c-paper);
+  border: 1px solid var(--c-ink);
+  font-family: var(--ff-mono);
+  font-size: 0.9rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+  padding: 0;
+  transition: opacity var(--t-fast), background var(--t-fast), color var(--t-fast);
 }
+
+.project-carousel:hover .carousel-btn { opacity: 1; }
+
+.carousel-btn:hover {
+  background: var(--c-ink);
+  color: var(--c-paper);
+  opacity: 1;
+}
+
+.carousel-btn--prev { left: 0.5rem; }
+.carousel-btn--next { right: 0.5rem; }
+
+/* Dot indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.35rem;
+  z-index: 2;
+}
+
+.carousel-dot {
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  padding: 0;
+  cursor: pointer;
+  transition: background var(--t-fast);
+}
+
+.carousel-dot.is-active { background: var(--c-paper); }
+
+/* Project title link */
+.project-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.project-title a:hover { opacity: 0.6; }
 
 .project-meta {
   padding-top: 1rem;
