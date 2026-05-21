@@ -12,7 +12,6 @@
   --c-ink:        #0a0a0a;   /* near-black for text */
   --c-paper:      #ffffff;   /* primary background */
   --c-paper-2:    #f4f4f1;   /* warm off-white surface */
-  --c-rule:       #1a1a1a;   /* strong divider lines */
   --c-muted:      #6b6b6b;   /* secondary text */
   --c-faint:      #d8d8d4;   /* hairline rules */
 
@@ -323,6 +322,14 @@ main > section:first-child { border-top: 0; }
   line-height: 1.5;
   max-width: 52ch;
   color: var(--c-ink);
+  margin-bottom: 2.5rem;
+}
+
+.hero-note {
+  font-size: 0.9rem;
+  color: var(--c-muted);
+  font-family: var(--ff-mono);
+  letter-spacing: 0.06em;
   margin-bottom: 2.5rem;
 }
 
@@ -708,6 +715,7 @@ main > section:first-child { border-top: 0; }
   }
   .case-body > p,
   .case-body > .case-intro,
+  .case-body > .case-meta,
   .case-body > .lost-project { grid-column: 2; }
   .case-body::before {
     /* spacer to keep alignment with case-head */
