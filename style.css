@@ -795,15 +795,18 @@ main > section:first-child { border-top: 0; }
 .contact-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem 2.5rem;
+  gap: 1.25rem 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--c-faint);
 }
 .contact-links a {
-  font-family: var(--ff-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: var(--c-ink);
+  transition: opacity var(--t-fast), transform var(--t-med);
+}
+.contact-links a:hover {
+  opacity: 0.6;
+  transform: translateY(-2px);
 }
 
 /* ------------------------------------------------------------
@@ -843,41 +846,4 @@ main > section:first-child { border-top: 0; }
     transition: none !important;
     animation: none !important;
   }
-}
-.contact-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-  margin-top: 2rem;
-}
-
-.contact-links a {
-  color: #111;
-  font-size: 1.4rem;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.contact-links a:hover {
-  opacity: 0.6;
-  transform: translateY(-2px);
-}
-
-.contact-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-  margin-top: 2rem;
-}
-
-.contact-links a {
-  color: #111;
-  font-size: 1.4rem;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.contact-links a:hover {
-  opacity: 0.6;
-  transform: translateY(-2px);
 }
