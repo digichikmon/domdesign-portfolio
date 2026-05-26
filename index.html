@@ -1,112 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ============================================================
-       DOMDESIGN.CA — Portfolio of Dominic Daniel
-       Editorial / Swiss-influenced monochrome layout
-       Plain HTML · CSS · vanilla JS · GitHub Pages ready
-       ============================================================ -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Dominic Daniel — Graphic Designer · DomDesign</title>
-  <meta name="description" content="Portfolio of Dominic Daniel, graphic designer working in branding, technical layouts, editorial systems, and visual communication built through real production experience." />
+  <title>DomDesign — Graphic Design Studio · Dominic Daniel</title>
+  <meta name="description" content="DomDesign is the studio of Dominic Daniel — structured visual systems for modern brands and technical environments. Based in Québec, Canada." />
   <meta name="author" content="Dominic Daniel" />
 
-  <!-- Open Graph (placeholders — replace before publishing) -->
-  <meta property="og:title" content="Dominic Daniel — Graphic Designer" />
-  <meta property="og:description" content="Branding · Editorial · Technical layouts. Portfolio of Dominic Daniel." />
+  <meta property="og:title" content="DomDesign — Graphic Design Studio" />
+  <meta property="og:description" content="Structured visual systems for modern brands and technical environments." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://domdesign.ca" />
   <meta property="og:image" content="images/IMG_0645.jpeg" />
 
-  <!-- Favicon placeholder -->
   <link rel="icon" type="image/jpeg" href="images/IMG_0182.jpeg" />
 
-  <!-- Typography: Archivo (grotesque, Swiss-influenced) + JetBrains Mono (technical labels) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ============================================================
-       SKIP LINK — accessibility for keyboard users
-       ============================================================ -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ============================================================
-       HEADER / NAVIGATION
-       ============================================================ -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="DomDesign home">
+      <a href="index.html" class="brand" aria-label="DomDesign — home">
         <span class="brand-mark">DD</span>
         <span class="brand-name">DomDesign</span>
       </a>
 
-      <!-- Mobile menu toggle -->
-      <button
-        class="nav-toggle"
-        id="navToggle"
-        aria-controls="primaryNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
       </button>
 
       <nav class="primary-nav" id="primaryNav" aria-label="Primary">
         <ul>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="client-experience.html">Client Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
+      <a href="contact.html" class="nav-cta">Start Your Project</a>
     </div>
   </header>
 
   <main id="main">
 
     <!-- ============================================================
-         01 — HERO
+         HERO
          ============================================================ -->
     <section class="hero" id="top" aria-labelledby="hero-heading">
       <div class="container">
-        <div class="hero-meta">
+        <div class="hero-meta js-reveal">
           <span class="section-number">01</span>
-          <span class="section-label">Portfolio · 2026</span>
+          <span class="section-label">Studio · 2026</span>
         </div>
 
-        <h1 id="hero-heading" class="hero-headline">
-          Graphic design rooted in <em>precision</em> and visual communication.
+        <h1 id="hero-heading" class="hero-headline js-reveal">
+          Structured visual systems for <em>modern brands</em> and technical environments.
         </h1>
 
-        <p class="hero-sub">
-          I'm Dominic Daniel, a graphic designer focused on branding,
-          technical layouts, editorial systems, and visual communication
-          built through real production experience.
-        </p>
-        
-        <p class="hero-note">
-          Built through production floors, technical layouts, and real-world design systems.
+        <p class="hero-sub js-reveal">
+          DomDesign is the studio of Dominic Daniel — a graphic designer working at the intersection of precision, craft, and real production thinking. Based in Québec, Canada.
         </p>
 
-        <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">View projects</a>
-          <a href="#contact" class="btn btn-ghost">Contact</a>
+        <p class="hero-note js-reveal">
+          Production-floor trained · Branding · Editorial · Technical design
+        </p>
+
+        <div class="hero-actions js-reveal">
+          <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+          <a href="#work" class="btn btn-ghost">View Work</a>
         </div>
 
-        <!-- Footer strip of hero with location + status -->
-        <dl class="hero-footstrip">
+        <dl class="hero-footstrip js-reveal">
           <div>
             <dt>Based in</dt>
             <dd>Québec, Canada</dd>
@@ -119,22 +95,26 @@
             <dt>Status</dt>
             <dd>Open to freelance</dd>
           </div>
+          <div>
+            <dt>Studio</dt>
+            <dd>DomDesign</dd>
+          </div>
         </dl>
       </div>
     </section>
 
     <!-- ============================================================
-         02 — ABOUT
+         ABOUT
          ============================================================ -->
     <section class="about" id="about" aria-labelledby="about-heading">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head js-reveal">
           <span class="section-number">02</span>
           <h2 id="about-heading" class="section-title">About</h2>
         </div>
 
         <div class="about-grid">
-          <div class="about-lede">
+          <div class="about-lede js-reveal">
             <p>
               My path into graphic design did not follow a straight line.
               It was built through years of hands-on work in the print
@@ -142,7 +122,7 @@
             </p>
           </div>
 
-          <div class="about-body">
+          <div class="about-body js-reveal">
             <p>
               I came up through production. At <strong>Imprimerie Paragraph</strong>,
               I worked as a project manager — coordinating jobs, handling files,
@@ -150,7 +130,6 @@
               the unforgiving reality of the press. That foundation reshaped
               how I think about every layout I touch today.
             </p>
-
             <p>
               At <strong>PMU Québec</strong>, I now produce evacuation plans —
               technical drawings where every line, label, and legend has to
@@ -158,7 +137,6 @@
               preference there; it's a requirement. That discipline carries
               directly into my branding, editorial, and identity work.
             </p>
-
             <p>
               I trained formally through three complementary programs: a
               <strong>DEP in Graphic Design</strong> at CBG Sorel-Tracy, a
@@ -167,7 +145,6 @@
               at John Abbott College. Each one added a different layer —
               craft, process, then the digital and strategic dimension.
             </p>
-
             <p>
               Today I work as a graphic designer, take on freelance projects
               on the side, and continue building a body of work rooted in
@@ -180,103 +157,75 @@
     </section>
 
     <!-- ============================================================
-         03 — EXPERIENCE TIMELINE
+         EXPERIENCE & EDUCATION
          ============================================================ -->
     <section class="experience" id="experience" aria-labelledby="exp-heading">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head js-reveal">
           <span class="section-number">03</span>
           <h2 id="exp-heading" class="section-title">Experience &amp; Education</h2>
         </div>
 
-        <!-- Professional experience -->
-        <h3 class="timeline-group-title">Professional</h3>
-        <ol class="timeline" aria-label="Professional experience">
+        <h3 class="timeline-group-title js-reveal">Professional</h3>
+        <ol class="timeline js-stagger" aria-label="Professional experience">
           <li class="timeline-item">
             <span class="timeline-year">2022 — Present</span>
             <div class="timeline-body">
               <h4>Evacuation Plan Technician / Graphic Designer</h4>
               <p class="timeline-org">PMU Québec</p>
-              <p class="timeline-desc">
-                Production of technical evacuation plans — drafting, symbol systems, plan layouts, and graphic output for printed safety signage in collaboration with fire safety and project teams.
-              </p>
+              <p class="timeline-desc">Production of technical evacuation plans — drafting, symbol systems, plan layouts, and graphic output for printed safety signage in collaboration with fire safety and project teams.</p>
             </div>
           </li>
-
           <li class="timeline-item">
             <span class="timeline-year">2019 — 2022</span>
             <div class="timeline-body">
               <h4>Graphic Designer</h4>
               <p class="timeline-org">Production JG</p>
-              <p class="timeline-desc">
-                Design and pre-press for production-oriented print work.
-                File preparation, layout systems, and on-brand visual output.
-              </p>
+              <p class="timeline-desc">Design and pre-press for production-oriented print work. File preparation, layout systems, and on-brand visual output.</p>
             </div>
           </li>
-
           <li class="timeline-item">
             <span class="timeline-year">2019</span>
             <div class="timeline-body">
               <h4>Project Manager</h4>
               <p class="timeline-org">Imprimerie Paragraph</p>
-              <p class="timeline-desc">
-                Coordination of print projects from intake to delivery.
-                Hands-on involvement with paper, ink, registration, and
-                press realities — the foundation of my design instinct.
-              </p>
+              <p class="timeline-desc">Coordination of print projects from intake to delivery. Hands-on involvement with paper, ink, registration, and press realities — the foundation of my design instinct.</p>
             </div>
           </li>
-
           <li class="timeline-item">
             <span class="timeline-year">2018 — 2019</span>
             <div class="timeline-body">
               <h4>Print Industry</h4>
               <p class="timeline-org">Various roles</p>
-              <p class="timeline-desc">
-                Production-floor experience across the print industry —
-                where design either works or it doesn't.
-              </p>
+              <p class="timeline-desc">Production-floor experience across the print industry — where design either works or it doesn't.</p>
             </div>
           </li>
         </ol>
 
-        <!-- Education -->
-        <h3 class="timeline-group-title">Education</h3>
-        <ol class="timeline" aria-label="Education">
+        <h3 class="timeline-group-title js-reveal">Education</h3>
+        <ol class="timeline js-stagger" aria-label="Education">
           <li class="timeline-item">
             <span class="timeline-year">2023 — 2024</span>
             <div class="timeline-body">
               <h4>Graphic &amp; Web Design <small class="credential-badge">AEC</small></h4>
               <p class="timeline-org">John Abbott College</p>
-              <p class="timeline-desc">
-                Digital methods, web fundamentals, and contemporary
-                visual communication.
-              </p>
+              <p class="timeline-desc">Digital methods, web fundamentals, and contemporary visual communication.</p>
             </div>
           </li>
-
           <li class="timeline-item">
             <span class="timeline-year">2020 — 2023</span>
             <div class="timeline-body">
               <h4>Project Management &amp; Graphic Communication <small class="credential-badge">DEC</small></h4>
               <p class="timeline-org">Ahuntsic College</p>
-              <p class="timeline-desc">
-                Strategy, production workflow, and the management
-                side of design — how projects actually get made.
-              </p>
+              <p class="timeline-desc">Strategy, production workflow, and the management side of design — how projects actually get made.</p>
             </div>
           </li>
-
           <li class="timeline-item">
             <span class="timeline-year">2016 — 2018</span>
             <div class="timeline-body">
               <h4>Graphic Design <small class="credential-badge">DEP</small></h4>
               <p class="timeline-org">CBG Sorel-Tracy</p>
-              <p class="timeline-desc">
-                Foundational training in design craft, typography,
-                and the discipline of layout.
-              </p>
+              <p class="timeline-desc">Foundational training in design craft, typography, and the discipline of layout.</p>
             </div>
           </li>
         </ol>
@@ -284,53 +233,34 @@
     </section>
 
     <!-- ============================================================
-         04 — WORK / PROJECTS
+         WORK / PROJECTS
          ============================================================ -->
     <section class="work" id="work" aria-labelledby="work-heading">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head js-reveal">
           <span class="section-number">04</span>
           <h2 id="work-heading" class="section-title">Selected work</h2>
         </div>
 
-        <p class="work-intro">
+        <p class="work-intro js-reveal">
           A selected archive of design work, technical layouts, academic projects, freelance concepts, and unfinished proposals. Some projects were completed, some were not selected — all of them shaped the way I think, build, and communicate visually.
         </p>
 
-        <!-- Project grid -->
         <div class="project-grid">
 
-          <!-- Project 01 -->
-          <article class="project-card" id="project-school">
+          <!-- Project 01 — School -->
+          <article class="project-card js-reveal" id="project-school">
             <div class="project-carousel" aria-label="School design project images">
               <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="images/IMG_0645.jpeg" alt="School design project — image 1" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/IMG_2267.jpeg" alt="School design project — image 2" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/IMG_0646.jpeg" alt="School design project — image 3" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/Capture d'écran, le 2021-10-06 à 13.48.29.jpeg" alt="School design project — image 4" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/Capture d'écran, le 2021-10-06 à 14.23.51.jpeg" alt="School design project — image 5" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/Capture d'écran, le 2021-10-06 à 14.24.59.jpeg" alt="School design project — image 6" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/DominicD-E-newletter.jpg" alt="School design project — image 7" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/Dominic daniel_ticket_mutek_VDP.png" alt="School design project — image 8" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/Screen Shot 2026-04-13 at 3.23.25 PM.png" alt="School design project — image 9" loading="lazy" />
-                </div>
+                <div class="carousel-slide"><img src="images/IMG_0645.jpeg" alt="School design project — image 1" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/IMG_2267.jpeg" alt="School design project — image 2" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/IMG_0646.jpeg" alt="School design project — image 3" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/Capture d'écran, le 2021-10-06 à 13.48.29.jpeg" alt="School design project — image 4" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/Capture d'écran, le 2021-10-06 à 14.23.51.jpeg" alt="School design project — image 5" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/Capture d'écran, le 2021-10-06 à 14.24.59.jpeg" alt="School design project — image 6" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/DominicD-E-newletter.jpg" alt="School design project — image 7" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/Dominic daniel_ticket_mutek_VDP.png" alt="School design project — image 8" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/Screen Shot 2026-04-13 at 3.23.25 PM.png" alt="School design project — image 9" loading="lazy" /></div>
               </div>
               <button class="carousel-btn carousel-btn--prev" aria-label="Previous image">&#8592;</button>
               <button class="carousel-btn carousel-btn--next" aria-label="Next image">&#8594;</button>
@@ -353,25 +283,15 @@
             </div>
           </article>
 
-          <!-- Project 02 -->
-          <article class="project-card" id="project-branding">
+          <!-- Project 02 — Branding -->
+          <article class="project-card js-reveal" id="project-branding">
             <div class="project-carousel" aria-label="Branding project images">
               <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="images/IMG_3367.jpeg" alt="Branding and logo identity — image 1" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/IMG_0223.jpeg" alt="Branding and logo identity — image 2" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/digichikmon_An_angry_seal_logo_side_face_gaming_design_logo_whi_bed215bf-6485-4782-84bf-69b7486506ab.png" alt="Branding and logo identity — image 3" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/51880E3D-CC1F-4695-9557-5F46D5A14085.png" alt="Branding and logo identity — image 4" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/Untitled Project - illustrationImage (3).png" alt="Branding and logo identity — image 5" loading="lazy" />
-                </div>
+                <div class="carousel-slide"><img src="images/IMG_3367.jpeg" alt="Branding and logo identity — image 1" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/IMG_0223.jpeg" alt="Branding and logo identity — image 2" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/digichikmon_An_angry_seal_logo_side_face_gaming_design_logo_whi_bed215bf-6485-4782-84bf-69b7486506ab.png" alt="Branding and logo identity — image 3" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/51880E3D-CC1F-4695-9557-5F46D5A14085.png" alt="Branding and logo identity — image 4" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/Untitled Project - illustrationImage (3).png" alt="Branding and logo identity — image 5" loading="lazy" /></div>
               </div>
               <button class="carousel-btn carousel-btn--prev" aria-label="Previous image">&#8592;</button>
               <button class="carousel-btn carousel-btn--next" aria-label="Next image">&#8594;</button>
@@ -390,19 +310,13 @@
             </div>
           </article>
 
-          <!-- Project 03 -->
-          <article class="project-card" id="project-pmu">
+          <!-- Project 03 — PMU -->
+          <article class="project-card js-reveal" id="project-pmu">
             <div class="project-carousel" aria-label="PMU Québec project images">
               <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="images/Screen Shot 2026-05-19 at 7.38.58 PM.png" alt="PMU Québec evacuation plan — image 1" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/IMG_0572.jpeg" alt="PMU Québec evacuation plan — image 2" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/IMG_4029.JPG" alt="PMU Québec evacuation plan — image 3" loading="lazy" />
-                </div>
+                <div class="carousel-slide"><img src="images/Screen Shot 2026-05-19 at 7.38.58 PM.png" alt="PMU Québec evacuation plan — image 1" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/IMG_0572.jpeg" alt="PMU Québec evacuation plan — image 2" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/IMG_4029.JPG" alt="PMU Québec evacuation plan — image 3" loading="lazy" /></div>
               </div>
               <button class="carousel-btn carousel-btn--prev" aria-label="Previous image">&#8592;</button>
               <button class="carousel-btn carousel-btn--next" aria-label="Next image">&#8594;</button>
@@ -419,28 +333,16 @@
             </div>
           </article>
 
-          <!-- Project 04 -->
-          <article class="project-card" id="project-print">
+          <!-- Project 04 — Print -->
+          <article class="project-card js-reveal" id="project-print">
             <div class="project-carousel" aria-label="Print and layout project images">
               <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="images/IMG_0220.jpeg" alt="Print and layout project — image 1" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/IMG_0182.jpeg" alt="Print and layout project — image 2" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/BusStopAd_Dominic.png" alt="Print and layout project — image 3" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/BusStopAd_Moodboard_Dominic.png" alt="Print and layout project — image 4" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/DominicD_CookbookFlyer.jpg" alt="Print and layout project — image 5" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/DominicD_CookbookFlyer.png" alt="Print and layout project — image 6" loading="lazy" />
-                </div>
+                <div class="carousel-slide"><img src="images/IMG_0220.jpeg" alt="Print and layout project — image 1" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/IMG_0182.jpeg" alt="Print and layout project — image 2" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/BusStopAd_Dominic.png" alt="Print and layout project — image 3" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/BusStopAd_Moodboard_Dominic.png" alt="Print and layout project — image 4" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/DominicD_CookbookFlyer.jpg" alt="Print and layout project — image 5" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/DominicD_CookbookFlyer.png" alt="Print and layout project — image 6" loading="lazy" /></div>
               </div>
               <button class="carousel-btn carousel-btn--prev" aria-label="Previous image">&#8592;</button>
               <button class="carousel-btn carousel-btn--next" aria-label="Next image">&#8594;</button>
@@ -460,19 +362,13 @@
             </div>
           </article>
 
-          <!-- Project 05 -->
-          <article class="project-card" id="project-freelance">
+          <!-- Project 05 — Freelance -->
+          <article class="project-card js-reveal" id="project-freelance">
             <div class="project-carousel" aria-label="Freelance project images">
               <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="images/IMG_0646.jpeg" alt="Freelance client concept — image 1" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/cosmetic-product-still-life-on-neutral-background-2026-03-24-13-56-04-utc.jpeg" alt="Freelance client concept — image 2" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/Create_a_mockup_of_celestial_b_Nano_Banana_62528.jpg" alt="Freelance client concept — image 3" loading="lazy" />
-                </div>
+                <div class="carousel-slide"><img src="images/IMG_0646.jpeg" alt="Freelance client concept — image 1" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/cosmetic-product-still-life-on-neutral-background-2026-03-24-13-56-04-utc.jpeg" alt="Freelance client concept — image 2" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/Create_a_mockup_of_celestial_b_Nano_Banana_62528.jpg" alt="Freelance client concept — image 3" loading="lazy" /></div>
               </div>
               <button class="carousel-btn carousel-btn--prev" aria-label="Previous image">&#8592;</button>
               <button class="carousel-btn carousel-btn--next" aria-label="Next image">&#8594;</button>
@@ -489,16 +385,12 @@
             </div>
           </article>
 
-          <!-- Project 06 — honest case -->
-          <article class="project-card project-card--lost" id="project-lost">
+          <!-- Project 06 — Honest case -->
+          <article class="project-card project-card--lost js-reveal" id="project-lost">
             <div class="project-carousel" aria-label="Unselected concepts images">
               <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="images/IMG_0223.jpeg" alt="Unselected concept — image 1" loading="lazy" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="images/IMG_0182.jpeg" alt="Unselected concept — image 2" loading="lazy" />
-                </div>
+                <div class="carousel-slide"><img src="images/IMG_0223.jpeg" alt="Unselected concept — image 1" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="images/IMG_0182.jpeg" alt="Unselected concept — image 2" loading="lazy" /></div>
               </div>
               <button class="carousel-btn carousel-btn--prev" aria-label="Previous image">&#8592;</button>
               <button class="carousel-btn carousel-btn--next" aria-label="Next image">&#8594;</button>
@@ -516,23 +408,16 @@
 
         </div>
 
-        <!-- ============================================================
-             CASE STUDIES — detailed write-ups
-             ============================================================ -->
+        <!-- CASE STUDIES -->
         <div class="case-studies">
 
-          <!-- Case: School -->
-          <article class="case" id="case-school">
+          <article class="case js-reveal" id="case-school">
             <header class="case-head">
               <span class="case-no">Case 01</span>
               <h3>School design projects</h3>
             </header>
             <div class="case-body">
-              <p>
-                A body of academic work produced during my DEP, DEC, and
-                AEC programs — typographic studies, editorial layouts,
-                identity exercises, and structured grid work.
-              </p>
+              <p>A body of academic work produced during my DEP, DEC, and AEC programs — typographic studies, editorial layouts, identity exercises, and structured grid work.</p>
               <dl class="case-meta">
                 <div><dt>Focus</dt><dd>Typography, grid, hierarchy</dd></div>
                 <div><dt>Tools</dt><dd>InDesign, Illustrator, Photoshop</dd></div>
@@ -541,19 +426,13 @@
             </div>
           </article>
 
-          <!-- Case: Branding -->
-          <article class="case" id="case-branding">
+          <article class="case js-reveal" id="case-branding">
             <header class="case-head">
               <span class="case-no">Case 02</span>
               <h3>Branding &amp; logo systems</h3>
             </header>
             <div class="case-body">
-              <p>
-                Identity work — wordmarks, monograms, and the systems
-                around them. My approach starts with the typographic
-                structure and works outward toward color, signage, and
-                application.
-              </p>
+              <p>Identity work — wordmarks, monograms, and the systems around them. My approach starts with the typographic structure and works outward toward color, signage, and application.</p>
               <dl class="case-meta">
                 <div><dt>Focus</dt><dd>Wordmark, monogram, system</dd></div>
                 <div><dt>Tools</dt><dd>Illustrator, InDesign</dd></div>
@@ -562,20 +441,13 @@
             </div>
           </article>
 
-          <!-- Case: PMU Québec -->
-          <article class="case" id="case-pmu">
+          <article class="case js-reveal" id="case-pmu">
             <header class="case-head">
               <span class="case-no">Case 03</span>
               <h3>PMU Québec — Technical evacuation plans</h3>
             </header>
             <div class="case-body">
-              <p>
-                Ongoing technical design work: floor-plan drafting,
-                evacuation routes, symbol systems, and code-compliant
-                signage layouts. Every plan is a working document — it
-                has to be legible under stress, in poor lighting, and
-                across different print sizes.
-              </p>
+              <p>Ongoing technical design work: floor-plan drafting, evacuation routes, symbol systems, and code-compliant signage layouts. Every plan is a working document — it has to be legible under stress, in poor lighting, and across different print sizes.</p>
               <dl class="case-meta">
                 <div><dt>Discipline</dt><dd>Technical drafting · Signage</dd></div>
                 <div><dt>Tools</dt><dd>AutoCAD, Illustrator</dd></div>
@@ -584,19 +456,13 @@
             </div>
           </article>
 
-          <!-- Case: Print -->
-          <article class="case" id="case-print">
+          <article class="case js-reveal" id="case-print">
             <header class="case-head">
               <span class="case-no">Case 04</span>
               <h3>Print &amp; layout</h3>
             </header>
             <div class="case-body">
-              <p>
-                Production-grade print files: brochures, posters, business
-                stationery. Built with the press in mind — bleeds, color
-                profiles, registration, and the discipline of files that
-                run cleanly the first time.
-              </p>
+              <p>Production-grade print files: brochures, posters, business stationery. Built with the press in mind — bleeds, color profiles, registration, and the discipline of files that run cleanly the first time.</p>
               <dl class="case-meta">
                 <div><dt>Focus</dt><dd>Pre-press &amp; production</dd></div>
                 <div><dt>Tools</dt><dd>InDesign, Illustrator, Acrobat</dd></div>
@@ -605,19 +471,13 @@
             </div>
           </article>
 
-          <!-- Case: Freelance -->
-          <article class="case" id="case-freelance">
+          <article class="case js-reveal" id="case-freelance">
             <header class="case-head">
               <span class="case-no">Case 05</span>
               <h3>Freelance client concepts</h3>
             </header>
             <div class="case-body">
-              <p>
-                Independent client work outside my employer. Small
-                businesses, local services, identity refreshes. The
-                scope is modest by design — the goal is to ship work
-                that actually gets used.
-              </p>
+              <p>Independent client work outside my employer. Small businesses, local services, identity refreshes. The scope is modest by design — the goal is to ship work that actually gets used.</p>
               <dl class="case-meta">
                 <div><dt>Scope</dt><dd>Small business identity &amp; print</dd></div>
                 <div><dt>Engagement</dt><dd>Direct-to-client</dd></div>
@@ -626,68 +486,51 @@
             </div>
           </article>
 
-          <!-- Case: Honest — lost / not selected -->
-          <article class="case case--lost" id="case-lost">
+          <article class="case case--lost js-reveal" id="case-lost">
             <header class="case-head">
               <span class="case-no">Case 06 · Honest</span>
               <h3>Unselected concepts &amp; lost pitches</h3>
             </header>
-
             <div class="case-body">
-              <p class="case-intro">
-                Not every project ships. These are real concepts that
-                clients did not select, presented honestly — because the
-                reasoning behind a "no" usually teaches more than a "yes."
-              </p>
+              <p class="case-intro">Not every project ships. These are real concepts that clients did not select, presented honestly — because the reasoning behind a "no" usually teaches more than a "yes."</p>
 
-              <!-- Lost project 01 -->
-              <details class="lost-project">
-                <summary>
-                  <span class="lost-no">A.</span>
-                  Restaurant identity — concept not selected
-                </summary>
-                <div class="lost-body">
-                  <p><strong>Client need.</strong> A small restaurant looking for a complete visual identity with a modern but warm character.</p>
-                  <p><strong>Concept direction.</strong> A refined typographic logotype paired with a custom monogram and a muted earth-tone palette.</p>
-                  <p><strong>What worked.</strong> The typographic system was strong and the print applications — menu, business cards, signage mock-ups — held together cleanly.</p>
-                  <p><strong>Why it was not selected.</strong> The client chose a more illustrative, character-driven proposal from another designer. They wanted personality on the page; I delivered structure.</p>
-                  <p><strong>What I learned.</strong> A correct answer is not always the chosen one. What a client emotionally responds to matters as much as the underlying design logic.</p>
-                  <p><strong>How it improved my process.</strong> I now lead with mood boards and visual references earlier in the conversation — before the typography starts moving.</p>
-                </div>
-              </details>
+              <div class="lost-cases">
+                <details class="lost-project">
+                  <summary><span class="lost-no">A.</span> Restaurant identity — concept not selected</summary>
+                  <div class="lost-body">
+                    <p><strong>Client need.</strong> A small restaurant looking for a complete visual identity with a modern but warm character.</p>
+                    <p><strong>Concept direction.</strong> A refined typographic logotype paired with a custom monogram and a muted earth-tone palette.</p>
+                    <p><strong>What worked.</strong> The typographic system was strong and the print applications held together cleanly.</p>
+                    <p><strong>Why it was not selected.</strong> The client chose a more illustrative, character-driven proposal. They wanted personality on the page; I delivered structure.</p>
+                    <p><strong>What I learned.</strong> A correct answer is not always the chosen one. What a client emotionally responds to matters as much as the underlying design logic.</p>
+                    <p><strong>How it improved my process.</strong> I now lead with mood boards and visual references earlier in the conversation — before the typography starts moving.</p>
+                  </div>
+                </details>
 
-              <!-- Lost project 02 -->
-              <details class="lost-project">
-                <summary>
-                  <span class="lost-no">B.</span>
-                  Nonprofit rebrand pitch — not awarded
-                </summary>
-                <div class="lost-body">
-                  <p><strong>Client need.</strong> A small nonprofit wanted to refresh a dated identity while keeping existing supporters comfortable.</p>
-                  <p><strong>Concept direction.</strong> A clean restructuring of the existing mark — same shape, modernized proportions, refined color.</p>
-                  <p><strong>What worked.</strong> Continuity. Donors would have recognized the brand instantly, and the system was production-ready.</p>
-                  <p><strong>Why it was not selected.</strong> The board wanted a bolder break from the past. They felt the proposal was too quiet for the moment.</p>
-                  <p><strong>What I learned.</strong> "Refresh" can mean very different things. Some clients want evolution, others want a flag in the ground.</p>
-                  <p><strong>How it improved my process.</strong> I now ask early — explicitly — how far the client is willing to move from where they are. Quiet is a valid choice, but it has to be the client's choice.</p>
-                </div>
-              </details>
+                <details class="lost-project">
+                  <summary><span class="lost-no">B.</span> Nonprofit rebrand pitch — not awarded</summary>
+                  <div class="lost-body">
+                    <p><strong>Client need.</strong> A small nonprofit wanted to refresh a dated identity while keeping existing supporters comfortable.</p>
+                    <p><strong>Concept direction.</strong> A clean restructuring of the existing mark — same shape, modernized proportions, refined color.</p>
+                    <p><strong>What worked.</strong> Continuity. Donors would have recognized the brand instantly, and the system was production-ready.</p>
+                    <p><strong>Why it was not selected.</strong> The board wanted a bolder break from the past. They felt the proposal was too quiet for the moment.</p>
+                    <p><strong>What I learned.</strong> "Refresh" can mean very different things. Some clients want evolution, others want a flag in the ground.</p>
+                    <p><strong>How it improved my process.</strong> I now ask explicitly how far the client is willing to move from where they are.</p>
+                  </div>
+                </details>
 
-              <!-- Lost project 03 -->
-              <details class="lost-project">
-                <summary>
-                  <span class="lost-no">C.</span>
-                  Local service brand — direction changed mid-project
-                </summary>
-                <div class="lost-body">
-                  <p><strong>Client need.</strong> A local service provider needed a full identity and basic print package on a tight timeline.</p>
-                  <p><strong>Concept direction.</strong> A geometric monogram with a strict sans-serif system, focused on legibility on vehicles and signage.</p>
-                  <p><strong>What worked.</strong> The mark performed well at small sizes and in single-color print — practical strengths for the client's real use case.</p>
-                  <p><strong>Why it was not selected.</strong> The client pivoted their offering halfway through. The original brief no longer matched the new business model.</p>
-                  <p><strong>What I learned.</strong> A brief is a snapshot of a moment. Building flexibility into the system from the start is more valuable than perfecting the first idea.</p>
-                  <p><strong>How it improved my process.</strong> I now design identity systems with at least one secondary configuration in mind — so the brand can flex without being rebuilt.</p>
-                </div>
-              </details>
-
+                <details class="lost-project">
+                  <summary><span class="lost-no">C.</span> Local service brand — direction changed mid-project</summary>
+                  <div class="lost-body">
+                    <p><strong>Client need.</strong> A local service provider needed a full identity and basic print package on a tight timeline.</p>
+                    <p><strong>Concept direction.</strong> A geometric monogram with a strict sans-serif system, focused on legibility on vehicles and signage.</p>
+                    <p><strong>What worked.</strong> The mark performed well at small sizes and in single-color print.</p>
+                    <p><strong>Why it was not selected.</strong> The client pivoted their offering halfway through. The original brief no longer matched the new business model.</p>
+                    <p><strong>What I learned.</strong> A brief is a snapshot of a moment. Building flexibility into the system from the start is more valuable than perfecting the first idea.</p>
+                    <p><strong>How it improved my process.</strong> I now design identity systems with at least one secondary configuration in mind — so the brand can flex without being rebuilt.</p>
+                  </div>
+                </details>
+              </div>
             </div>
           </article>
 
@@ -696,16 +539,16 @@
     </section>
 
     <!-- ============================================================
-         05 — SKILLS
+         SKILLS
          ============================================================ -->
     <section class="skills" id="skills" aria-labelledby="skills-heading">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head js-reveal">
           <span class="section-number">05</span>
           <h2 id="skills-heading" class="section-title">Skills</h2>
         </div>
 
-        <div class="skills-grid">
+        <div class="skills-grid js-stagger">
           <div class="skill-group">
             <h3>Design</h3>
             <ul>
@@ -715,7 +558,6 @@
               <li>Hierarchy &amp; grid</li>
             </ul>
           </div>
-
           <div class="skill-group">
             <h3>Technical</h3>
             <ul>
@@ -725,17 +567,15 @@
               <li>Pre-press &amp; print specifications</li>
             </ul>
           </div>
-
           <div class="skill-group">
             <h3>Web</h3>
             <ul>
-              <li>HTML</li>
-              <li>CSS</li>
+              <li>HTML &amp; CSS</li>
               <li>Visual Studio Code</li>
               <li>GitHub &amp; GitHub Pages</li>
+              <li>Responsive design</li>
             </ul>
           </div>
-
           <div class="skill-group">
             <h3>Software</h3>
             <ul>
@@ -752,78 +592,66 @@
     </section>
 
     <!-- ============================================================
-         06 — CONTACT
+         CONTACT
          ============================================================ -->
     <section class="contact" id="contact" aria-labelledby="contact-heading">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head js-reveal">
           <span class="section-number">06</span>
           <h2 id="contact-heading" class="section-title">Contact</h2>
         </div>
 
-        <p class="contact-statement">
-          If my work aligns with what you're looking for,
-          feel free to contact me.
+        <p class="contact-statement js-reveal">
+          If my work aligns with what you're looking for, feel free to reach out.
         </p>
 
-        <!-- Primary email — replace placeholder before publishing -->
-        <a class="contact-email" href="mailto:digidesign73@gmail.com">
+        <a class="contact-email js-reveal" href="mailto:digidesign73@gmail.com">
           digidesign73@gmail.com
         </a>
 
-        <!-- Social / external profiles — replace # with real URLs -->
-     <ul class="contact-links" aria-label="External profiles">
+        <ul class="contact-links js-stagger" aria-label="External profiles">
+          <li>
+            <a href="https://www.linkedin.com/in/dominic-daniel-04b29220" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/digichikmon" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/digidesign2021/" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
 
-  <!-- LinkedIn -->
-  <li>
-    <a href="https://www.linkedin.com/in/dominic-daniel-04b29220"
-       target="_blank"
-       rel="noopener"
-       aria-label="LinkedIn">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-  </li>
-
-  <!-- GitHub -->
-  <li>
-    <a href="https://github.com/digichikmon"
-       target="_blank"
-       rel="noopener"
-       aria-label="GitHub">
-      <i class="fab fa-github"></i>
-    </a>
-  </li>
-
-  <!-- Instagram -->
-  <li>
-    <a href="https://www.instagram.com/digidesign2021/"
-       target="_blank"
-       rel="noopener"
-       aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </li>
-
-</ul>
+        <div class="js-reveal">
+          <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
-      <p class="footer-brand">DomDesign © 2026</p>
-      <p class="footer-credit">Designed and developed by Dominic Daniel.</p>
-      <p class="footer-meta">
-        <a href="#top">Back to top ↑</a>
-      </p>
+      <p class="footer-brand">DomDesign &copy; <span id="year">2026</span></p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="client-experience.html">Client Experience</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-meta"><a href="#top">Back to top ↑</a></p>
     </div>
   </footer>
 
-  <!-- Minimal vanilla JS -->
-  <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
