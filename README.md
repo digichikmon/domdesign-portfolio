@@ -1,58 +1,81 @@
-# DomDesign — Portfolio of Dominic Daniel
+# DomDesign — Studio of Dominic Daniel
 
-A minimal, editorial portfolio site built in plain HTML, CSS, and vanilla JavaScript.
-No framework, no build step, no CMS. Ready to deploy to GitHub Pages as-is.
+**[domdesign.ca](https://domdesign.ca)** — A premium editorial portfolio for a graphic design studio. Built in plain HTML, CSS, and vanilla JavaScript with GSAP animations and Lenis smooth scrolling. No framework, no build step, no CMS. Deployed via GitHub Pages.
 
 ---
 
-## 1 · File structure
+## 1 · Site structure
+
+Five pages, one shared design system.
 
 ```
-domdesign/
-├── index.html            ← single-page portfolio
-├── style.css             ← Swiss / editorial monochrome styles
-├── script.js             ← mobile nav + smooth scrolling (vanilla JS)
-├── README.md             ← this file
-└── assets/
-    └── images/
-        ├── favicon.svg
-        ├── profile/
-        │   ├── dominic-daniel.jpg     ← optional profile photo
-        │   └── og-card.jpg            ← social share preview
-        └── projects/
-            ├── school-project-1.jpg
-            ├── branding-1.jpg
-            ├── pmu-evacuation-1.jpg
-            ├── print-layout-1.jpg
-            ├── freelance-1.jpg
-            └── lost-project-1.jpg
+domdesign-portfolio/
+├── index.html                ← Home — hero, about, experience, work, skills, contact
+├── projects.html             ← Full portfolio grid with category filter
+├── services.html             ← Service offerings (Branding, Print, Technical, Web)
+├── client-experience.html    ← Process steps + HoneyBook client portal info
+├── contact.html              ← Contact info + project brief panel
+├── style.css                 ← Complete design system
+├── script.js                 ← GSAP + Lenis + carousels + nav + portfolio filter
+├── CNAME                     ← Custom domain: domdesign.ca
+├── favicon.svg               ← DD monogram SVG favicon
+└── images/                   ← All project and portfolio images (25 files)
 ```
 
-Image filenames in `assets/images/projects/` are already wired into `index.html`.
-Drop your real artwork in with those exact filenames and the page will display them.
+---
+
+## 2 · Design system
+
+### Colors
+
+| Token         | Value     | Usage                           |
+| ------------- | --------- | ------------------------------- |
+| `--c-ink`     | `#0C0C0C` | Primary text, borders, buttons  |
+| `--c-paper`   | `#FAFAFA` | Page background                 |
+| `--c-surface` | `#EBEBEB` | Card backgrounds, meta blocks   |
+| `--c-muted`   | `#787878` | Secondary text, labels          |
+| `--c-stone`   | `#A89B8C` | Accent, italic headlines, hover |
+
+### Typography
+
+| Token          | Family             | Usage                        |
+| -------------- | ------------------ | ---------------------------- |
+| `--ff-display` | Cormorant Garamond | Headlines, section titles    |
+| `--ff-body`    | Barlow             | Body text, paragraphs        |
+| `--ff-label`   | Barlow Condensed   | Labels, tags, nav, buttons   |
+| `--ff-mono`    | JetBrains Mono     | Metadata, numbers, dates     |
+
+All fonts loaded from Google Fonts — no licensing concerns.
+
+### JavaScript libraries (CDN)
+
+| Library       | Version | Purpose                              |
+| ------------- | ------- | ------------------------------------ |
+| GSAP          | 3.12.5  | Scroll-triggered reveal animations   |
+| ScrollTrigger | 3.12.5  | Viewport detection for GSAP          |
+| Lenis         | 1.0.42  | Smooth wheel scrolling               |
+| Font Awesome  | 6.5.1   | Contact section icons                |
 
 ---
 
-## 2 · Before you publish — replace these placeholders
+## 3 · Key features
 
-Search the project for these and replace them with the real values:
-
-| Placeholder                          | Where                          | Replace with                       |
-| ------------------------------------ | ------------------------------ | ---------------------------------- |
-| `your-email@example.com`             | `index.html` — contact section | Your actual email                  |
-| LinkedIn `href="#"`                  | `index.html` — contact links   | Your LinkedIn profile URL          |
-| Behance `href="#"`                   | `index.html` — contact links   | Your Behance profile URL           |
-| GitHub `href="#"`                    | `index.html` — contact links   | Your GitHub profile URL            |
-| `https://domdesign.ca`               | `index.html` — Open Graph URL  | Your live site URL                 |
-| Project `.jpg` files                 | `assets/images/projects/`      | Your final project artwork         |
+- **Multi-page architecture** — 5 pages with consistent header, nav, and footer
+- **GSAP scroll reveals** — `.js-reveal` (fade up) and `.js-stagger` (staggered children) on all sections
+- **Lenis smooth scroll** — synchronized with GSAP ticker for frame-perfect smoothness
+- **Project carousels** — 6 carousels on the home page with prev/next buttons, dot indicators, and touch swipe
+- **Portfolio filter** — client-side category filtering on `projects.html` (All / Branding / Graphic Design / Technical / Web)
+- **Active nav state** — current page highlighted automatically based on URL
+- **Mobile nav** — full-screen overlay menu on small screens with ARIA state management
+- **HoneyBook integration** — client experience and contact pages link to the HoneyBook client portal for proposals, contracts, and invoices
+- **Responsive** — mobile-first grid, breakpoints at 480 px, 768 px, 1024 px, 1280 px
+- **Accessible** — skip link, semantic landmarks, ARIA on nav toggle, `prefers-reduced-motion` respected
 
 ---
 
-## 3 · Local preview
+## 4 · Local preview
 
-Open `index.html` directly in a browser — that works for a quick check.
-
-For a more accurate local server (recommended, especially for the Google Fonts request):
+Open any `.html` file directly in a browser for a quick check, or run a local server for accurate font loading:
 
 ```bash
 # Python 3
@@ -62,76 +85,70 @@ python3 -m http.server 8080
 
 ---
 
-## 4 · Deploying to GitHub Pages
-
-### Option A — Project site (`username.github.io/repo-name`)
-
-1. **Create a repository** on GitHub (e.g. `domdesign`).
-2. **Push your files** to the `main` branch:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit — portfolio"
-   git branch -M main
-   git remote add origin https://github.com/USERNAME/domdesign.git
-   git push -u origin main
-   ```
-3. On GitHub → **Settings → Pages**.
-4. Under **Build and deployment**:
-   - Source: **Deploy from a branch**
-   - Branch: **main** · Folder: **/(root)**
-   - Click **Save**.
-5. Wait ~30–60 seconds. Your site goes live at:
-   `https://USERNAME.github.io/domdesign/`
-
-### Option B — User site (`username.github.io`)
-
-Same process, but name the repository exactly `USERNAME.github.io`.
-The site will live at `https://USERNAME.github.io/`.
-
-### Option C — Custom domain (`domdesign.ca`)
-
-1. In **Settings → Pages → Custom domain**, enter `domdesign.ca`.
-2. At your domain registrar, set DNS records:
-   - **A records** pointing your apex domain to GitHub's IPs:
-     - `185.199.108.153`
-     - `185.199.109.153`
-     - `185.199.110.153`
-     - `185.199.111.153`
-   - **CNAME record** for `www` pointing to `USERNAME.github.io`.
-3. Tick **Enforce HTTPS** once the certificate is issued (allow a few minutes).
-4. GitHub will automatically commit a `CNAME` file to your repo — leave it.
-
----
-
 ## 5 · Updating the site
 
-Any change is a normal git push:
+### Editing content
+
+| Page                       | What to edit                                         |
+| -------------------------- | ---------------------------------------------------- |
+| `index.html`               | Hero copy, about text, timeline, carousels, skills   |
+| `projects.html`            | `.portfolio-item` blocks, `data-category` attributes |
+| `services.html`            | `.service-item` blocks                               |
+| `client-experience.html`   | `.process-step` blocks, HoneyBook callout text       |
+| `contact.html`             | Email address, social links, HoneyBook URL           |
+
+### Adding a new project image
+
+1. Drop the image file into the `images/` folder.
+2. In `index.html`, add a `<div class="carousel-slide">` inside the matching project's `.carousel-track`.
+3. Add a matching `<button class="carousel-dot"></button>` to the `.carousel-indicators` block.
+4. In `projects.html`, add a `.portfolio-item` element with the correct `data-category`.
+
+### Committing and deploying
 
 ```bash
 git add .
-git commit -m "Update copy / swap project images"
+git commit -m "Describe what changed"
 git push
 ```
 
-GitHub Pages rebuilds automatically. Allow ~30 seconds for the new version to appear.
+GitHub Pages rebuilds automatically from `main`. Allow ~30–60 seconds.
 
 ---
 
-## 6 · Notes on the design
+## 6 · GitHub Pages + custom domain
 
-- **Typography:** Archivo (Swiss-influenced grotesque) + JetBrains Mono (technical labels).
-  Both load from Google Fonts — no licensing concerns.
-- **Color:** Strict monochrome — near-black on white, with one warm off-white surface
-  used to highlight the honest case-studies block. No accent color by design.
-- **Layout:** Mobile-first. Grid expands at `640px`, `768px`, `1024px`, `1200px`.
-- **Accessibility:** Skip link, visible keyboard focus, semantic landmarks (`header`,
-  `main`, `section`, `footer`), ARIA on the mobile nav, `prefers-reduced-motion` respected.
-- **Performance:** No frameworks. Two Google Fonts requests with `preconnect`.
-  Images lazy-loaded. Total payload before images is well under 50 KB.
+The site is already live at [domdesign.ca](https://domdesign.ca) via the `CNAME` file.
+
+To set up from scratch on a new repository:
+
+1. Push all files to the `main` branch.
+2. Go to **Settings → Pages → Deploy from branch → main / (root)**.
+3. In **Settings → Pages → Custom domain**, enter `domdesign.ca`.
+4. At your domain registrar, set these DNS A records:
+   ```
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+   ```
+5. Tick **Enforce HTTPS** once the certificate is issued (allow a few minutes).
 
 ---
 
-## 7 · License & credit
+## 7 · Animation classes
+
+Add these classes to any HTML element to trigger GSAP scroll animations:
+
+| Class        | Effect                                           |
+| ------------ | ------------------------------------------------ |
+| `.js-reveal` | Fade in + slide up when element enters viewport  |
+| `.js-stagger`| Each direct child fades in with a stagger delay  |
+
+Both are disabled when `prefers-reduced-motion: reduce` is active in the OS.
+
+---
+
+## 8 · License & credit
 
 Designed and developed by **Dominic Daniel** — DomDesign © 2026.
