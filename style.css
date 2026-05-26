@@ -1086,6 +1086,16 @@ summary::-webkit-details-marker { display: none; }
   letter-spacing: -0.01em;
 }
 
+.service-subitem--featured .service-subitem-name {
+  font-weight: 600;
+}
+
+.service-subitem--featured .service-subitem-price {
+  font-weight: 700;
+  font-size: var(--fs-md);
+  color: var(--c-ink);
+}
+
 .service-subitem-desc {
   font-size: var(--fs-xs);
   color: var(--c-muted);
