@@ -182,14 +182,14 @@ summary::-webkit-details-marker { display: none; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--c-paper);
-  background: var(--c-ink);
+  color: var(--c-ink);
+  background: var(--c-paper);
   padding: 0.6rem 1.25rem;
   border: var(--border-ink);
   white-space: nowrap;
   transition: background var(--t-fast), color var(--t-fast);
 }
-.nav-cta:hover { background: transparent; color: var(--c-ink); }
+.nav-cta:hover { background: var(--c-ink); color: var(--c-paper); }
 
 .nav-toggle {
   display: flex;
