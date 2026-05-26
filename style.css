@@ -262,6 +262,17 @@ summary::-webkit-details-marker { display: none; }
 }
 .btn-primary:hover { background: transparent; color: var(--c-ink); }
 
+/* Hero section — invert primary button to white default / black hover */
+.hero .btn-primary {
+  background: var(--c-paper);
+  color: var(--c-ink);
+  border: var(--border-ink);
+}
+.hero .btn-primary:hover {
+  background: var(--c-ink);
+  color: var(--c-paper);
+}
+
 .btn-ghost {
   background: transparent;
   color: var(--c-ink);
