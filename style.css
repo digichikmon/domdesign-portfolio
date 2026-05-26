@@ -1334,6 +1334,71 @@ summary::-webkit-details-marker { display: none; }
   .portfolio-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
+/* ============================================================
+   BACK TO TOP
+   ============================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  background: var(--c-paper);
+  border: var(--border-ink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 900;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background var(--t-fast), border-color var(--t-fast);
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover { background: var(--c-ink); }
+.back-to-top:hover .back-to-top-ring-track    { stroke: rgba(250,250,250,0.15); }
+.back-to-top:hover .back-to-top-ring-progress { stroke: var(--c-paper); }
+.back-to-top:hover .back-to-top-arrow         { color: var(--c-paper); }
+
+.back-to-top-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.back-to-top-ring-track {
+  fill: none;
+  stroke: var(--c-surface);
+  stroke-width: 2;
+}
+.back-to-top-ring-progress {
+  fill: none;
+  stroke: var(--c-ink);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 119.38;
+  stroke-dashoffset: 119.38;
+  transition: stroke-dashoffset 0.12s linear, stroke var(--t-fast);
+}
+.back-to-top-arrow {
+  font-family: var(--ff-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--c-ink);
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  transition: color var(--t-fast);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

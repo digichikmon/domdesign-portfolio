@@ -7,6 +7,7 @@
   'use strict';
 
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lenis = null;
 
   /* ----------------------------------------------------------
      1. LENIS + GSAP SETUP
@@ -16,7 +17,7 @@
   }
 
   if (!prefersReduced && typeof Lenis !== 'undefined') {
-    var lenis = new Lenis({
+    lenis = new Lenis({
       duration: 1.2,
       easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
     });
@@ -198,5 +199,41 @@
      ---------------------------------------------------------- */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ----------------------------------------------------------
+     9. BACK TO TOP
+     ---------------------------------------------------------- */
+  var bttBtn      = document.getElementById('backToTop');
+  var bttProgress = document.querySelector('.back-to-top-ring-progress');
+  var CIRCUMFERENCE = 119.38;
+
+  if (bttBtn) {
+    function updateBackToTop() {
+      var scrollY  = window.scrollY || document.documentElement.scrollTop;
+      var docH     = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = docH > 0 ? scrollY / docH : 0;
+
+      if (bttProgress) {
+        bttProgress.style.strokeDashoffset = CIRCUMFERENCE * (1 - progress);
+      }
+
+      if (scrollY > 400) {
+        bttBtn.classList.add('is-visible');
+      } else {
+        bttBtn.classList.remove('is-visible');
+      }
+    }
+
+    window.addEventListener('scroll', updateBackToTop, { passive: true });
+    updateBackToTop();
+
+    bttBtn.addEventListener('click', function () {
+      if (lenis) {
+        lenis.scrollTo(0, { duration: 1.2 });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
 
 })();
