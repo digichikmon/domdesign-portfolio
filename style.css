@@ -1051,6 +1051,48 @@ summary::-webkit-details-marker { display: none; }
   max-width: 55ch;
 }
 
+.service-subitems {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  border-top: var(--border);
+}
+
+.service-subitem {
+  padding-block: 1rem;
+  border-bottom: var(--border);
+}
+
+.service-subitem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.service-subitem-name {
+  font-family: var(--ff-body);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--c-ink);
+}
+
+.service-subitem-price {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-sm);
+  color: var(--c-ink);
+  flex-shrink: 0;
+  letter-spacing: -0.01em;
+}
+
+.service-subitem-desc {
+  font-size: var(--fs-xs);
+  color: var(--c-muted);
+  line-height: var(--lh-base);
+  max-width: 52ch;
+}
+
 .service-tags {
   display: flex;
   flex-wrap: wrap;
