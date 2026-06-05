@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Guide — DomDesign</title>
+<link rel="stylesheet" href="assets/site.css">
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#FAFAF7"/>
+    <text x="50" y="44" font-family="Georgia, serif" font-size="34" fill="#0E0E0E" text-anchor="middle" font-style="italic">D</text>
+    <text x="50" y="66" font-family="monospace" font-size="7" letter-spacing="2" fill="#8A8A85" text-anchor="middle">DOMDESIGN</text>
+  </svg>
+</template>
+<style>
+  .page-head {
+    padding: 80px 0 56px;
+    border-bottom: var(--hair);
+  }
+  .page-head .wrap {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    gap: 24px;
+    align-items: end;
+  }
+  .page-head .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .page-head h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .page-head h1 em { font-style: italic; color: var(--ink-70); }
+  .page-head p {
+    max-width: 44ch;
+    color: var(--ink-70);
+    font-size: 15px;
+    line-height: 1.55;
+    justify-self: end;
+  }
+
+  section.sg {
+    padding: 80px 0;
+    border-bottom: var(--hair);
+  }
+  section.sg > .wrap {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .sg .idx {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .sg h2 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+    margin-bottom: 36px;
+  }
+  .sg h2 em { font-style: italic; color: var(--ink-70); }
+
+  /* Color swatches */
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .sw {
+    border: var(--hair);
+  }
+  .sw .chip {
+    aspect-ratio: 1 / 1;
+    border-bottom: var(--hair);
+  }
+  .sw .info {
+    padding: 14px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+  }
+  .sw .info .name {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ink-50);
+    margin-bottom: 6px;
+  }
+  .sw .info .hex {
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .sw .info .role {
+    margin-top: 6px;
+    color: var(--ink-50);
+  }
+
+  /* Type scale */
+  .type-row {
+    display: grid;
+    grid-template-columns: 80px 120px 1fr;
+    gap: 24px;
+    align-items: baseline;
+    padding: 20px 0;
+    border-top: var(--hair);
+  }
+  .type-row:last-child { border-bottom: var(--hair); }
+  .type-row .label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .type-row .spec {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-50);
+    letter-spacing: 0.06em;
+  }
+  .type-row .sample { color: var(--ink); }
+
+  /* Spacing scale */
+  .space-list {
+    display: grid;
+    gap: 12px;
+  }
+  .space-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 60px;
+    gap: 16px;
+    align-items: center;
+    padding: 10px 0;
+    border-top: var(--hair);
+  }
+  .space-item:last-child { border-bottom: var(--hair); }
+  .space-item .tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .space-item .bar {
+    background: var(--ink);
+    height: 10px;
+  }
+  .space-item .px {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink);
+    text-align: right;
+  }
+
+  /* Grid demo */
+  .grid-demo {
+    position: relative;
+    border: var(--hair);
+    padding: 24px;
+    background: var(--bg);
+    overflow: hidden;
+  }
+  .grid-demo .cols {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    height: 160px;
+  }
+  .grid-demo .col {
+    background: repeating-linear-gradient(
+      135deg,
+      rgba(14,14,14,0.06) 0px,
+      rgba(14,14,14,0.06) 1px,
+      transparent 1px,
+      transparent 6px
+    );
+    border: var(--hair);
+  }
+  .grid-caption {
+    margin-top: 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+
+  /* Components */
+  .comp-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    padding: 28px 0;
+    border-top: var(--hair);
+    align-items: center;
+  }
+  .comp-row:last-child { border-bottom: var(--hair); }
+  .comp-row .label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .comp-row .demo { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+
+  .ph-demo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .ph-demo .placeholder { aspect-ratio: 4 / 3; }
+
+  @media (max-width: 900px) {
+    .page-head .wrap { grid-template-columns: 1fr; gap: 12px; }
+    .page-head p { justify-self: start; }
+    section.sg > .wrap { grid-template-columns: 1fr; gap: 20px; }
+    .swatches { grid-template-columns: 1fr 1fr; }
+    .type-row, .comp-row { grid-template-columns: 1fr; gap: 6px; }
+    .grid-demo .cols { gap: 6px; height: 100px; }
+  }
+</style>
+</head>
+<body data-page="style">
+<div id="site-header-slot"></div>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="num">§ 05 / Style Guide</span>
+    <h1>System &amp; <em>tokens</em>.</h1>
+    <p>A reference for colour, type, spacing, grid, and components used across the site. Useful when rebuilding or extending the design in Figma.</p>
+  </div>
+</section>
+
+<!-- COLOUR -->
+<section class="sg">
+  <div class="wrap">
+    <span class="idx">01 / Colour</span>
+    <div>
+      <h2>A monochrome <em>palette</em>.</h2>
+      <div class="swatches">
+        <div class="sw">
+          <div class="chip" style="background:#FAFAF7;border-bottom:var(--hair);"></div>
+          <div class="info">
+            <div class="name">Paper</div>
+            <div class="hex">#FAFAF7</div>
+            <div class="role">Background</div>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="chip" style="background:#0E0E0E;"></div>
+          <div class="info">
+            <div class="name">Ink</div>
+            <div class="hex">#0E0E0E</div>
+            <div class="role">Text, rules</div>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="chip" style="background:#8A8A85;"></div>
+          <div class="info">
+            <div class="name">Muted</div>
+            <div class="hex">#8A8A85</div>
+            <div class="role">Secondary text</div>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="chip" style="background:#EFEFEA;"></div>
+          <div class="info">
+            <div class="name">Placeholder</div>
+            <div class="hex">#EFEFEA</div>
+            <div class="role">Image stand-ins</div>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:20px;font-size:13px;color:var(--ink-70);max-width:56ch;">Hairline rules are <code style="font-family:var(--mono);">Ink @ 15% opacity</code>. Never introduce a new hue without a reason — the system gains its quietness by staying strictly monochrome.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TYPE -->
+<section class="sg">
+  <div class="wrap">
+    <span class="idx">02 / Type</span>
+    <div>
+      <h2>Two families, <em>three</em> voices.</h2>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:32px;">
+        <div>
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-50);margin-bottom:8px;">Display &amp; body — Newsreader</div>
+          <div style="font-family:var(--serif);font-weight:300;font-size:88px;line-height:0.95;letter-spacing:-0.02em;">Aa <em style="font-style:italic;">Bb</em></div>
+          <div style="margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--ink-50);">Light 300 · Regular 400 · Italic</div>
+        </div>
+        <div>
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-50);margin-bottom:8px;">Labels &amp; numerals — JetBrains Mono</div>
+          <div style="font-family:var(--mono);font-size:72px;letter-spacing:-0.01em;">01 / 99</div>
+          <div style="margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--ink-50);">Regular 400 · Medium 500</div>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <span class="label">Display</span>
+        <span class="spec">Newsreader · 300 · 96–136px · -0.02em</span>
+        <span class="sample" style="font-family:var(--serif);font-weight:300;font-size:56px;line-height:1;letter-spacing:-0.02em;">Clear systems <em style="font-style:italic;">for work</em></span>
+      </div>
+      <div class="type-row">
+        <span class="label">H1</span>
+        <span class="spec">Newsreader · 300 · 56–96px</span>
+        <span class="sample" style="font-family:var(--serif);font-weight:300;font-size:44px;letter-spacing:-0.02em;">Selected work.</span>
+      </div>
+      <div class="type-row">
+        <span class="label">H2</span>
+        <span class="spec">Newsreader · 300 · 36–56px</span>
+        <span class="sample" style="font-family:var(--serif);font-weight:300;font-size:32px;letter-spacing:-0.015em;">What the studio offers.</span>
+      </div>
+      <div class="type-row">
+        <span class="label">H3</span>
+        <span class="spec">Newsreader · 400 · 22px</span>
+        <span class="sample" style="font-family:var(--serif);font-weight:400;font-size:22px;">Ledger Coffee Roasters</span>
+      </div>
+      <div class="type-row">
+        <span class="label">Body</span>
+        <span class="spec">System sans · 400 · 16–17px · 1.55</span>
+        <span class="sample" style="font-size:17px;line-height:1.55;">DomDesign is an independent graphic studio building visual identities.</span>
+      </div>
+      <div class="type-row">
+        <span class="label">Small</span>
+        <span class="spec">System sans · 400 · 13–14px</span>
+        <span class="sample" style="font-size:14px;color:var(--ink-70);">A short description of the project and rough timeline.</span>
+      </div>
+      <div class="type-row">
+        <span class="label">Eyebrow</span>
+        <span class="spec">JetBrains Mono · 11px · 0.18em tracking · UPPERCASE</span>
+        <span class="sample" style="font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-50);">§ 02 / Portfolio</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPACING -->
+<section class="sg">
+  <div class="wrap">
+    <span class="idx">03 / Spacing</span>
+    <div>
+      <h2>An 8-pixel <em>rhythm</em>.</h2>
+      <p style="font-size:15px;color:var(--ink-70);max-width:56ch;margin-bottom:24px;">All padding, gaps, and offsets step in multiples of 8. The full scale below covers component gaps through to section padding.</p>
+      <div class="space-list">
+        <div class="space-item"><span class="tag">xs</span><span class="bar" style="width:8px;"></span><span class="px">8px</span></div>
+        <div class="space-item"><span class="tag">sm</span><span class="bar" style="width:16px;"></span><span class="px">16px</span></div>
+        <div class="space-item"><span class="tag">md</span><span class="bar" style="width:24px;"></span><span class="px">24px</span></div>
+        <div class="space-item"><span class="tag">lg</span><span class="bar" style="width:32px;"></span><span class="px">32px</span></div>
+        <div class="space-item"><span class="tag">xl</span><span class="bar" style="width:48px;"></span><span class="px">48px</span></div>
+        <div class="space-item"><span class="tag">2xl</span><span class="bar" style="width:64px;"></span><span class="px">64px</span></div>
+        <div class="space-item"><span class="tag">3xl</span><span class="bar" style="width:96px;"></span><span class="px">96px</span></div>
+        <div class="space-item"><span class="tag">4xl</span><span class="bar" style="width:120px;"></span><span class="px">120px</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRID -->
+<section class="sg">
+  <div class="wrap">
+    <span class="idx">04 / Grid</span>
+    <div>
+      <h2>12 columns, <em>1440px</em> max.</h2>
+      <p style="font-size:15px;color:var(--ink-70);max-width:56ch;margin-bottom:20px;">Page container: 1440px max-width, centred, with 48px outer gutters (24px below 900px). 16px inter-column gutter.</p>
+      <div class="grid-demo">
+        <div class="cols">
+          <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+          <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+          <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+        </div>
+      </div>
+      <div class="grid-caption">Max-width 1440px · 48px gutter · 12 columns · 16px between</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPONENTS -->
+<section class="sg">
+  <div class="wrap">
+    <span class="idx">05 / Components</span>
+    <div>
+      <h2>A small set of <em>parts</em>.</h2>
+
+      <div class="comp-row">
+        <span class="label">Pill button</span>
+        <div class="demo">
+          <a class="pill" href="#">Primary action <span class="arrow">→</span></a>
+          <a class="pill" href="#" style="background:var(--ink);color:var(--bg);">Inverted <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="comp-row">
+        <span class="label">Inline link</span>
+        <div class="demo">
+          <a class="link-underline" href="#">See all projects →</a>
+        </div>
+      </div>
+      <div class="comp-row">
+        <span class="label">Chip</span>
+        <div class="demo">
+          <span style="font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);">All</span>
+          <span style="font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink-15);color:var(--ink-70);">Identity</span>
+          <span style="font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ink-15);color:var(--ink-70);">Editorial</span>
+        </div>
+      </div>
+      <div class="comp-row">
+        <span class="label">Hairline rule</span>
+        <div class="demo" style="flex-direction:column;align-items:stretch;width:100%;">
+          <hr class="hair">
+          <span style="font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-50);margin-top:8px;">1px · Ink @ 15% opacity</span>
+        </div>
+      </div>
+      <div class="comp-row">
+        <span class="label">Placeholder image</span>
+        <div class="demo" style="width:100%;">
+          <div class="ph-demo" style="width:100%;">
+            <div class="placeholder">
+              <span class="label">Image · project shot</span>
+              <span class="meta">01 / Example</span>
+            </div>
+            <div class="placeholder">
+              <span class="label">Image · spread layout</span>
+              <span class="meta">02 / Example</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <span class="label">Section header</span>
+        <div class="demo" style="width:100%;">
+          <div style="width:100%;border-top:var(--hair);padding-top:24px;display:grid;grid-template-columns:120px 1fr;gap:24px;">
+            <span style="font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-50);">01 / Section</span>
+            <h3 style="font-family:var(--serif);font-weight:300;font-size:32px;letter-spacing:-0.015em;">Title of the <em style="font-style:italic;color:var(--ink-70);">section</em>.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="sg">
+  <div class="wrap">
+    <span class="idx">06 / Voice</span>
+    <div>
+      <h2>How the studio <em>writes</em>.</h2>
+      <ul style="list-style:none;display:grid;gap:14px;max-width:56ch;">
+        <li style="padding-left:16px;position:relative;font-size:15px;color:var(--ink);line-height:1.55;"><span style="position:absolute;left:0;color:var(--ink-30);">—</span>Short, declarative sentences. No marketing adjectives.</li>
+        <li style="padding-left:16px;position:relative;font-size:15px;color:var(--ink);line-height:1.55;"><span style="position:absolute;left:0;color:var(--ink-30);">—</span>Titles are topic noun-phrases, not punchlines.</li>
+        <li style="padding-left:16px;position:relative;font-size:15px;color:var(--ink);line-height:1.55;"><span style="position:absolute;left:0;color:var(--ink-30);">—</span>Italics are used sparingly, for emphasis on a single word.</li>
+        <li style="padding-left:16px;position:relative;font-size:15px;color:var(--ink);line-height:1.55;"><span style="position:absolute;left:0;color:var(--ink-30);">—</span>Numbers use the em-dash range form: <span style="font-family:var(--mono);">2022 — 2026</span>.</li>
+        <li style="padding-left:16px;position:relative;font-size:15px;color:var(--ink);line-height:1.55;"><span style="position:absolute;left:0;color:var(--ink-30);">—</span>No emoji, no exclamation marks, no drop-caps.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer-slot"></div>
+<script src="assets/partials.js"></script>
+</body>
+</html>

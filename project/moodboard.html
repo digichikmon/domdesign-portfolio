@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moodboard — DomDesign</title>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .page-head {
+    padding: 80px 0 56px;
+    border-bottom: var(--hair);
+  }
+  .page-head .wrap {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    gap: 24px;
+    align-items: end;
+  }
+  .page-head .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .page-head h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .page-head h1 em { font-style: italic; color: var(--ink-70); }
+  .page-head p {
+    max-width: 44ch;
+    color: var(--ink-70);
+    font-size: 15px;
+    line-height: 1.55;
+    justify-self: end;
+  }
+
+  /* Section heads */
+  .sec {
+    padding: 80px 0;
+    border-bottom: var(--hair);
+  }
+  .sec-head {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 24px;
+    align-items: baseline;
+    border-top: var(--hair);
+    padding-top: 24px;
+    margin-bottom: 36px;
+  }
+  .sec-head .idx {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .sec-head h2 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(32px, 4vw, 52px);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  .sec-head h2 em { font-style: italic; color: var(--ink-70); }
+
+  /* Colors */
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  .sw { border: var(--hair); }
+  .sw .chip { aspect-ratio: 1 / 1; border-bottom: var(--hair); }
+  .sw .info {
+    padding: 14px;
+    font-family: var(--mono);
+    font-size: 11px;
+  }
+  .sw .info .name {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ink-50);
+    margin-bottom: 4px;
+  }
+  .sw .info .hex { color: var(--ink); }
+
+  /* Logos & monograms — square slot grid */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .slot-wrap { display: flex; flex-direction: column; gap: 8px; }
+  .slot-wrap image-slot { width: 100%; aspect-ratio: 1 / 1; }
+  .slot-wrap .cap {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    display: flex;
+    justify-content: space-between;
+  }
+  .slot-wrap .cap .n { color: var(--ink); }
+
+  /* Tone & texture — wider editorial slots */
+  .tex-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
+  }
+  .tex-grid .slot-wrap.hero image-slot { aspect-ratio: 16 / 10; }
+  .tex-grid .slot-wrap.tall image-slot { aspect-ratio: 4 / 5; }
+  .tex-grid .slot-wrap.wide image-slot { aspect-ratio: 16 / 9; }
+  .tex-grid .hero { grid-row: span 2; }
+
+  .help {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    margin-bottom: 24px;
+  }
+  .help .dot {
+    display: inline-block; width: 7px; height: 7px;
+    background: var(--ink); border-radius: 50%;
+    margin-right: 8px; vertical-align: middle;
+  }
+
+  @media (max-width: 900px) {
+    .page-head .wrap { grid-template-columns: 1fr; gap: 12px; }
+    .page-head p { justify-self: start; }
+    .sec-head { grid-template-columns: 1fr; gap: 8px; }
+    .swatches { grid-template-columns: repeat(2, 1fr); }
+    .logo-grid { grid-template-columns: repeat(2, 1fr); }
+    .tex-grid { grid-template-columns: 1fr; }
+    .tex-grid .hero { grid-row: auto; }
+  }
+</style>
+</head>
+<body data-page="moodboard">
+<div id="site-header-slot"></div>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="num">§ 06 / Moodboard</span>
+    <h1>Visual <em>brief</em>.</h1>
+    <p>Drag images directly onto any slot below — they save to your browser and stay on reload.</p>
+  </div>
+</section>
+
+<!-- 01 COLORS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">01 / Colors</span>
+      <h2>The <em>palette</em>.</h2>
+    </div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#FAFAF7;border-bottom:var(--hair);"></div><div class="info"><div class="name">Paper</div><div class="hex">#FAFAF7</div></div></div>
+      <div class="sw"><div class="chip" style="background:#EFEFEA;border-bottom:var(--hair);"></div><div class="info"><div class="name">Bone</div><div class="hex">#EFEFEA</div></div></div>
+      <div class="sw"><div class="chip" style="background:#8A8A85;"></div><div class="info"><div class="name">Muted</div><div class="hex">#8A8A85</div></div></div>
+      <div class="sw"><div class="chip" style="background:#3A3A36;"></div><div class="info"><div class="name">Slate</div><div class="hex">#3A3A36</div></div></div>
+      <div class="sw"><div class="chip" style="background:#0E0E0E;"></div><div class="info"><div class="name">Ink</div><div class="hex">#0E0E0E</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 LOGOS & MONOGRAMS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">02 / Logos &amp; Monograms</span>
+      <h2>Marks &amp; <em>monograms</em>.</h2>
+    </div>
+    <p class="help"><span class="dot"></span>Drop logo references into any of the eight slots.</p>
+    <div class="logo-grid">
+      <div class="slot-wrap"><image-slot id="mb-logo-1" placeholder="Logo / mark" shape="rect"></image-slot><div class="cap"><span class="n">01</span><span>Mark</span></div></div>
+      <div class="slot-wrap"><image-slot id="mb-logo-2" placeholder="Logo / mark" shape="rect"></image-slot><div class="cap"><span class="n">02</span><span>Mark</span></div></div>
+      <div class="slot-wrap"><image-slot id="mb-logo-3" placeholder="Logo / mark" shape="rect"></image-slot><div class="cap"><span class="n">03</span><span>Mark</span></div></div>
+      <div class="slot-wrap"><image-slot id="mb-logo-4" placeholder="Logo / mark" shape="rect"></image-slot><div class="cap"><span class="n">04</span><span>Mark</span></div></div>
+      <div class="slot-wrap"><image-slot id="mb-logo-5" placeholder="Monogram" shape="rect"></image-slot><div class="cap"><span class="n">05</span><span>Monogram</span></div></div>
+      <div class="slot-wrap"><image-slot id="mb-logo-6" placeholder="Monogram" shape="rect"></image-slot><div class="cap"><span class="n">06</span><span>Monogram</span></div></div>
+      <div class="slot-wrap"><image-slot id="mb-logo-7" placeholder="Monogram" shape="rect"></image-slot><div class="cap"><span class="n">07</span><span>Monogram</span></div></div>
+      <div class="slot-wrap"><image-slot id="mb-logo-8" placeholder="Monogram" shape="rect"></image-slot><div class="cap"><span class="n">08</span><span>Monogram</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 TONE & TEXTURE -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="idx">03 / Tone &amp; Texture</span>
+      <h2>Surfaces &amp; <em>atmosphere</em>.</h2>
+    </div>
+    <p class="help"><span class="dot"></span>Wide imagery — paper, ink, materials, light.</p>
+    <div class="tex-grid">
+      <div class="slot-wrap hero">
+        <image-slot id="mb-tex-1" placeholder="Hero — wide texture or surface" shape="rect"></image-slot>
+        <div class="cap"><span class="n">01 / Hero</span><span>Wide</span></div>
+      </div>
+      <div class="slot-wrap tall">
+        <image-slot id="mb-tex-2" placeholder="Detail / close-up" shape="rect"></image-slot>
+        <div class="cap"><span class="n">02 / Detail</span><span>Tall</span></div>
+      </div>
+      <div class="slot-wrap tall">
+        <image-slot id="mb-tex-3" placeholder="Material / paper / print" shape="rect"></image-slot>
+        <div class="cap"><span class="n">03 / Material</span><span>Tall</span></div>
+      </div>
+      <div class="slot-wrap wide" style="grid-column: 1 / -1;">
+        <image-slot id="mb-tex-4" placeholder="Atmospheric / full-width" shape="rect"></image-slot>
+        <div class="cap"><span class="n">04 / Atmosphere</span><span>Full bleed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer-slot"></div>
+<script src="assets/partials.js"></script>
+<script src="assets/image-slot.js"></script>
+</body>
+</html>
