@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — DomDesign</title>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .page-head {
+    padding: 80px 0 56px;
+    border-bottom: var(--hair);
+  }
+  .page-head .wrap {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    gap: 24px;
+    align-items: end;
+  }
+  .page-head .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .page-head h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .page-head h1 em { font-style: italic; color: var(--ink-70); }
+  .page-head p {
+    max-width: 44ch;
+    color: var(--ink-70);
+    font-size: 15px;
+    line-height: 1.55;
+    justify-self: end;
+  }
+
+  /* Main block */
+  .contact-main {
+    padding: 96px 0 64px;
+    border-bottom: var(--hair);
+  }
+  .contact-main .wrap {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .contact-main .idx {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .contact-main .big {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(44px, 5.5vw, 80px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+    max-width: 16ch;
+  }
+  .contact-main .big em { font-style: italic; color: var(--ink-70); }
+
+  .email-block {
+    display: inline-block;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 28px 0;
+    min-width: 520px;
+    max-width: 100%;
+    transition: padding 0.15s ease;
+  }
+  .email-block:hover { padding: 28px 12px; text-decoration: none; }
+  .email-block .label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    margin-bottom: 10px;
+  }
+  .email-block .addr {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(32px, 4vw, 52px);
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+
+  /* Details grid */
+  .details {
+    padding: 64px 0 96px;
+    border-bottom: var(--hair);
+  }
+  .details .wrap {
+    display: grid;
+    grid-template-columns: 120px repeat(3, 1fr);
+    gap: 48px;
+  }
+  .details h3 {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: var(--hair);
+  }
+  .details .item { font-family: var(--serif); font-size: 20px; font-weight: 400; letter-spacing: -0.005em; line-height: 1.35; }
+  .details .item em { font-style: italic; color: var(--ink-70); font-weight: 300; }
+  .details .sub { margin-top: 6px; font-family: var(--sans); font-size: 13px; color: var(--ink-50); }
+
+  /* FAQ */
+  .faq {
+    padding: 96px 0;
+  }
+  .faq .section-head .num { display: block; }
+  .faq-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 64px;
+  }
+  .faq-list h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: -0.005em;
+    margin-bottom: 8px;
+  }
+  .faq-list p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-70);
+    max-width: 44ch;
+  }
+
+  @media (max-width: 900px) {
+    .page-head .wrap { grid-template-columns: 1fr; gap: 12px; }
+    .page-head p { justify-self: start; }
+    .contact-main .wrap,
+    .details .wrap { grid-template-columns: 1fr; gap: 32px; }
+    .email-block { min-width: 0; width: 100%; }
+    .faq-list { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>
+</head>
+<body data-page="contact">
+<div id="site-header-slot"></div>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="num">§ 04 / Contact</span>
+    <h1>Let's <em>talk</em>.</h1>
+    <p>Briefs, questions, and quiet hellos are all welcome. Expect a reply within two business days.</p>
+  </div>
+</section>
+
+<section class="contact-main">
+  <div class="wrap">
+    <span class="idx">01 / Email</span>
+    <div>
+      <p class="big">The fastest way to reach the studio is <em>directly.</em></p>
+      <a class="email-block" href="mailto:digidesign73@gmail.com">
+        <span class="label">Email — Primary</span>
+        <span class="addr">digidesign73@gmail.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="details">
+  <div class="wrap">
+    <span class="idx" style="font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-50);">02 / Details</span>
+    <div>
+      <h3>Elsewhere</h3>
+      <p class="item"><a href="https://instagram.com/digidesign2021" target="_blank" rel="noopener" class="link-underline">Instagram <em>/ digidesign2021</em></a></p>
+      <p class="sub">Updates, work-in-progress, and the occasional process note.</p>
+    </div>
+    <div>
+      <h3>Studio hours</h3>
+      <p class="item">Mon — Fri<br><em>16:30–18:00 ET</em></p>
+      <p class="sub">Replies outside of these hours happen, but less reliably.</p>
+    </div>
+    <div>
+      <h3>Availability</h3>
+      <p class="item">Booking new work<br><em>from June 2026.</em></p>
+      <p class="sub">One or two engagements accepted per quarter.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">03 / Before you write</span>
+      <h2>A few <em style="font-style:italic;font-weight:300;color:var(--ink-70);">common</em> questions.</h2>
+    </div>
+    <div class="faq-list">
+      <div>
+        <h4>What should a first email include?</h4>
+        <p>A short description of the project, a rough timeline, and — if you have one — a budget range. Links or attachments are welcome; a finished brief is not required.</p>
+      </div>
+      <div>
+        <h4>Do you take on smaller projects?</h4>
+        <p>Yes. A single mark, a one-page document, or a vector cleanup is fine. If it isn't the right fit, the studio will say so and suggest someone who is.</p>
+      </div>
+      <div>
+        <h4>How long does a project take?</h4>
+        <p>Most engagements run four to eight weeks, from kickoff to final files. Smaller briefs land inside two weeks; complex identity work can run longer.</p>
+      </div>
+      <div>
+        <h4>Do you work with clients outside Canada?</h4>
+        <p>Often. The studio has shipped work to teams in the US, the UK, and across Europe. Calls are scheduled around your timezone, within reason.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer-slot"></div>
+<script src="assets/partials.js"></script>
+</body>
+</html>

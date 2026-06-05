@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — DomDesign</title>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .page-head {
+    padding: 80px 0 56px;
+    border-bottom: var(--hair);
+  }
+  .page-head .wrap {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    gap: 24px;
+    align-items: end;
+  }
+  .page-head .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .page-head h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .page-head h1 em { font-style: italic; color: var(--ink-70); }
+  .page-head p {
+    max-width: 44ch;
+    color: var(--ink-70);
+    font-size: 15px;
+    line-height: 1.55;
+    justify-self: end;
+  }
+
+  /* Jump TOC */
+  .toc {
+    border-bottom: var(--hair);
+    padding: 18px 0;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .toc .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+  }
+  .toc a { color: var(--ink-70); }
+  .toc a:hover { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); }
+
+  /* Service rows */
+  .svc {
+    border-bottom: var(--hair);
+    padding: 80px 0;
+  }
+  .svc .wrap {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .svc .idx {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    padding-top: 14px;
+  }
+  .svc h2 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(36px, 4vw, 56px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    max-width: 14ch;
+  }
+  .svc h2 em { font-style: italic; color: var(--ink-70); }
+  .svc .body p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    max-width: 52ch;
+  }
+  .svc .body p + p { margin-top: 14px; color: var(--ink-70); }
+  .svc .body .deliverables {
+    margin-top: 28px;
+    border-top: var(--hair);
+    padding-top: 18px;
+  }
+  .svc .body .deliverables h4 {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    margin-bottom: 10px;
+  }
+  .svc .body .deliverables ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 16px;
+  }
+  .svc .body .deliverables li {
+    font-size: 14px;
+    color: var(--ink-70);
+    padding: 3px 0;
+    position: relative;
+    padding-left: 16px;
+  }
+  .svc .body .deliverables li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--ink-30);
+  }
+
+  .foot-cta {
+    padding: 120px 0;
+    text-align: center;
+  }
+  .foot-cta h3 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(36px, 5vw, 64px);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 28px;
+    max-width: 18ch;
+    margin-inline: auto;
+  }
+  .foot-cta h3 em { font-style: italic; color: var(--ink-70); }
+
+  @media (max-width: 900px) {
+    .page-head .wrap { grid-template-columns: 1fr; gap: 12px; }
+    .page-head p { justify-self: start; }
+    .svc { padding: 56px 0; }
+    .svc .wrap { grid-template-columns: 1fr; gap: 20px; }
+    .svc .body .deliverables ul { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body data-page="services">
+<div id="site-header-slot"></div>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="num">§ 03 / Services</span>
+    <h1>What we <em>do</em>.</h1>
+    <p>Seven disciplines, one sensibility. Each engagement begins with a written brief, a grid, and a clear scope. Projects are delivered with production files and a usage guide.</p>
+  </div>
+</section>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#s01">01 · Logo Design</a>
+    <a href="#s02">02 · Graphic Design</a>
+    <a href="#s03">03 · Vector &amp; File Conversion</a>
+    <a href="#s04">04 · Technical &amp; Architectural Graphics</a>
+    <a href="#s05">05 · Layout &amp; Web Design</a>
+    <a href="#s06">06 · Document &amp; Layout Design</a>
+    <a href="#s07">07 · Custom Graphic Design</a>
+  </div>
+</nav>
+
+<article class="svc" id="s01">
+  <div class="wrap">
+    <span class="idx">Service 01</span>
+    <h2>Logo <em>Design</em>.</h2>
+    <div class="body">
+      <p>Considered marks, monograms, and logotypes drawn from first principles. Every route is developed through sketching, vector construction, and scale-testing before a recommendation is made.</p>
+      <p>Output includes a primary mark, lockup variations, and a clear usage guide covering clear-space, minimum sizes, and backgrounds — so the identity is ready to hand to printers, developers, and signage fabricators without guesswork.</p>
+      <div class="deliverables">
+        <h4>Deliverables</h4>
+        <ul>
+          <li>Primary mark + lockups</li>
+          <li>Monochrome &amp; single-colour versions</li>
+          <li>Vector source files (AI, SVG, PDF)</li>
+          <li>Usage &amp; clear-space guide</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="svc" id="s02">
+  <div class="wrap">
+    <span class="idx">Service 02</span>
+    <h2>Graphic <em>Design</em>.</h2>
+    <div class="body">
+      <p>Campaigns, collateral, and brand-aligned visual systems across print and digital. Built on a documented grid so the work stays coherent when it's extended — by the studio or by an internal team.</p>
+      <p>Engagements typically cover posters, social templates, email layouts, and event collateral. The goal is a consistent voice across every surface, without sacrificing the specificity any one piece needs.</p>
+      <div class="deliverables">
+        <h4>Deliverables</h4>
+        <ul>
+          <li>Print &amp; digital collateral</li>
+          <li>Social &amp; email templates</li>
+          <li>Campaign key visuals</li>
+          <li>Editable working files</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="svc" id="s03">
+  <div class="wrap">
+    <span class="idx">Service 03</span>
+    <h2>Vector &amp; File <em>Conversion</em>.</h2>
+    <div class="body">
+      <p>Clean vector rebuilds from sketches, photos, low-resolution files, or legacy artwork. Every curve is drawn — not auto-traced — so the result holds up at any size, from a favicon to the side of a truck.</p>
+      <p>Delivered in the formats you need: layered AI or EPS for print and signage; optimised SVG for web; PDF for embedding; and flattened PNG / JPG exports at the sizes you use most.</p>
+      <div class="deliverables">
+        <h4>Deliverables</h4>
+        <ul>
+          <li>Hand-redrawn vectors</li>
+          <li>AI · EPS · SVG · PDF</li>
+          <li>Optimised web exports</li>
+          <li>Print-ready CMYK files</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="svc" id="s04">
+  <div class="wrap">
+    <span class="idx">Service 04</span>
+    <h2>Technical &amp; Architectural <em>Graphics</em>.</h2>
+    <div class="body">
+      <p>Diagrams, plans, sections, and technical illustration for the built environment. Produced with architects, engineers, and planning teams for presentations, proposals, and planning submissions.</p>
+      <p>The work is drawn to measure — line weights, hatches, and labelling systems that communicate cleanly at both A3 and on screen. Useful when a CAD export isn't readable and a photograph doesn't tell the story.</p>
+      <div class="deliverables">
+        <h4>Deliverables</h4>
+        <ul>
+          <li>Plans, sections &amp; elevations</li>
+          <li>Technical illustrations</li>
+          <li>Diagrams &amp; schematics</li>
+          <li>Presentation-ready boards</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="svc" id="s05">
+  <div class="wrap">
+    <span class="idx">Service 05</span>
+    <h2>Layout &amp; <em>Web</em> Design.</h2>
+    <div class="body">
+      <p>Structured, readable layouts — print-ready and web-ready. The studio designs in-browser for responsive work, on a grid for print, and documents both with the same discipline.</p>
+      <p>Typical outputs include marketing sites, portfolio sites, one-page landers, and long-form articles. Hand-off is fully specified so development stays faithful to the design.</p>
+      <div class="deliverables">
+        <h4>Deliverables</h4>
+        <ul>
+          <li>Responsive site design</li>
+          <li>Component &amp; page specs</li>
+          <li>Developer hand-off</li>
+          <li>Launch QA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="svc" id="s06">
+  <div class="wrap">
+    <span class="idx">Service 06</span>
+    <h2>Document &amp; Layout <em>Design</em>.</h2>
+    <div class="body">
+      <p>Reports, proposals, whitepapers, and long-form documents built on a disciplined grid. The work balances dense information with room to breathe — so the reader finishes the page instead of skimming it.</p>
+      <p>Templates are delivered alongside the finished piece, with paragraph, character, and table styles set up so the document can be updated internally without the structure drifting.</p>
+      <div class="deliverables">
+        <h4>Deliverables</h4>
+        <ul>
+          <li>Reports &amp; whitepapers</li>
+          <li>Pitch decks &amp; proposals</li>
+          <li>InDesign / Figma templates</li>
+          <li>Style sheets &amp; master pages</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="svc" id="s07">
+  <div class="wrap">
+    <span class="idx">Service 07</span>
+    <h2>Custom Graphic <em>Design</em>.</h2>
+    <div class="body">
+      <p>One-off, considered work for specific briefs and audiences — the projects that don't fit cleanly into a single discipline. Invitations, packaging, exhibition graphics, livery, and the occasional album sleeve.</p>
+      <p>Scoped as a bespoke engagement from the first call. Bring the problem; the studio will define the shape the solution needs to take.</p>
+      <div class="deliverables">
+        <h4>Deliverables</h4>
+        <ul>
+          <li>Bespoke brief &amp; scope</li>
+          <li>Concept routes</li>
+          <li>Production artwork</li>
+          <li>Handover documentation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+<section class="foot-cta">
+  <div class="wrap">
+    <h3>Not sure which one <em>fits?</em> Start a conversation.</h3>
+    <a class="pill" href="contact.html" style="background:var(--ink);color:var(--bg);">Get in touch <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<div id="site-footer-slot"></div>
+<script src="assets/partials.js"></script>
+</body>
+</html>

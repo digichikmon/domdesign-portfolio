@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — DomDesign</title>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .page-head {
+    padding: 80px 0 56px;
+    border-bottom: var(--hair);
+  }
+  .page-head .wrap {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    gap: 24px;
+    align-items: end;
+  }
+  .page-head .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .page-head h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .page-head h1 em { font-style: italic; color: var(--ink-70); }
+  .page-head p {
+    max-width: 44ch;
+    color: var(--ink-70);
+    font-size: 15px;
+    line-height: 1.55;
+    justify-self: end;
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    border-bottom: var(--hair);
+    padding: 18px 0;
+  }
+  .filter-bar .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .chip {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    border: 1px solid var(--ink-15);
+    color: var(--ink-70);
+    cursor: default;
+    transition: all 0.15s ease;
+  }
+  .chip:hover { border-color: var(--ink); color: var(--ink); }
+  .chip.is-on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .count-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+
+  /* Gallery */
+  .gallery {
+    padding: 56px 0 96px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 28px;
+  }
+  .card { display: block; cursor: default; }
+  .card .placeholder {
+    aspect-ratio: 1 / 1;
+    transition: opacity 0.2s ease;
+  }
+  .card:hover .placeholder { opacity: 0.82; }
+  .card .meta {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    align-items: baseline;
+    padding-bottom: 10px;
+    border-bottom: var(--hair);
+  }
+  .card .ttl {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+  }
+  .card .cat {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .card .row2 {
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--ink-50);
+  }
+
+  @media (max-width: 900px) {
+    .page-head .wrap { grid-template-columns: 1fr; gap: 12px; }
+    .page-head p { justify-self: start; }
+    .grid { grid-template-columns: 1fr 1fr; gap: 28px 16px; }
+  }
+  @media (max-width: 560px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body data-page="portfolio">
+<div id="site-header-slot"></div>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="num">§ 02 / Portfolio</span>
+    <h1>Selected <em>work</em>.</h1>
+    <p>A rolling archive of identity, editorial, and environmental projects. Filter by discipline, or browse everything below.</p>
+  </div>
+</section>
+
+<section class="filter-bar">
+  <div class="wrap">
+    <div class="chips">
+      <span class="chip is-on">All</span>
+      <span class="chip">Identity</span>
+      <span class="chip">Editorial</span>
+      <span class="chip">Environmental</span>
+      <span class="chip">Web</span>
+      <span class="chip">Technical</span>
+    </div>
+    <div class="count-tag">12 Projects · 2022 — 2026</div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<div id="site-footer-slot"></div>
+<script src="assets/partials.js"></script>
+<script>
+  const items = [
+    { n: '01', title: 'Ledger Coffee Roasters',  cat: 'Identity',      year: '2025', loc: 'Toronto' },
+    { n: '02', title: 'Northline Atlas',          cat: 'Editorial',     year: '2025', loc: 'Print' },
+    { n: '03', title: 'Station 14 Wayfinding',    cat: 'Environmental', year: '2024', loc: 'Montréal' },
+    { n: '04', title: 'Marrow & Oak',             cat: 'Logo',          year: '2024', loc: 'Halifax' },
+    { n: '05', title: 'Harbour & Hand',           cat: 'Identity',      year: '2024', loc: 'Vancouver' },
+    { n: '06', title: 'Quarterly No. 07',         cat: 'Editorial',     year: '2024', loc: 'Print' },
+    { n: '07', title: 'Meridian Architects',      cat: 'Technical',     year: '2023', loc: 'Ottawa' },
+    { n: '08', title: 'Folio / Lookbook 2023',    cat: 'Editorial',     year: '2023', loc: 'Print' },
+    { n: '09', title: 'Civic Type Specimen',      cat: 'Editorial',     year: '2023', loc: 'Print' },
+    { n: '10', title: 'Blueprint — Studio Site',  cat: 'Web',           year: '2023', loc: 'Digital' },
+    { n: '11', title: 'Field Notes, Vol. II',     cat: 'Editorial',     year: '2022', loc: 'Print' },
+    { n: '12', title: 'Foundry Mark',             cat: 'Logo',          year: '2022', loc: 'Calgary' },
+  ];
+
+  const grid = document.getElementById('grid');
+  grid.innerHTML = items.map(i => `
+    <article class="card">
+      <div class="placeholder">
+        <span class="label">Image · ${i.cat.toLowerCase()}</span>
+        <span class="meta">${i.n} / ${i.title}</span>
+      </div>
+      <div class="meta">
+        <span class="ttl">${i.title}</span>
+        <span class="cat">${i.cat}</span>
+      </div>
+      <div class="row2">
+        <span>${i.loc}</span>
+        <span>${i.year}</span>
+      </div>
+    </article>
+  `).join('');
+</script>
+</body>
+</html>

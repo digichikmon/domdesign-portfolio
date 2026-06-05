@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DomDesign — Independent graphic designer</title>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  /* Home-only */
+  .hero {
+    padding: 96px 0 120px;
+    border-bottom: var(--hair);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .hero .meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+    padding-top: 14px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(56px, 9vw, 136px);
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    max-width: 15ch;
+  }
+  .hero h1 em { font-style: italic; font-weight: 300; color: var(--ink-70); }
+  .hero-sub {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: end;
+  }
+  .hero-sub p {
+    max-width: 44ch;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink-70);
+  }
+  .hero-sub .actions {
+    display: flex;
+    gap: 14px;
+    justify-content: flex-end;
+  }
+
+  /* Running info bar */
+  .info-bar {
+    border-bottom: var(--hair);
+    padding: 14px 0;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-70);
+  }
+  .info-bar .wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .info-bar .dot {
+    display: inline-block;
+    width: 7px; height: 7px;
+    background: var(--ink);
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .info-bar .dot.on { background: #2E8B2E; }
+
+  /* Selected work */
+  .work {
+    padding: 96px 0;
+  }
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 32px;
+  }
+  .work-item { display: block; }
+  .work-item .placeholder { aspect-ratio: 4 / 3; }
+  .work-item .caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 14px;
+    padding-bottom: 10px;
+    border-bottom: var(--hair);
+  }
+  .work-item .title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .work-item .cat {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+  .work-item:hover .placeholder { opacity: 0.85; }
+  .work-item { transition: opacity 0.2s ease; }
+
+  .work-foot {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: var(--hair);
+    padding-top: 24px;
+  }
+  .work-foot .count {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-50);
+  }
+
+  /* Services strip */
+  .services-strip {
+    padding: 96px 0;
+    border-top: var(--hair);
+  }
+  .svc-list {
+    list-style: none;
+    border-top: var(--hair);
+  }
+  .svc-list li {
+    display: grid;
+    grid-template-columns: 80px 1.2fr 2fr 80px;
+    gap: 24px;
+    align-items: baseline;
+    padding: 28px 0;
+    border-bottom: var(--hair);
+    transition: padding-left 0.2s ease;
+  }
+  .svc-list li:hover { padding-left: 12px; }
+  .svc-list .n {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--ink-50);
+  }
+  .svc-list .name {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+  .svc-list .desc {
+    font-size: 14px;
+    color: var(--ink-70);
+    max-width: 48ch;
+  }
+  .svc-list .arrow {
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 14px;
+    opacity: 0.3;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .svc-list li:hover .arrow { opacity: 1; transform: translateX(4px); }
+
+  /* About / statement */
+  .statement {
+    padding: 96px 0;
+    border-top: var(--hair);
+  }
+  .statement-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 24px;
+  }
+  .statement .big {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(28px, 3.2vw, 44px);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    max-width: 28ch;
+  }
+  .statement .big em { font-style: italic; color: var(--ink-70); }
+
+  /* CTA */
+  .cta {
+    padding: 120px 0 140px;
+    border-top: var(--hair);
+    text-align: center;
+  }
+  .cta .eyebrow { margin-bottom: 28px; display: block; }
+  .cta h3 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(44px, 6vw, 88px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 36px;
+  }
+  .cta h3 em { font-style: italic; color: var(--ink-70); }
+  .cta .mail {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    border-bottom: 1px solid var(--ink-30);
+    padding-bottom: 4px;
+  }
+  .cta .mail:hover { border-bottom-color: var(--ink); text-decoration: none; }
+
+  @media (max-width: 900px) {
+    .hero { padding: 56px 0 72px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 16px; }
+    .hero-sub { grid-template-columns: 1fr; gap: 28px; }
+    .hero-sub .actions { justify-content: flex-start; }
+    .info-bar .wrap { grid-template-columns: 1fr 1fr; }
+    .work-grid { grid-template-columns: 1fr; gap: 32px; }
+    .svc-list li { grid-template-columns: 40px 1fr; gap: 12px; }
+    .svc-list .desc, .svc-list .arrow { grid-column: 2; }
+    .statement-grid { grid-template-columns: 1fr; gap: 8px; }
+  }
+</style>
+</head>
+<body data-page="home">
+<div id="site-header-slot"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="meta">
+      <div>Est. 2018</div>
+      <div style="margin-top:6px;">Toronto, ON</div>
+    </div>
+    <div>
+      <h1>Clear systems<br>for <em>visual</em> work.</h1>
+      <div class="hero-sub">
+        <p>DomDesign is an independent graphic studio building visual identities and graphic systems that work across print, digital, and real-world environments.</p>
+        <div class="actions">
+          <a class="pill" href="portfolio.html">View Portfolio <span class="arrow">→</span></a>
+          <a class="pill" href="contact.html" style="background:var(--ink);color:var(--bg);">Start a Project <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO BAR -->
+<section class="info-bar">
+  <div class="wrap">
+    <div><span class="dot on"></span>Available · June 2026</div>
+    <div>Identity · Print · Digital</div>
+    <div>Based in Toronto</div>
+    <div style="text-align:right;">v.4 — 2026 Edition</div>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<section class="work">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">01 / Selected Work</span>
+      <h2>Recent projects, <em style="font-style:italic;font-weight:300;color:var(--ink-70);">selected</em>.</h2>
+    </div>
+    <div class="work-grid">
+      <a class="work-item" href="portfolio.html">
+        <div class="placeholder" style="aspect-ratio:4/3;">
+          <span class="label">Image · project shot</span>
+          <span class="meta">01 / Ledger Coffee</span>
+        </div>
+        <div class="caption">
+          <span class="title">Ledger Coffee Roasters</span>
+          <span class="cat">Identity · 2025</span>
+        </div>
+      </a>
+      <a class="work-item" href="portfolio.html">
+        <div class="placeholder" style="aspect-ratio:4/3;">
+          <span class="label">Image · spread layout</span>
+          <span class="meta">02 / Northline Atlas</span>
+        </div>
+        <div class="caption">
+          <span class="title">Northline Atlas</span>
+          <span class="cat">Editorial · 2025</span>
+        </div>
+      </a>
+      <a class="work-item" href="portfolio.html">
+        <div class="placeholder" style="aspect-ratio:4/3;">
+          <span class="label">Image · wayfinding</span>
+          <span class="meta">03 / Station 14</span>
+        </div>
+        <div class="caption">
+          <span class="title">Station 14 Wayfinding</span>
+          <span class="cat">Environmental · 2024</span>
+        </div>
+      </a>
+      <a class="work-item" href="portfolio.html">
+        <div class="placeholder" style="aspect-ratio:4/3;">
+          <span class="label">Image · logo sheet</span>
+          <span class="meta">04 / Marrow &amp; Oak</span>
+        </div>
+        <div class="caption">
+          <span class="title">Marrow &amp; Oak</span>
+          <span class="cat">Logo · 2024</span>
+        </div>
+      </a>
+    </div>
+    <div class="work-foot">
+      <span class="count">Showing 4 of 16</span>
+      <a class="link-underline" href="portfolio.html">See all projects →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES STRIP -->
+<section class="services-strip">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">02 / Services</span>
+      <h2>What the studio <em style="font-style:italic;font-weight:300;color:var(--ink-70);">offers</em>.</h2>
+    </div>
+    <ul class="svc-list">
+      <li>
+        <span class="n">01</span>
+        <span class="name">Logo Design</span>
+        <span class="desc">Marks, monograms, and logotypes with clear usage systems.</span>
+        <span class="arrow">→</span>
+      </li>
+      <li>
+        <span class="n">02</span>
+        <span class="name">Graphic Design</span>
+        <span class="desc">Campaigns, collateral, and brand-aligned visual systems.</span>
+        <span class="arrow">→</span>
+      </li>
+      <li>
+        <span class="n">03</span>
+        <span class="name">Vector &amp; File Conversion</span>
+        <span class="desc">Clean vector rebuilds and production-ready file delivery.</span>
+        <span class="arrow">→</span>
+      </li>
+      <li>
+        <span class="n">04</span>
+        <span class="name">Technical &amp; Architectural Graphics</span>
+        <span class="desc">Diagrams, plans, and technical illustration for the built environment.</span>
+        <span class="arrow">→</span>
+      </li>
+      <li>
+        <span class="n">05</span>
+        <span class="name">Layout &amp; Web Design</span>
+        <span class="desc">Structured, readable layouts — print-ready and web-ready.</span>
+        <span class="arrow">→</span>
+      </li>
+      <li>
+        <span class="n">06</span>
+        <span class="name">Document &amp; Layout Design</span>
+        <span class="desc">Reports, proposals, and long-form documents built on a grid.</span>
+        <span class="arrow">→</span>
+      </li>
+      <li>
+        <span class="n">07</span>
+        <span class="name">Custom Graphic Design</span>
+        <span class="desc">One-off, considered work for specific briefs and audiences.</span>
+        <span class="arrow">→</span>
+      </li>
+    </ul>
+    <div style="margin-top:32px; text-align:right;">
+      <a class="link-underline" href="services.html">Read about each service →</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="statement">
+  <div class="wrap statement-grid">
+    <span class="num" style="font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-50);">03 / Approach</span>
+    <p class="big">A quiet belief that <em>clarity</em> is the most underrated quality in design — and that every project, no matter the scale, deserves the same level of care, structure, and restraint.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <span class="eyebrow">04 / Contact</span>
+    <h3>Have a project <em>in mind?</em></h3>
+    <a class="mail" href="mailto:digidesign73@gmail.com">digidesign73@gmail.com</a>
+  </div>
+</section>
+
+<div id="site-footer-slot"></div>
+<script src="assets/partials.js"></script>
+</body>
+</html>
