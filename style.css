@@ -131,17 +131,9 @@ summary::-webkit-details-marker { display: none; }
 }
 
 .brand-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 2rem;
   height: 2rem;
-  background: var(--c-ink);
-  color: var(--c-paper);
-  font-family: var(--ff-mono);
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  object-fit: contain;
   flex-shrink: 0;
 }
 
