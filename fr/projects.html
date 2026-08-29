@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projets — DomDesign · Dominic Daniel</title>
+  <meta name="description" content="Portfolio sélectionné de Dominic Daniel — image de marque, graphisme, mises en page techniques et projets Web." />
+
+  <meta property="og:title" content="Projets — DomDesign" />
+  <meta property="og:description" content="Portfolio sélectionné de Dominic Daniel." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://domdesign.ca/fr/projects.html" />
+  <meta property="og:image" content="../images/IMG_0645.jpeg" />
+
+  <link rel="icon" type="image/jpeg" href="../images/IMG_0182.jpeg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Passer au contenu</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="DomDesign — accueil">
+        <img class="brand-mark" src="../images/domdesign-logomark.png" alt="Logo DomDesign" width="32" height="32" />
+        <span class="brand-name">DomDesign</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Basculer la navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Principale">
+        <ul>
+          <li><a href="index.html#work">Travaux</a></li>
+          <li><a href="projects.html">Projets</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="client-experience.html">Expérience client</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.etsy.com/ca/shop/DigiBackward" target="_blank" rel="noopener">Boutique Etsy</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://projects.domdesign.ca" target="_blank" rel="noopener" class="nav-cta">Démarrer votre projet</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero-label js-reveal">Portfolio</p>
+        <h1 class="page-hero-title js-reveal">Projets</h1>
+        <p class="page-hero-sub js-reveal">
+          Image de marque, graphisme, mises en page techniques et travaux académiques — une archive vivante de projets bâtis grâce à une véritable expérience de production.
+        </p>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <div class="container">
+
+        <div class="filter-bar js-reveal" role="group" aria-label="Filtrer les projets par catégorie">
+          <button class="filter-btn is-active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="branding">Image de marque</button>
+          <button class="filter-btn" data-filter="graphic-design">Graphisme</button>
+          <button class="filter-btn" data-filter="technical">Technique</button>
+        </div>
+
+        <div class="portfolio-grid js-stagger">
+
+          <a class="portfolio-item" data-category="graphic-design" href="school-project.html">
+            <div class="portfolio-item-img">
+              <img src="../images/DominicD-E-newletter.jpg" alt="Projets scolaires de design — travaux d'édition, d'image de marque et de présentation" loading="lazy" />
+            </div>
+            <div class="portfolio-item-meta">
+              <h3>Projets scolaires de design</h3>
+              <p class="portfolio-item-tag">Édition · Image de marque · Présentation · 2016–2024</p>
+            </div>
+          </a>
+
+          <a class="portfolio-item" data-category="technical" href="pmu-project.html">
+            <div class="portfolio-item-img" style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; background:#f0f0ec;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#8a8a80" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
+              <p style="font-family: var(--ff-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8a8a80; text-align: center; padding: 0 1rem;">Confidentiel — non destiné à l'affichage public</p>
+            </div>
+            <div class="portfolio-item-meta">
+              <h3>PMU Québec — Plans d'évacuation</h3>
+              <p class="portfolio-item-tag">Mise en page technique · En cours</p>
+            </div>
+          </a>
+
+          <article class="portfolio-item" data-category="branding">
+            <div class="portfolio-item-img">
+              <img src="../images/cosmetic-product-still-life-on-neutral-background-2026-03-24-13-56-04-utc.jpeg" alt="Concept de marque cosmétique à la pige" loading="lazy" />
+            </div>
+            <div class="portfolio-item-meta">
+              <h3>Marque cosmétique — concept à la pige</h3>
+              <p class="portfolio-item-tag">Produit · Identité · 2026</p>
+            </div>
+          </article>
+
+          <a class="portfolio-item" data-category="branding" href="celestial-project.html">
+            <div class="portfolio-item-img">
+              <img src="../images/Create_a_mockup_of_celestial_b_Nano_Banana_62528.jpg" alt="Maquette de flacon de parfum Karmae Cosmic Pulse" loading="lazy" />
+            </div>
+            <div class="portfolio-item-meta">
+              <h3>Karmae — Cosmic Pulse</h3>
+              <p class="portfolio-item-tag">Étude de cas conceptuelle · Bark.com · Emballage · 2026</p>
+            </div>
+          </a>
+
+          <a class="portfolio-item" data-category="graphic-design" href="dette-project.html">
+            <div class="portfolio-item-img">
+              <img src="../images/dette/dette-calendar-concept-02.jpg" alt="D'Ette Realty — étude de cas calendrier et vêtements" loading="lazy" />
+            </div>
+            <div class="portfolio-item-meta">
+              <h3>D'Ette Realty — Calendrier &amp; Vêtements</h3>
+              <p class="portfolio-item-tag">Étude de cas à la pige · Calendrier · Vêtements · 2026</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-brand">DomDesign &copy; <span id="year">2026</span></p>
+      <nav class="footer-nav" aria-label="Navigation de pied de page">
+        <a href="index.html">Accueil</a>
+        <a href="projects.html">Projets</a>
+        <a href="services.html">Services</a>
+        <a href="client-experience.html">Expérience client</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.etsy.com/ca/shop/DigiBackward" target="_blank" rel="noopener">Boutique Etsy</a>
+      </nav>
+      <p class="footer-meta"><a href="#top">Retour en haut ↑</a></p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <svg class="back-to-top-ring" viewBox="0 0 44 44" aria-hidden="true">
+      <circle class="back-to-top-ring-track" cx="22" cy="22" r="19" />
+      <circle class="back-to-top-ring-progress" cx="22" cy="22" r="19" />
+    </svg>
+    <span class="back-to-top-arrow">↑</span>
+  </button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>
