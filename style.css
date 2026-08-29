@@ -1539,3 +1539,73 @@ summary::-webkit-details-marker { display: none; }
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ============================================================
+   22. LANGUAGE GATE
+   ============================================================ */
+.lang-gate-page { background: var(--c-paper); }
+
+.lang-gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--container-pad);
+}
+
+.lang-gate-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  animation: lang-gate-in var(--t-slow) ease both;
+}
+
+@keyframes lang-gate-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.lang-gate-mark {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+.lang-gate-name {
+  font-family: var(--ff-label);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.lang-gate-sub {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  margin-top: -1rem;
+}
+
+.lang-gate-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 20rem;
+}
+
+.lang-gate-btn { width: 100%; }
+
+@media (min-width: 480px) {
+  .lang-gate-actions { flex-direction: row; width: auto; }
+  .lang-gate-btn { width: auto; min-width: 10rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lang-gate-inner { animation: none; }
+}
