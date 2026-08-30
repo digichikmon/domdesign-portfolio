@@ -6,21 +6,30 @@
 
 ## 1 · Site structure
 
-Five pages, one shared design system.
+Bilingual site: a minimal language-choice gate at the root, then a full English mirror under `/en/` and a full French mirror under `/fr/` — nine pages each, sharing one design system.
 
 ```
 domdesign-portfolio/
-├── index.html                ← Home — hero, about, experience, work, skills, contact
-├── projects.html             ← Full portfolio grid with category filter
-├── services.html             ← Service offerings (Branding, Print, Technical, Web)
-├── client-experience.html    ← Process steps + HoneyBook client portal info
-├── contact.html              ← Contact info + project brief panel
-├── style.css                 ← Complete design system
-├── script.js                 ← GSAP + Lenis + carousels + nav + portfolio filter
-├── CNAME                     ← Custom domain: domdesign.ca
-├── favicon.svg               ← DD monogram SVG favicon
-└── images/                   ← All project and portfolio images (25 files)
+├── index.html                ← Language gate — logo + English / Français buttons only
+├── en/                        ← English site
+│   ├── index.html             ← Home — hero, about, experience, work, skills, contact
+│   ├── projects.html          ← Full portfolio grid with category filter
+│   ├── services.html          ← Service offerings (Branding, Print, Technical, Web)
+│   ├── client-experience.html ← Process steps + HoneyBook client portal info
+│   ├── contact.html           ← Contact info + project brief panel
+│   ├── dette-project.html     ← D'Ette Realty case study
+│   ├── pmu-project.html       ← PMU Québec case study
+│   ├── celestial-project.html ← Karmae — Cosmic Pulse case study
+│   └── school-project.html    ← School design projects case study
+├── fr/                         ← French mirror of every page in /en/ (same filenames)
+├── style.css                  ← Complete design system, shared by every page
+├── script.js                  ← GSAP + Lenis + carousels + nav + portfolio filter
+├── CNAME                      ← Custom domain: domdesign.ca
+├── favicon.svg                 ← DD monogram SVG favicon
+└── images/                    ← All project and portfolio images, shared by both languages
 ```
+
+Pages inside `/en/` and `/fr/` reference shared assets one directory up (`../style.css`, `../script.js`, `../images/...`); links between pages within the same language stay relative siblings (`projects.html`, not `/en/projects.html`). There is currently no in-page language switcher — visitors pick a language once, at the root gate.
 
 ---
 
@@ -60,7 +69,7 @@ All fonts loaded from Google Fonts — no licensing concerns.
 
 ## 3 · Key features
 
-- **Multi-page architecture** — 5 pages with consistent header, nav, and footer
+- **Bilingual, static-mirror architecture** — a root language gate, then a full `/en/` and `/fr/` mirror of every page, each with consistent header, nav, and footer
 - **GSAP scroll reveals** — `.js-reveal` (fade up) and `.js-stagger` (staggered children) on all sections
 - **Lenis smooth scroll** — synchronized with GSAP ticker for frame-perfect smoothness
 - **Project carousels** — 6 carousels on the home page with prev/next buttons, dot indicators, and touch swipe
@@ -89,20 +98,23 @@ python3 -m http.server 8080
 
 ### Editing content
 
+Every content page exists twice — once under `/en/` and once under `/fr/` — and both copies need the same edit (translated) to stay in sync.
+
 | Page                       | What to edit                                         |
 | -------------------------- | ---------------------------------------------------- |
-| `index.html`               | Hero copy, about text, timeline, carousels, skills   |
-| `projects.html`            | `.portfolio-item` blocks, `data-category` attributes |
-| `services.html`            | `.service-item` blocks                               |
-| `client-experience.html`   | `.process-step` blocks, HoneyBook callout text       |
-| `contact.html`             | Email address, social links, HoneyBook URL           |
+| `index.html`               | Language gate — logo, wordmark, the two buttons only |
+| `en\|fr/index.html`        | Hero copy, about text, timeline, carousels, skills   |
+| `en\|fr/projects.html`     | `.portfolio-item` blocks, `data-category` attributes |
+| `en\|fr/services.html`     | `.service-item` blocks                               |
+| `en\|fr/client-experience.html` | `.process-step` blocks, HoneyBook callout text  |
+| `en\|fr/contact.html`      | Email address, social links, HoneyBook URL           |
 
 ### Adding a new project image
 
-1. Drop the image file into the `images/` folder.
-2. In `index.html`, add a `<div class="carousel-slide">` inside the matching project's `.carousel-track`.
-3. Add a matching `<button class="carousel-dot"></button>` to the `.carousel-indicators` block.
-4. In `projects.html`, add a `.portfolio-item` element with the correct `data-category`.
+1. Drop the image file into the `images/` folder (shared by both languages).
+2. In `en/index.html` **and** `fr/index.html`, add a `<div class="carousel-slide">` inside the matching project's `.carousel-track`, with the image path prefixed `../images/...` and the `alt` text translated.
+3. Add a matching `<button class="carousel-dot"></button>` to the `.carousel-indicators` block in both.
+4. In `en/projects.html` and `fr/projects.html`, add a `.portfolio-item` element with the correct `data-category`.
 
 ### Committing and deploying
 
