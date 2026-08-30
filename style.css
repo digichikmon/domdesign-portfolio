@@ -1629,8 +1629,8 @@ summary::-webkit-details-marker { display: none; }
 
 .lang-switch {
   font-family: var(--ff-label);
-  font-size: var(--fs-xs);
-  font-weight: 500;
+  font-size: var(--fs-sm);
+  font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--c-muted);
