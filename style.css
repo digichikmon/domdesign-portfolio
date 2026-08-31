@@ -118,7 +118,14 @@ summary::-webkit-details-marker { display: none; }
   align-items: center;
   justify-content: space-between;
   height: 4rem;
-  gap: 2rem;
+  gap: 1.25rem;
+}
+
+/* Header needs a tighter horizontal budget than page sections so the
+   full desktop nav + CTA + language switch actually fit without
+   forcing the breakpoint absurdly wide. */
+.site-header .container {
+  padding-inline: clamp(1rem, 2.5vw, 2.5rem);
 }
 
 .brand {
@@ -150,7 +157,7 @@ summary::-webkit-details-marker { display: none; }
 .primary-nav ul {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .primary-nav a {
@@ -1413,11 +1420,16 @@ summary::-webkit-details-marker { display: none; }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (min-width: 768px) {
+/* The full desktop nav + CTA + language switch need more room than
+   768px to avoid overflowing (especially with the longer French
+   labels) — held back to its own breakpoint below. */
+@media (min-width: 1280px) {
   .nav-toggle  { display: none; }
   .primary-nav { display: flex; align-items: center; }
   .nav-cta     { display: inline-flex; }
+}
 
+@media (min-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr 1.5fr;
     gap: 4rem;
@@ -1616,7 +1628,11 @@ summary::-webkit-details-marker { display: none; }
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
+}
+
+.header-actions .nav-cta {
+  padding: 0.7rem 1.5rem;
 }
 
 .lang-switch,
