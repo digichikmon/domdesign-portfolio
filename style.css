@@ -1668,3 +1668,6 @@ summary::-webkit-details-marker { display: none; }
   transition: color var(--t-fast);
 }
 .lang-switch-link:hover { color: var(--c-ink); }
+
+/* Services pricing — accessible, bilingual details */
+.service-options{margin:1rem 0;border-top:1px solid var(--c-stone)}.service-options summary{cursor:pointer;padding:.85rem 0;font-weight:500}.service-options summary:focus-visible,.service-quote-btn:focus-visible{outline:2px solid currentColor;outline-offset:4px}.service-quote-btn{display:inline-flex;margin:1rem 0}.services-pricing-note{padding:2rem 0;max-width:76ch;color:var(--c-muted);line-height:1.65}
