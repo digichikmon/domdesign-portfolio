@@ -1529,7 +1529,7 @@ summary::-webkit-details-marker { display: none; }
   }
 
   .process-visual {
-    width: min(70%, 42rem);
+    width: min(35%, 22rem);
     margin-left: 5rem;
   }
 
