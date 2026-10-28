@@ -1528,7 +1528,10 @@ summary::-webkit-details-marker { display: none; }
     align-items: start;
   }
 
-  .process-visual { margin-left: 5rem; }
+  .process-visual {
+    width: min(70%, 42rem);
+    margin-left: 5rem;
+  }
 
   .contact-layout { grid-template-columns: 1fr 1fr; align-items: start; }
 
