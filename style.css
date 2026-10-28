@@ -1063,6 +1063,49 @@ summary::-webkit-details-marker { display: none; }
   max-width: 55ch;
 }
 
+.service-visual {
+  width: min(100%, 42rem);
+  margin: 1.5rem 0;
+  overflow: hidden;
+  background: var(--c-surface);
+  border: var(--border);
+}
+
+.service-visual > a {
+  display: block;
+}
+
+.service-visual img,
+.service-visual svg {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.service-visual--technical svg {
+  object-fit: contain;
+}
+
+.service-visual figcaption {
+  padding: 0.75rem 1rem;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-base);
+  color: var(--c-muted);
+  border-top: var(--border);
+}
+
+.service-visual figcaption a {
+  color: var(--c-ink);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.service-visual figcaption a:hover {
+  color: var(--c-stone);
+}
+
 .service-subitems {
   display: flex;
   flex-direction: column;
