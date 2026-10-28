@@ -1238,6 +1238,29 @@ summary::-webkit-details-marker { display: none; }
   max-width: 55ch;
 }
 
+.process-visual {
+  margin: 0 0 2.75rem;
+  overflow: hidden;
+  background: var(--c-surface);
+  border: var(--border);
+}
+
+.process-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.process-visual figcaption {
+  padding: 0.75rem 1rem;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-base);
+  color: var(--c-muted);
+  border-top: var(--border);
+}
+
 .honeybook-callout {
   padding: 3rem;
   background: var(--c-surface);
@@ -1504,6 +1527,8 @@ summary::-webkit-details-marker { display: none; }
     gap: 2rem;
     align-items: start;
   }
+
+  .process-visual { margin-left: 5rem; }
 
   .contact-layout { grid-template-columns: 1fr 1fr; align-items: start; }
 
