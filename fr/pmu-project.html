@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>PMU Québec — Plans d'évacuation — DomDesign · Dominic Daniel</title>
-  <meta name="description" content="Dessin de plans d'évacuation et signalisation de prévention incendie pour bâtiments et usines à travers le Québec — un rôle continu chez PMU Québec." />
+  <title>Étude de cas PMU Québec — Plans d'évacuation · Dominic Daniel</title>
+  <meta name="description" content="Étude de cas : mon rôle de chargé de projets en plans d&#x27;évacuation chez PMU Québec. Hiérarchie visuelle, lisibilité, signalétique et fichiers prêts à imprimer." />
 
-  <meta property="og:title" content="PMU Québec — Plans d'évacuation — DomDesign" />
-  <meta property="og:description" content="Dessin de plans d'évacuation et production de signalisation de prévention incendie — un rôle continu chez PMU Québec." />
+  <meta property="og:title" content="Plans d&#x27;évacuation chez PMU Québec — Étude de cas de Dominic Daniel" />
+  <meta property="og:description" content="Mon travail salarié de chargé de projets en plans d&#x27;évacuation chez PMU Québec, illustré par deux plans fictifs créés pour la démonstration." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://domdesign.ca/fr/pmu-project.html" />
   <meta property="og:image" content="../images/IMG_0182.jpeg" />
@@ -21,6 +21,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* PMU Québec case study — fictional plan figures (page-scoped) */
+    .plan-figures { display: grid; gap: 2rem; margin-top: 2rem; }
+    .plan-figure { border: var(--border); background: #fff; margin: 0; }
+    .plan-figure .plan-svg { display: block; width: 100%; height: auto; }
+    .plan-figure figcaption {
+      padding: 1rem 1.25rem;
+      border-top: var(--border);
+      font-family: var(--ff-mono);
+      font-size: var(--fs-xs);
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+      color: var(--c-muted);
+    }
+    .plan-disclaimer {
+      display: block;
+      margin-top: 0.6rem;
+      padding-left: 0.75rem;
+      border-left: 3px solid #d0201f;
+      color: var(--c-ink);
+      font-weight: 500;
+    }
+    .case-page-note { font-size: var(--fs-sm); color: var(--c-muted); max-width: 62ch; margin-top: 1.5rem; }
+    .case-page-note a { color: var(--c-ink); text-decoration: underline; text-underline-offset: 3px; }
+    .contribution-list strong { font-weight: 600; }
+    .case-page-cta h3 { font-family: var(--ff-display); font-size: clamp(var(--fs-xl), 3vw, var(--fs-2xl)); font-weight: 600; letter-spacing: -0.02em; }
+    @media (min-width: 1024px) { .plan-figures { grid-template-columns: 1fr 1fr; } }
+  </style>
 </head>
 <body>
 
@@ -58,190 +86,331 @@
 
     <section class="page-hero">
       <div class="container">
-        <p class="page-hero-label js-reveal">Rôle actuel · PMU Québec · En continu depuis 2022</p>
-        <h1 class="page-hero-title js-reveal">Plans d'évacuation — PMU Québec</h1>
+        <p class="page-hero-label js-reveal">Étude de cas · Emploi salarié · PMU Québec · Depuis 2022</p>
+        <h1 class="page-hero-title js-reveal">Plans d'évacuation chez PMU Québec</h1>
         <p class="page-hero-sub js-reveal">
-          Signalisation de prévention incendie et dessin de plans d'évacuation pour bâtiments et usines à travers le Québec — un travail technique que je produis dans le cadre de mon emploi, et non un projet unique avec un début et une fin.
+          Comment je conçois et produis des plans d'évacuation clairs dans mon emploi de chargé de projets chez PMU Québec. Les plans présentés sur cette page sont des exemples fictifs, créés uniquement pour la démonstration.
         </p>
       </div>
     </section>
 
     <!-- ============================================================
-         OVERVIEW
+         01 · ROLE
          ============================================================ -->
     <section class="case-page-section">
       <div class="container">
         <div class="section-head js-reveal">
           <span class="section-number">01</span>
-          <h2 class="section-title">Aperçu et mon rôle</h2>
+          <h2 class="section-title">Mon rôle chez PMU Québec</h2>
         </div>
 
         <p class="case-page-lede js-reveal">
-          Chaque plan d'évacuation est un équipement de sécurité des personnes avant d'être une pièce de design — il doit fonctionner pour quelqu'un qui le lit dans la fumée, en faible luminosité, ou lors d'une véritable urgence.
+          Un plan d'évacuation doit se lire en quelques secondes, par une personne qui ne connaît pas le bâtiment.
         </p>
 
         <p class="case-page-text js-reveal">
-          Je travaille comme technicien en plans d'évacuation / designer graphique chez <strong>PMU Québec</strong>, où je produis les plans d'évacuation imprimés et la signalisation de prévention incendie exigés par les codes du bâtiment et de prévention incendie du Québec pour les usines, commerces, bureaux et bâtiments institutionnels. Je prends les plans d'étage architecturaux fournis par l'équipe de projet et je les transforme en diagrammes d'évacuation clairs et conformes aux codes — tracés, sorties, points de rassemblement, et le jeu de symboles normalisés pour les extincteurs, les avertisseurs manuels et l'équipement d'alarme — prêts pour l'impression et l'installation. Il s'agit d'un travail de production continu, et non d'un mandat ponctuel : de nouveaux sites arrivent constamment, et les plans existants sont révisés à mesure que les bâtiments changent.
+          Je suis chargé de projets en plans d'évacuation chez <strong>PMU Québec</strong>, une entreprise québécoise de prévention incendie. C'est un emploi salarié : je fais le suivi des projets, je dessine les plans à partir des documents fournis et je les mène jusqu'aux fichiers d'impression. Ces mandats appartiennent à PMU Québec et à ses clients. Ce ne sont pas des mandats de DomDesign.
         </p>
 
-        <ul class="case-page-list js-stagger">
-          <li>Convertir des plans d'étage architecturaux en diagrammes de trajets d'évacuation avec des sorties et des points de rassemblement corrects.</li>
-          <li>Appliquer une légende de symboles de sécurité incendie normalisée de façon constante sur chaque plan.</li>
-          <li>Mettre en page les plans pour la lisibilité aux tailles d'impression réellement utilisées sur le terrain — pas seulement à l'écran.</li>
-          <li>Coordonner avec les équipes de prévention incendie et de gestion de projet sur les exigences des codes et les détails propres à chaque site.</li>
-          <li>Réviser et réémettre les plans à mesure que les bâtiments et leur occupation changent.</li>
-        </ul>
-
         <dl class="case-meta js-reveal" style="margin-top: 2.5rem;">
-          <div><dt>Rôle</dt><dd>Technicien en plans d'évacuation / Designer graphique</dd></div>
-          <div><dt>Outils</dt><dd>AutoCAD, Illustrator</dd></div>
+          <div><dt>Poste</dt><dd>Chargé de projets, plans d'évacuation</dd></div>
           <div><dt>Employeur</dt><dd>PMU Québec</dd></div>
-          <div><dt>Statut</dt><dd>En continu, dans le cadre de l'emploi</dd></div>
+          <div><dt>Statut</dt><dd>Emploi salarié, depuis 2022</dd></div>
+          <div><dt>Outils</dt><dd>AutoCAD, Illustrator</dd></div>
         </dl>
+
+        <p class="case-page-note js-reveal">Vous avez besoin de plans d'évacuation? Communiquez directement avec PMU Québec sur <a href="https://pmuquebec.com" target="_blank" rel="noopener">pmuquebec.com</a>.</p>
       </div>
     </section>
 
     <!-- ============================================================
-         PROCESS
+         02 · CONTRIBUTION
          ============================================================ -->
     <section class="case-page-section">
       <div class="container">
         <div class="section-head js-reveal">
           <span class="section-number">02</span>
-          <h2 class="section-title">Comment un plan est construit</h2>
+          <h2 class="section-title">Ma contribution à la conception et à la production des plans</h2>
         </div>
 
-        <ol class="timeline js-stagger" aria-label="Étapes de production des plans d'évacuation">
-          <li class="timeline-item">
-            <span class="timeline-year">Étape 1</span>
-            <div class="timeline-body">
-              <h4>Prise en charge du site et du plan d'étage</h4>
-              <p class="timeline-org">Données fournies par l'équipe de projet</p>
-              <p class="timeline-desc">Les plans d'étage architecturaux et les détails du site proviennent des équipes de projet et de prévention incendie — la référence de départ pour chaque dessin.</p>
-            </div>
-          </li>
-          <li class="timeline-item">
-            <span class="timeline-year">Étape 2</span>
-            <div class="timeline-body">
-              <h4>Dessin des trajets et des symboles</h4>
-              <p class="timeline-org">Travail de dessin principal</p>
-              <p class="timeline-desc">Les trajets de sortie, les points « Vous êtes ici », et la légende de symboles normalisés (extincteurs, avertisseurs manuels, alarmes, points de rassemblement) sont placés et dessinés sur le plan d'étage.</p>
-            </div>
-          </li>
-          <li class="timeline-item">
-            <span class="timeline-year">Étape 3</span>
-            <div class="timeline-body">
-              <h4>Révision des codes et mise en page pour impression</h4>
-              <p class="timeline-org">Vérification de conformité et de lisibilité</p>
-              <p class="timeline-desc">La mise en page est vérifiée par rapport aux exigences des codes du bâtiment et de prévention incendie du Québec, et formatée pour la lisibilité aux tailles réellement installées, pas seulement à l'écran.</p>
-            </div>
-          </li>
-          <li class="timeline-item">
-            <span class="timeline-year">Étape 4</span>
-            <div class="timeline-body">
-              <h4>Livraison et production de la signalisation</h4>
-              <p class="timeline-org">En continu</p>
-              <p class="timeline-desc">Les fichiers finaux sont envoyés pour l'installation de la signalisation imprimée sur le terrain. Les plans sont révisés et réémis chaque fois que la disposition ou l'occupation d'un bâtiment change.</p>
-            </div>
-          </li>
-        </ol>
+        <p class="case-page-text js-reveal">Sur chaque plan, mon travail porte sur cinq aspects.</p>
+
+        <ul class="case-page-list contribution-list js-stagger">
+          <li><strong>Hiérarchie visuelle</strong> : je fais ressortir d'abord le repère « Vous êtes ici », les trajets et les sorties, puis je garde les détails du bâtiment en gris, à l'arrière-plan.</li>
+          <li><strong>Lisibilité des plans</strong> : je règle la taille des textes, l'épaisseur des traits et les espacements selon le format réellement affiché au mur, pas seulement à l'écran.</li>
+          <li><strong>Signalétique</strong> : j'applique la même légende et les mêmes symboles d'un plan à l'autre, pour que l'information se repère toujours de la même façon.</li>
+          <li><strong>Dessin technique</strong> : je dessine dans AutoCAD les murs, les portes avec leur sens d'ouverture, les corridors et les escaliers à partir des documents fournis.</li>
+          <li><strong>Préparation pour l'impression</strong> : je vérifie les formats, les marges, les couleurs et les polices, puis je prépare des fichiers prêts à imprimer et à installer.</li>
+        </ul>
+
+        <div class="case-callout js-reveal">
+          <p><strong>Ma règle de base :</strong> chaque choix graphique doit aider une personne à trouver la sortie plus vite. Si un élément n'aide pas à la lecture, il passe au second plan.</p>
+        </div>
       </div>
     </section>
 
     <!-- ============================================================
-         WHAT THE WORK REQUIRES
+         03 · FICTIONAL EXAMPLES
          ============================================================ -->
     <section class="case-page-section">
       <div class="container">
         <div class="section-head js-reveal">
           <span class="section-number">03</span>
-          <h2 class="section-title">Ce que ce travail exige</h2>
+          <h2 class="section-title">Des exemples fictifs qui illustrent mon approche</h2>
         </div>
 
-        <ul class="case-page-list js-stagger">
-          <li>Une lisibilité sous le stress — mauvais éclairage, fumée, et un lecteur qui n'a pas le temps d'interpréter une mise en page chargée.</li>
-          <li>Durabilité et clarté à travers les différentes tailles physiques auxquelles les plans sont réellement imprimés et affichés.</li>
-          <li>Une constance stricte dans la légende des symboles de sécurité incendie, plan après plan.</li>
-          <li>Travailler avec précision à partir de dessins architecturaux sources qui ne sont pas toujours prêts pour le design.</li>
-          <li>Traiter chaque plan comme un document de sécurité fonctionnel, et non décoratif.</li>
-        </ul>
+        <p class="case-page-text js-reveal">
+          Je ne publie aucun plan réalisé pour un client. Pour montrer ma façon de travailler, j'ai dessiné deux scénarios de démonstration à partir de zéro : le <strong>Centre civique des Ormes</strong> et le <strong>Pavillon communautaire des Aulnes</strong>. Ces bâtiments n'existent pas. Leur géométrie, leurs locaux et leurs accès sont inventés et ne reprennent aucun plan, aucune adresse ni aucun logo tiré d'un mandat réel.
+        </p>
 
-        <div class="case-callout js-reveal">
-          <p><strong>La rigueur fondamentale :</strong> un instinct décoratif est le mauvais réflexe ici. Chaque choix de mise en page est jugé selon une seule question — sera-t-il instantanément lisible par quelqu'un qui n'a jamais vu ce bâtiment auparavant, dans les pires conditions que le bâtiment pourrait connaître? Cette contrainte façonne tout, de la typographie au placement des symboles, jusqu'à la quantité d'espace blanc qu'une page peut réellement se permettre.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         WHY NO PLANS ARE SHOWN
-         ============================================================ -->
-    <section class="case-page-section">
-      <div class="container">
-        <div class="section-head js-reveal">
-          <span class="section-number">04</span>
-          <h2 class="section-title">Pourquoi vous ne verrez pas de vrais plans ici</h2>
-        </div>
-
-        <div class="case-gallery js-stagger" style="grid-template-columns: 1fr; max-width: 26rem;">
-          <figure>
-            <div class="case-gallery-img" style="aspect-ratio: 4 / 3; background: #f0f0ec; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; border:none;">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#8a8a80" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
-              <p style="font-family: var(--ff-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8a8a80; text-align: center; padding: 0 1rem;">Confidentiel — non destiné à l'affichage public</p>
-            </div>
-            <figcaption>Les vrais plans d'évacuation sont propres à chaque site et confidentiels</figcaption>
+        <div class="plan-figures" role="group" aria-label="Exemples de plans fictifs">
+          <figure class="plan-figure js-reveal">
+            <svg class="plan-svg" viewBox="0 0 640 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fp-fr-t fp-fr-d" font-family="Arial, Helvetica, sans-serif">
+            <title id="fp-fr-t">Plan d'étage fictif du Centre civique des Ormes, niveau 1</title><desc id="fp-fr-d">Plan d'étage de démonstration en noir et gris, de style AutoCAD. Un corridor central dessert six locaux. Un repère rouge « Vous êtes ici » se trouve dans le corridor. Un trajet vert continu mène vers le sud, à travers le hall, jusqu'à la sortie A. Un trajet vert pointillé mène vers l'ouest, jusqu'à la sortie B. Une légende identifie les symboles. Exemple fictif, à ne pas utiliser pour une évacuation.</desc>
+            <defs><marker id="fp-fr-ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0f8a3c"/></marker></defs>
+            <rect width="640" height="600" fill="#fff"/>
+            <g transform="translate(12,0)">
+            <line x1="70" y1="44" x2="70" y2="60" stroke="#bdbdbd" stroke-width="0.7" stroke-dasharray="6 3 1 3"/>
+            <circle cx="70" cy="32" r="10" fill="#fff" stroke="#8c8c8c" stroke-width="0.9"/>
+            <text x="70" y="36" font-size="10" text-anchor="middle" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em">A</text>
+            <line x1="230" y1="44" x2="230" y2="60" stroke="#bdbdbd" stroke-width="0.7" stroke-dasharray="6 3 1 3"/>
+            <circle cx="230" cy="32" r="10" fill="#fff" stroke="#8c8c8c" stroke-width="0.9"/>
+            <text x="230" y="36" font-size="10" text-anchor="middle" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em">B</text>
+            <line x1="430" y1="44" x2="430" y2="60" stroke="#bdbdbd" stroke-width="0.7" stroke-dasharray="6 3 1 3"/>
+            <circle cx="430" cy="32" r="10" fill="#fff" stroke="#8c8c8c" stroke-width="0.9"/>
+            <text x="430" y="36" font-size="10" text-anchor="middle" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em">C</text>
+            <line x1="610" y1="44" x2="610" y2="60" stroke="#bdbdbd" stroke-width="0.7" stroke-dasharray="6 3 1 3"/>
+            <circle cx="610" cy="32" r="10" fill="#fff" stroke="#8c8c8c" stroke-width="0.9"/>
+            <text x="610" y="36" font-size="10" text-anchor="middle" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em">D</text>
+            <rect x="100" y="125" width="60" height="30" fill="none" stroke="#8c8c8c" stroke-width="0.9"/>
+            <circle cx="130" cy="168" r="7" fill="none" stroke="#8c8c8c" stroke-width="0.9"/>
+            <rect x="280" y="120" width="100" height="44" rx="4" fill="none" stroke="#8c8c8c" stroke-width="0.9"/>
+            <rect x="288" y="108" width="14" height="9" fill="none" stroke="#8c8c8c" stroke-width="0.8"/>
+            <rect x="288" y="167" width="14" height="9" fill="none" stroke="#8c8c8c" stroke-width="0.8"/>
+            <rect x="313" y="108" width="14" height="9" fill="none" stroke="#8c8c8c" stroke-width="0.8"/>
+            <rect x="313" y="167" width="14" height="9" fill="none" stroke="#8c8c8c" stroke-width="0.8"/>
+            <rect x="338" y="108" width="14" height="9" fill="none" stroke="#8c8c8c" stroke-width="0.8"/>
+            <rect x="338" y="167" width="14" height="9" fill="none" stroke="#8c8c8c" stroke-width="0.8"/>
+            <rect x="363" y="108" width="14" height="9" fill="none" stroke="#8c8c8c" stroke-width="0.8"/>
+            <rect x="363" y="167" width="14" height="9" fill="none" stroke="#8c8c8c" stroke-width="0.8"/>
+            <rect x="450" y="122" width="140" height="16" fill="none" stroke="#8c8c8c" stroke-width="0.9"/>
+            <rect x="450" y="152" width="100" height="16" fill="none" stroke="#8c8c8c" stroke-width="0.9"/>
+            <circle cx="110" cy="305" r="15" fill="none" stroke="#8c8c8c" stroke-width="0.9"/>
+            <circle cx="165" cy="305" r="15" fill="none" stroke="#8c8c8c" stroke-width="0.9"/>
+            <circle cx="220" cy="320" r="15" fill="none" stroke="#8c8c8c" stroke-width="0.9"/>
+            <line x1="560" y1="340" x2="560" y2="400" stroke="#8c8c8c" stroke-width="0.9"/>
+            <rect x="526" y="384" width="18" height="10" fill="none" stroke="#8c8c8c" stroke-width="0.8"/>
+            <ellipse cx="535" cy="374" rx="7" ry="10" fill="none" stroke="#8c8c8c" stroke-width="0.8"/>
+            <rect x="576" y="384" width="18" height="10" fill="none" stroke="#8c8c8c" stroke-width="0.8"/>
+            <ellipse cx="585" cy="374" rx="7" ry="10" fill="none" stroke="#8c8c8c" stroke-width="0.8"/>
+            <rect x="440" y="300" width="60" height="96" fill="none" stroke="#8c8c8c" stroke-width="0.9"/>
+            <line x1="440" y1="312" x2="500" y2="312" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="440" y1="324" x2="500" y2="324" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="440" y1="336" x2="500" y2="336" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="440" y1="348" x2="500" y2="348" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="440" y1="360" x2="500" y2="360" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="440" y1="372" x2="500" y2="372" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="440" y1="384" x2="500" y2="384" stroke="#8c8c8c" stroke-width="0.8"/>
+            <path d="M470,390 L470,318" stroke="#111" stroke-width="1" fill="none"/><path d="M465,326 L470,316 L475,326" stroke="#111" stroke-width="1" fill="none"/>
+            <text x="470" y="309" font-size="9.5" text-anchor="middle" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">ESCALIER</text>
+            <text x="482" y="386" font-size="9" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">M</text>
+            <line x1="70" y1="60" x2="610" y2="60" stroke="#111" stroke-width="7" stroke-linecap="square"/>
+            <line x1="610" y1="60" x2="610" y2="400" stroke="#111" stroke-width="7" stroke-linecap="square"/>
+            <line x1="610" y1="400" x2="380" y2="400" stroke="#111" stroke-width="7" stroke-linecap="square"/>
+            <line x1="320" y1="400" x2="70" y2="400" stroke="#111" stroke-width="7" stroke-linecap="square"/>
+            <line x1="70" y1="400" x2="70" y2="255" stroke="#111" stroke-width="7" stroke-linecap="square"/>
+            <line x1="70" y1="215" x2="70" y2="60" stroke="#111" stroke-width="7" stroke-linecap="square"/>
+            <line x1="70" y1="210" x2="180" y2="210" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="210" y1="210" x2="300" y2="210" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="330" y1="210" x2="570" y2="210" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="600" y1="210" x2="610" y2="210" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="70" y1="260" x2="220" y2="260" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="250" y1="260" x2="280" y2="260" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="420" y1="260" x2="450" y2="260" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="480" y1="260" x2="560" y2="260" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="590" y1="260" x2="610" y2="260" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="230" y1="60" x2="230" y2="210" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="430" y1="60" x2="430" y2="210" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="270" y1="260" x2="270" y2="400" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="430" y1="260" x2="430" y2="400" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="510" y1="260" x2="510" y2="400" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+            <line x1="110" y1="60" x2="170" y2="60" stroke="#fff" stroke-width="8"/><line x1="110" y1="57.4" x2="170" y2="57.4" stroke="#111" stroke-width="0.9"/><line x1="110" y1="62.6" x2="170" y2="62.6" stroke="#111" stroke-width="0.9"/><line x1="110" y1="60" x2="170" y2="60" stroke="#8c8c8c" stroke-width="0.6"/><line x1="110" y1="56" x2="110" y2="64" stroke="#111" stroke-width="1.2"/><line x1="170" y1="56" x2="170" y2="64" stroke="#111" stroke-width="1.2"/>
+            <line x1="275" y1="60" x2="385" y2="60" stroke="#fff" stroke-width="8"/><line x1="275" y1="57.4" x2="385" y2="57.4" stroke="#111" stroke-width="0.9"/><line x1="275" y1="62.6" x2="385" y2="62.6" stroke="#111" stroke-width="0.9"/><line x1="275" y1="60" x2="385" y2="60" stroke="#8c8c8c" stroke-width="0.6"/><line x1="275" y1="56" x2="275" y2="64" stroke="#111" stroke-width="1.2"/><line x1="385" y1="56" x2="385" y2="64" stroke="#111" stroke-width="1.2"/>
+            <line x1="465" y1="60" x2="575" y2="60" stroke="#fff" stroke-width="8"/><line x1="465" y1="57.4" x2="575" y2="57.4" stroke="#111" stroke-width="0.9"/><line x1="465" y1="62.6" x2="575" y2="62.6" stroke="#111" stroke-width="0.9"/><line x1="465" y1="60" x2="575" y2="60" stroke="#8c8c8c" stroke-width="0.6"/><line x1="465" y1="56" x2="465" y2="64" stroke="#111" stroke-width="1.2"/><line x1="575" y1="56" x2="575" y2="64" stroke="#111" stroke-width="1.2"/>
+            <line x1="610" y1="95" x2="610" y2="170" stroke="#fff" stroke-width="8"/><line x1="607.4" y1="95" x2="607.4" y2="170" stroke="#111" stroke-width="0.9"/><line x1="612.6" y1="95" x2="612.6" y2="170" stroke="#111" stroke-width="0.9"/><line x1="610" y1="95" x2="610" y2="170" stroke="#8c8c8c" stroke-width="0.6"/><line x1="606" y1="95" x2="614" y2="95" stroke="#111" stroke-width="1.2"/><line x1="606" y1="170" x2="614" y2="170" stroke="#111" stroke-width="1.2"/>
+            <line x1="610" y1="300" x2="610" y2="370" stroke="#fff" stroke-width="8"/><line x1="607.4" y1="300" x2="607.4" y2="370" stroke="#111" stroke-width="0.9"/><line x1="612.6" y1="300" x2="612.6" y2="370" stroke="#111" stroke-width="0.9"/><line x1="610" y1="300" x2="610" y2="370" stroke="#8c8c8c" stroke-width="0.6"/><line x1="606" y1="300" x2="614" y2="300" stroke="#111" stroke-width="1.2"/><line x1="606" y1="370" x2="614" y2="370" stroke="#111" stroke-width="1.2"/>
+            <line x1="120" y1="400" x2="200" y2="400" stroke="#fff" stroke-width="8"/><line x1="120" y1="397.4" x2="200" y2="397.4" stroke="#111" stroke-width="0.9"/><line x1="120" y1="402.6" x2="200" y2="402.6" stroke="#111" stroke-width="0.9"/><line x1="120" y1="400" x2="200" y2="400" stroke="#8c8c8c" stroke-width="0.6"/><line x1="120" y1="396" x2="120" y2="404" stroke="#111" stroke-width="1.2"/><line x1="200" y1="396" x2="200" y2="404" stroke="#111" stroke-width="1.2"/>
+            <path d="M180,210 L180,180" stroke="#111" stroke-width="1.6" fill="none"/><path d="M180,180 A30,30 0 0,1 210,210" stroke="#8c8c8c" stroke-width="0.9" fill="none" stroke-dasharray="3 2"/>
+            <path d="M300,210 L300,180" stroke="#111" stroke-width="1.6" fill="none"/><path d="M300,180 A30,30 0 0,1 330,210" stroke="#8c8c8c" stroke-width="0.9" fill="none" stroke-dasharray="3 2"/>
+            <path d="M570,210 L570,180" stroke="#111" stroke-width="1.6" fill="none"/><path d="M570,180 A30,30 0 0,1 600,210" stroke="#8c8c8c" stroke-width="0.9" fill="none" stroke-dasharray="3 2"/>
+            <path d="M250,260 L250,290" stroke="#111" stroke-width="1.6" fill="none"/><path d="M250,290 A30,30 0 0,1 220,260" stroke="#8c8c8c" stroke-width="0.9" fill="none" stroke-dasharray="3 2"/>
+            <path d="M480,260 L480,290" stroke="#111" stroke-width="1.6" fill="none"/><path d="M480,290 A30,30 0 0,1 450,260" stroke="#8c8c8c" stroke-width="0.9" fill="none" stroke-dasharray="3 2"/>
+            <path d="M590,260 L590,290" stroke="#111" stroke-width="1.6" fill="none"/><path d="M590,290 A30,30 0 0,1 560,260" stroke="#8c8c8c" stroke-width="0.9" fill="none" stroke-dasharray="3 2"/>
+            <path d="M70,215 L30,215" stroke="#111" stroke-width="1.6" fill="none"/><path d="M30,215 A40,40 0 0,0 70,255" stroke="#8c8c8c" stroke-width="0.9" fill="none" stroke-dasharray="3 2"/>
+            <path d="M320,400 L320,430" stroke="#111" stroke-width="1.6" fill="none"/><path d="M320,430 A30,30 0 0,0 350,400" stroke="#8c8c8c" stroke-width="0.9" fill="none" stroke-dasharray="3 2"/>
+            <path d="M380,400 L380,430" stroke="#111" stroke-width="1.6" fill="none"/><path d="M380,430 A30,30 0 0,1 350,400" stroke="#8c8c8c" stroke-width="0.9" fill="none" stroke-dasharray="3 2"/>
+            <text x="150" y="92" font-size="12" text-anchor="middle" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">BUREAU</text>
+            <text x="150" y="106" font-size="10" text-anchor="middle" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">101</text>
+            <text x="330" y="92" font-size="11.5" text-anchor="middle" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">SALLE DE RÉUNION</text>
+            <text x="330" y="106" font-size="10" text-anchor="middle" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">102</text>
+            <text x="520" y="92" font-size="12" text-anchor="middle" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">ATELIER</text>
+            <text x="520" y="106" font-size="10" text-anchor="middle" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">103</text>
+            <text x="170" y="362" font-size="11.5" text-anchor="middle" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">SALLE POLYVALENTE</text>
+            <text x="170" y="376" font-size="10" text-anchor="middle" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">104</text>
+            <text x="305" y="330" font-size="12" text-anchor="middle" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">HALL</text>
+            <text x="305" y="344" font-size="10" text-anchor="middle" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">105</text>
+            <text x="560" y="296" font-size="12" text-anchor="middle" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">SANITAIRES</text>
+            <text x="560" y="310" font-size="10" text-anchor="middle" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">106</text>
+            <rect x="391" y="211" width="8" height="14" rx="2" fill="#d0201f"/>
+            <rect x="136" y="211" width="8" height="14" rx="2" fill="#d0201f"/>
+            <rect x="556" y="245" width="8" height="14" rx="2" fill="#d0201f"/>
+            <rect x="80" y="264" width="12" height="12" fill="#d0201f"/><path d="M83,273 L86,267 L89,273" stroke="#fff" stroke-width="1.6" fill="none"/>
+            <rect x="389" y="384" width="12" height="12" fill="#d0201f"/><path d="M392,393 L395,387 L398,393" stroke="#fff" stroke-width="1.6" fill="none"/>
+            <path d="M488,243 H34" stroke="#0f8a3c" stroke-width="3" fill="none" stroke-dasharray="9 6" marker-end="url(#fp-fr-ah)"/>
+            <path d="M488,231 H352 V452" stroke="#0f8a3c" stroke-width="5" fill="none" stroke-linejoin="round" marker-end="url(#fp-fr-ah)"/>
+            <circle cx="500" cy="237" r="10" fill="#d0201f"/><circle cx="500" cy="237" r="4.2" fill="#fff"/>
+            <text x="500" y="199" font-size="11" text-anchor="middle" font-weight="bold" fill="#d0201f" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">VOUS ÊTES ICI</text>
+            <line x1="500" y1="204" x2="500" y2="225" stroke="#d0201f" stroke-width="1.2"/>
+            <rect x="392" y="424" width="70" height="18" fill="#0f8a3c"/><text x="427.0" y="437" font-size="10" text-anchor="middle" font-weight="bold" fill="#fff" letter-spacing="0.04em">SORTIE A</text>
+            <rect x="2" y="184" width="64" height="18" fill="#0f8a3c"/><text x="34.0" y="197" font-size="10" text-anchor="middle" font-weight="bold" fill="#fff" letter-spacing="0.04em">SORTIE B</text>
+            </g>
+            <rect x="20" y="478" width="600" height="112" fill="#fff" stroke="#111" stroke-width="1.2"/>
+            <line x1="440" y1="478" x2="440" y2="590" stroke="#111" stroke-width="1.2"/>
+            <text x="36" y="500" font-size="13" text-anchor="start" font-weight="bold" fill="#111" letter-spacing="0.04em">LÉGENDE</text>
+            <circle cx="50" cy="523" r="8" fill="#d0201f"/><circle cx="50" cy="523" r="3.4" fill="#fff"/>
+            <text x="76" y="528" font-size="13" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">Vous êtes ici</text>
+            <path d="M36,548 H62" stroke="#0f8a3c" stroke-width="5" marker-end="url(#fp-fr-ah)"/>
+            <text x="76" y="553" font-size="13" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">Trajet principal</text>
+            <path d="M36,573 H62" stroke="#0f8a3c" stroke-width="3" stroke-dasharray="7 4" marker-end="url(#fp-fr-ah)"/>
+            <text x="76" y="578" font-size="13" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">Trajet secondaire</text>
+            <rect x="243" y="515" width="26" height="16" fill="#0f8a3c"/>
+            <text x="281" y="528" font-size="13" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">Sortie</text>
+            <rect x="251" y="541" width="8" height="14" rx="2" fill="#d0201f"/>
+            <text x="281" y="553" font-size="13" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">Extincteur</text>
+            <rect x="249" y="567" width="12" height="12" fill="#d0201f"/><path d="M252,576 L255,570 L258,576" stroke="#fff" stroke-width="1.6" fill="none"/>
+            <text x="281" y="578" font-size="13" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">Avertisseur manuel</text>
+            <text x="454" y="500" font-size="11" text-anchor="start" font-weight="bold" fill="#111" letter-spacing="0.04em">CENTRE CIVIQUE</text>
+            <text x="454" y="515" font-size="11" text-anchor="start" font-weight="bold" fill="#111" letter-spacing="0.04em">DES ORMES</text>
+            <line x1="440" y1="524" x2="620" y2="524" stroke="#8c8c8c" stroke-width="0.8"/>
+            <text x="454" y="541" font-size="11" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">NIVEAU 1</text>
+            <text x="454" y="559" font-size="10" text-anchor="start" font-weight="bold" fill="#d0201f" letter-spacing="0.04em">SCÉNARIO FICTIF</text>
+            <text x="454" y="577" font-size="10" text-anchor="start" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em">SANS ÉCHELLE</text>
+            <g transform="translate(600,556)" aria-hidden="true"><circle r="16" fill="none" stroke="#111" stroke-width="1.2"/><path d="M0,-13 L6,8 L0,3 L-6,8 z" fill="#111"/><text x="0" y="-20" font-size="11" text-anchor="middle" font-weight="bold" fill="#111">N</text></g>
+            </svg>
+            <figcaption>Centre civique des Ormes, niveau 1 (bâtiment fictif). Plan d'étage de style AutoCAD : murs en trait fort, détails en gris, portes avec sens d'ouverture, escalier, trajet principal et trajet secondaire vers deux sorties.<span class="plan-disclaimer">Exemple fictif à des fins de démonstration. Ne pas utiliser pour une évacuation.</span></figcaption>
+          </figure>
+          <figure class="plan-figure js-reveal">
+            <svg class="plan-svg" viewBox="0 0 640 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sp-fr-t sp-fr-d" font-family="Arial, Helvetica, sans-serif">
+            <title id="sp-fr-t">Plan de site fictif du Pavillon communautaire des Aulnes</title><desc id="sp-fr-d">Plan de site de démonstration de style AutoCAD. Un bâtiment fictif en forme de L occupe la partie ouest du terrain, avec trois accès : A1 au sud, A2 à l'est et A3 à l'ouest. Des cheminements piétons gris relient les accès au trottoir et au stationnement. Des trajets verts mènent de chaque accès vers un point de rassemblement vert situé sur la pelouse, à l'est du bâtiment. Exemple fictif, à ne pas utiliser pour une évacuation.</desc>
+            <defs><marker id="sp-fr-ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0f8a3c"/></marker><pattern id="sp-fr-hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f2f2f2"/><line x1="0" y1="0" x2="0" y2="8" stroke="#bdbdbd" stroke-width="1"/></pattern></defs>
+            <rect width="640" height="600" fill="#fff"/>
+            <line x1="20" y1="412" x2="620" y2="412" stroke="#111" stroke-width="1.4"/>
+            <line x1="20" y1="462" x2="620" y2="462" stroke="#111" stroke-width="1.4"/>
+            <line x1="20" y1="437" x2="620" y2="437" stroke="#8c8c8c" stroke-width="0.9" stroke-dasharray="14 8"/>
+            <text x="260" y="455" font-size="11" text-anchor="middle" font-weight="bold" fill="#8c8c8c" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">VOIE PUBLIQUE (FICTIVE)</text>
+            <line x1="20" y1="392" x2="620" y2="392" stroke="#8c8c8c" stroke-width="0.9"/>
+            <text x="560" y="405" font-size="9" text-anchor="middle" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em">TROTTOIR</text>
+            <rect x="36" y="36" width="568" height="350" fill="none" stroke="#8c8c8c" stroke-width="1" stroke-dasharray="16 4 2 4"/>
+            <text x="44" y="30" font-size="9" text-anchor="start" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">LIMITE DE TERRAIN</text>
+            <rect x="380" y="70" width="200" height="180" fill="none" stroke="#111" stroke-width="1.4"/>
+            <line x1="400" y1="70" x2="400" y2="112" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="400" y1="208" x2="400" y2="250" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="420" y1="70" x2="420" y2="112" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="420" y1="208" x2="420" y2="250" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="440" y1="70" x2="440" y2="112" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="440" y1="208" x2="440" y2="250" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="460" y1="70" x2="460" y2="112" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="460" y1="208" x2="460" y2="250" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="480" y1="70" x2="480" y2="112" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="480" y1="208" x2="480" y2="250" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="500" y1="70" x2="500" y2="112" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="500" y1="208" x2="500" y2="250" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="520" y1="70" x2="520" y2="112" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="520" y1="208" x2="520" y2="250" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="540" y1="70" x2="540" y2="112" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="540" y1="208" x2="540" y2="250" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="560" y1="70" x2="560" y2="112" stroke="#8c8c8c" stroke-width="0.8"/>
+            <line x1="560" y1="208" x2="560" y2="250" stroke="#8c8c8c" stroke-width="0.8"/>
+            <text x="480" y="165" font-size="11" text-anchor="middle" font-weight="bold" fill="#8c8c8c" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">STATIONNEMENT</text>
+            <line x1="540" y1="250" x2="540" y2="392" stroke="#111" stroke-width="1.4"/>
+            <line x1="580" y1="250" x2="580" y2="392" stroke="#111" stroke-width="1.4"/>
+            <text x="560" y="320" font-size="9" text-anchor="middle" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round" transform="rotate(-90 560 320)">ACCÈS VÉHICULES</text>
+            <circle cx="300" cy="245" r="12" fill="none" stroke="#8c8c8c" stroke-width="0.9"/><line x1="295" y1="245" x2="305" y2="245" stroke="#8c8c8c" stroke-width="0.7"/><line x1="300" y1="240" x2="300" y2="250" stroke="#8c8c8c" stroke-width="0.7"/>
+            <circle cx="300" cy="345" r="12" fill="none" stroke="#8c8c8c" stroke-width="0.9"/><line x1="295" y1="345" x2="305" y2="345" stroke="#8c8c8c" stroke-width="0.7"/><line x1="300" y1="340" x2="300" y2="350" stroke="#8c8c8c" stroke-width="0.7"/>
+            <circle cx="130" cy="345" r="12" fill="none" stroke="#8c8c8c" stroke-width="0.9"/><line x1="125" y1="345" x2="135" y2="345" stroke="#8c8c8c" stroke-width="0.7"/><line x1="130" y1="340" x2="130" y2="350" stroke="#8c8c8c" stroke-width="0.7"/>
+            <circle cx="505" cy="350" r="12" fill="none" stroke="#8c8c8c" stroke-width="0.9"/><line x1="500" y1="350" x2="510" y2="350" stroke="#8c8c8c" stroke-width="0.7"/><line x1="505" y1="345" x2="505" y2="355" stroke="#8c8c8c" stroke-width="0.7"/>
+            <circle cx="330" cy="60" r="12" fill="none" stroke="#8c8c8c" stroke-width="0.9"/><line x1="325" y1="60" x2="335" y2="60" stroke="#8c8c8c" stroke-width="0.7"/><line x1="330" y1="55" x2="330" y2="65" stroke="#8c8c8c" stroke-width="0.7"/>
+            <path d="M170,300 V392" stroke="#8c8c8c" stroke-width="12" fill="none" stroke-linejoin="round"/><path d="M170,300 V392" stroke="#fff" stroke-width="10" fill="none" stroke-linejoin="round"/>
+            <path d="M330,135 H360 V330 H420" stroke="#8c8c8c" stroke-width="12" fill="none" stroke-linejoin="round"/><path d="M330,135 H360 V330 H420" stroke="#fff" stroke-width="10" fill="none" stroke-linejoin="round"/>
+            <path d="M90,200 H60 V392" stroke="#8c8c8c" stroke-width="12" fill="none" stroke-linejoin="round"/><path d="M90,200 H60 V392" stroke="#fff" stroke-width="10" fill="none" stroke-linejoin="round"/>
+            <path d="M440,392 V352" stroke="#8c8c8c" stroke-width="12" fill="none" stroke-linejoin="round"/><path d="M440,392 V352" stroke="#fff" stroke-width="10" fill="none" stroke-linejoin="round"/>
+            <path d="M360,135 H380" stroke="#8c8c8c" stroke-width="12" fill="none" stroke-linejoin="round"/><path d="M360,135 H380" stroke="#fff" stroke-width="10" fill="none" stroke-linejoin="round"/>
+            <path d="M90,90 H330 V180 H250 V300 H90 Z" fill="url(#sp-fr-hatch)" stroke="#111" stroke-width="6" stroke-linejoin="miter"/>
+            <text x="170" y="178" font-size="11" text-anchor="middle" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">PAVILLON</text>
+            <text x="170" y="193" font-size="11" text-anchor="middle" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">COMMUNAUTAIRE</text>
+            <text x="170" y="208" font-size="11" text-anchor="middle" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">DES AULNES</text>
+            <path d="M170,306 V398 H440 V358" stroke="#0f8a3c" stroke-width="4" fill="none" stroke-linejoin="round" marker-end="url(#sp-fr-ah)"/>
+            <path d="M336,135 H360 V330 H414" stroke="#0f8a3c" stroke-width="4" fill="none" stroke-linejoin="round" marker-end="url(#sp-fr-ah)"/>
+            <path d="M84,200 H60 V398 H150" stroke="#0f8a3c" stroke-width="4" fill="none" stroke-linejoin="round" marker-end="url(#sp-fr-ah)"/>
+            <rect x="164" y="294" width="12" height="12" fill="#0f8a3c" stroke="#fff" stroke-width="1.5"/><text x="182" y="322" font-size="11" text-anchor="start" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">A1</text>
+            <text x="182" y="336" font-size="9" text-anchor="start" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">ENTRÉE PRINCIPALE</text>
+            <rect x="324" y="129" width="12" height="12" fill="#0f8a3c" stroke="#fff" stroke-width="1.5"/><text x="338" y="124" font-size="11" text-anchor="start" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">A2</text>
+            <rect x="84" y="194" width="12" height="12" fill="#0f8a3c" stroke="#fff" stroke-width="1.5"/><text x="98" y="222" font-size="11" text-anchor="start" font-weight="bold" fill="#111" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">A3</text>
+            <circle cx="445" cy="330" r="22" fill="#0f8a3c"/>
+            <path d="M0,-8 L5,-16 L-5,-16 z" fill="#fff" transform="translate(445,330) rotate(0)"/>
+            <path d="M0,-8 L5,-16 L-5,-16 z" fill="#fff" transform="translate(445,330) rotate(90)"/>
+            <path d="M0,-8 L5,-16 L-5,-16 z" fill="#fff" transform="translate(445,330) rotate(180)"/>
+            <path d="M0,-8 L5,-16 L-5,-16 z" fill="#fff" transform="translate(445,330) rotate(270)"/>
+            <circle cx="445" cy="330" r="4" fill="#fff"/>
+            <text x="445" y="296" font-size="11" text-anchor="middle" font-weight="bold" fill="#0f8a3c" letter-spacing="0.04em" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">POINT DE RASSEMBLEMENT</text>
+            <rect x="20" y="478" width="600" height="112" fill="#fff" stroke="#111" stroke-width="1.2"/>
+            <line x1="440" y1="478" x2="440" y2="590" stroke="#111" stroke-width="1.2"/>
+            <text x="36" y="500" font-size="13" text-anchor="start" font-weight="bold" fill="#111" letter-spacing="0.04em">LÉGENDE</text>
+            <rect x="38" y="515" width="26" height="16" fill="url(#sp-fr-hatch)" stroke="#111" stroke-width="2.5"/>
+            <text x="76" y="528" font-size="13" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">Bâtiment</text>
+            <rect x="45" y="542" width="12" height="12" fill="#0f8a3c"/>
+            <text x="76" y="553" font-size="13" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">Accès</text>
+            <path d="M36,573 H66" stroke="#8c8c8c" stroke-width="12"/><path d="M36,573 H66" stroke="#fff" stroke-width="10"/>
+            <text x="76" y="578" font-size="13" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">Cheminement piéton</text>
+            <path d="M241,523 H267" stroke="#0f8a3c" stroke-width="4" marker-end="url(#sp-fr-ah)"/>
+            <text x="281" y="528" font-size="13" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">Trajet d'évacuation</text>
+            <circle cx="256" cy="548" r="9" fill="#0f8a3c"/><circle cx="256" cy="548" r="2.5" fill="#fff"/>
+            <text x="281" y="553" font-size="13" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">Point de rassemblement</text>
+            <path d="M241,573 H271" stroke="#8c8c8c" stroke-width="1.2" stroke-dasharray="10 3 2 3"/>
+            <text x="281" y="578" font-size="13" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">Limite de terrain</text>
+            <text x="454" y="500" font-size="11" text-anchor="start" font-weight="bold" fill="#111" letter-spacing="0.04em">PAVILLON COMMUNAUTAIRE</text>
+            <text x="454" y="515" font-size="11" text-anchor="start" font-weight="bold" fill="#111" letter-spacing="0.04em">DES AULNES</text>
+            <line x1="440" y1="524" x2="620" y2="524" stroke="#8c8c8c" stroke-width="0.8"/>
+            <text x="454" y="541" font-size="11" text-anchor="start" font-weight="normal" fill="#111" letter-spacing="0.04em">PLAN DE SITE</text>
+            <text x="454" y="559" font-size="10" text-anchor="start" font-weight="bold" fill="#d0201f" letter-spacing="0.04em">SCÉNARIO FICTIF</text>
+            <text x="454" y="577" font-size="10" text-anchor="start" font-weight="normal" fill="#8c8c8c" letter-spacing="0.04em">SANS ÉCHELLE</text>
+            <g transform="translate(600,556)" aria-hidden="true"><circle r="16" fill="none" stroke="#111" stroke-width="1.2"/><path d="M0,-13 L6,8 L0,3 L-6,8 z" fill="#111"/><text x="0" y="-20" font-size="11" text-anchor="middle" font-weight="bold" fill="#111">N</text></g>
+            </svg>
+            <figcaption>Pavillon communautaire des Aulnes (bâtiment fictif). Plan de site simplifié : emprise du bâtiment, trois accès, cheminements piétons et point de rassemblement.<span class="plan-disclaimer">Exemple fictif à des fins de démonstration. Ne pas utiliser pour une évacuation.</span></figcaption>
           </figure>
         </div>
-
-        <p class="case-page-text js-reveal" style="margin-top: 1.5rem;">
-          Les plans d'évacuation sont liés à des bâtiments, des entreprises et des occupants précis, donc je ne publie pas de vrais exemples ici — cela va de pair avec la façon dont le travail client de PMU Québec est traité, et cela protège les bâtiments et les entreprises pour lesquels les plans sont réalisés. Ce qui est montré ci-dessus est le substitut propre à cette page, et non un plan produit.
-        </p>
       </div>
     </section>
 
     <!-- ============================================================
-         WHAT THIS ROLE HAS TAUGHT ME
-         ============================================================ -->
-    <section class="case-page-section">
-      <div class="container">
-        <div class="section-head js-reveal">
-          <span class="section-number">05</span>
-          <h2 class="section-title">Ce que ce rôle m'a appris</h2>
-        </div>
-
-        <ul class="case-page-list js-stagger">
-          <li>La précision n'est pas un choix stylistique dans le travail technique — c'est tout le travail. Un plan presque juste est un plan erroné.</li>
-          <li>La pensée du terrain de production se transpose directement : savoir comment un fichier se comporte à la vraie taille d'impression, sur de vrais matériaux, avant même qu'il ne quitte mon écran.</li>
-          <li>Travailler à l'intérieur de contraintes strictes de code et de lisibilité a rendu mon travail d'image de marque et d'impression à la pige plus discipliné, pas moins créatif — la clarté et la hiérarchie doivent mériter leur place dans les deux cas.</li>
-          <li>Un travail continu, basé sur la révision, récompense des systèmes cohérents plutôt que l'ingéniosité ponctuelle — la légende des symboles et la grille de mise en page doivent tenir sur des centaines de plans, pas seulement un.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         ABOUT THE EMPLOYER
+         04 · DOMDESIGN QUOTE (independent services)
          ============================================================ -->
     <section class="case-page-section" style="border-bottom: none;">
       <div class="container">
         <div class="section-head js-reveal">
-          <span class="section-number">06</span>
-          <h2 class="section-title">À propos de PMU Québec</h2>
+          <span class="section-number">04</span>
+          <h2 class="section-title">Services de design graphique DomDesign</h2>
         </div>
 
-        <div class="case-callout js-reveal">
-          <p>
-            Ce travail fait partie de mon emploi chez <strong>PMU Québec</strong>, une entreprise québécoise de prévention incendie et de plans d'évacuation — il ne s'agit pas d'un mandat à la pige DomDesign, et je ne suis pas le point de contact pour leurs services. PMU Québec opère uniquement dans la province de Québec. Si vous cherchez des plans d'évacuation ou de la signalisation de prévention incendie, visitez leur site directement :
-          </p>
-          <p style="margin-top: 1.25rem;">
-            <a class="btn btn-ghost" href="https://pmuquebec.com" target="_blank" rel="noopener">Visiter pmuquebec.com &#8594;</a>
-          </p>
+        <div class="case-page-cta js-reveal">
+          <div>
+            <h3>Un projet de design graphique?</h3>
+            <p style="margin-top: 0.75rem;">Cette soumission concerne uniquement mes services indépendants chez DomDesign, comme l'identité visuelle, la mise en page et les fichiers prêts à imprimer. Elle ne vise pas les plans d'évacuation de PMU Québec.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="https://projects.domdesign.ca/public/6984bc95d8ae4d000786a123" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Demander une soumission</a>
+          </div>
         </div>
-
-        <p class="case-page-text js-reveal" style="margin-top: 2rem;">
-          Vous cherchez plutôt du travail de design à la pige — image de marque, impression ou numérique? C'est à ça que sert DomDesign.
-        </p>
-        <p class="js-reveal">
-          <a href="https://projects.domdesign.ca" target="_blank" rel="noopener" class="btn btn-primary">Démarrer votre projet</a>
-        </p>
       </div>
     </section>
 
