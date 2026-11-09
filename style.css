@@ -457,6 +457,14 @@ summary::-webkit-details-marker { display: none; }
   padding-top: 0.15rem;
 }
 
+/* iPhones can turn year ranges like "2019 — 2022" into phone links and
+   restyle them. Keep any such link looking like the plain date. */
+.timeline-year a {
+  color: inherit !important;
+  -webkit-text-fill-color: currentColor;
+  text-decoration: none !important;
+}
+
 .timeline-body h4 {
   font-family: var(--ff-body);
   font-size: var(--fs-base);
