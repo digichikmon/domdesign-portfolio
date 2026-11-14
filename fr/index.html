@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="dark"&&t!=="light"){t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.setAttribute("data-theme",t)})();</script>
   <meta name="format-detection" content="telephone=no, date=no" />
 
   <title>DomDesign — Designer graphique et spécialiste de la production technique · Dominic Daniel</title>
@@ -23,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="../style.css?v=20261114-5" />
+  <link rel="stylesheet" href="../style.css?v=20261114-6" />
 </head>
 <body>
 
@@ -48,6 +49,7 @@
 
       <div class="header-actions">
         <a href="https://projects.domdesign.ca" target="_blank" rel="noopener" class="nav-cta">Démarrer votre projet</a>
+        <button type="button" class="theme-toggle" aria-pressed="false" aria-label="Mode sombre" title="Mode sombre"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg></button>
         <div class="lang-switch" aria-label="Langue"><a class="lang-switch-link" href="../en/index.html">EN</a><span class="lang-switch-sep">/</span><span class="lang-switch-current">FR</span></div>
         <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Basculer la navigation">
           <span class="nav-toggle-bar"></span>
@@ -223,67 +225,48 @@
           <h2 id="exp-heading" class="section-title">Expérience et formation</h2>
         </div>
 
+        <p class="story-lead js-reveal">Plus de sept ans du côté production du design, de l'atelier d'impression aux plans techniques. Voici d'où vient cette expérience.</p>
+
         <h3 class="timeline-group-title js-reveal">Professionnel</h3>
-        <ol class="timeline js-stagger" aria-label="Expérience professionnelle">
-          <li class="timeline-item">
-            <span class="timeline-year">2022 — Aujourd'hui</span>
-            <div class="timeline-body">
-              <h4>Technicien en plans d'évacuation / Designer graphique</h4>
-              <p class="timeline-org">PMU Québec</p>
-              <p class="timeline-desc">Production de plans d'évacuation techniques — dessin, systèmes de symboles, mise en page de plans, et production graphique pour la signalisation de sécurité imprimée, en collaboration avec les équipes de prévention incendie et de gestion de projet.</p>
-            </div>
+        <ol class="story-list js-stagger" aria-label="Expérience professionnelle">
+          <li class="story-item">
+            <h4 class="story-title">PMU Québec</h4>
+            <p class="story-meta">Technicien en plans d'évacuation / Designer graphique<span class="story-sep" aria-hidden="true">·</span><span class="timeline-year">2022 — aujourd'hui</span></p>
+            <p class="story-desc">Je produis des plans d'évacuation techniques pour la signalisation de sécurité imprimée&nbsp;: le dessin, les systèmes de symboles, la mise en page des plans et la production graphique finale, en collaboration avec les équipes de prévention incendie et de gestion de projet.</p>
           </li>
-          <li class="timeline-item">
-            <span class="timeline-year">2019 — 2022</span>
-            <div class="timeline-body">
-              <h4>Designer graphique</h4>
-              <p class="timeline-org">Production JG</p>
-              <p class="timeline-desc">Design et prépresse pour des travaux d'impression orientés production. Préparation de fichiers, systèmes de mise en page, et production visuelle conforme à l'image de marque.</p>
-            </div>
+          <li class="story-item">
+            <h4 class="story-title">Production JG</h4>
+            <p class="story-meta">Designer graphique<span class="story-sep" aria-hidden="true">·</span><span class="timeline-year">2019 — 2022</span></p>
+            <p class="story-desc">Je m'occupais du design et du prépresse pour des travaux d'impression orientés production&nbsp;: préparation de fichiers, systèmes de mise en page et production visuelle fidèle à l'image de marque.</p>
           </li>
-          <li class="timeline-item">
-            <span class="timeline-year">2019</span>
-            <div class="timeline-body">
-              <h4>Chargé de projet</h4>
-              <p class="timeline-org">Imprimerie Paragraph</p>
-              <p class="timeline-desc">Coordination de projets d'impression, de la prise en charge à la livraison. Implication directe avec le papier, l'encre, le repérage et les réalités de la presse — le fondement de mon instinct de designer.</p>
-            </div>
+          <li class="story-item">
+            <h4 class="story-title">Imprimerie Paragraph</h4>
+            <p class="story-meta">Chargé de projet<span class="story-sep" aria-hidden="true">·</span><span class="timeline-year">2019</span></p>
+            <p class="story-desc">Je coordonnais des projets d'impression, de la prise en charge à la livraison. Ce travail concret avec le papier, l'encre, le repérage et les réalités de la presse est devenu le fondement de mon instinct de designer.</p>
           </li>
-          <li class="timeline-item">
-            <span class="timeline-year">2018 — 2019</span>
-            <div class="timeline-body">
-              <h4>Industrie de l'imprimerie</h4>
-              <p class="timeline-org">Divers postes</p>
-              <p class="timeline-desc">Expérience sur le terrain de production dans l'industrie de l'imprimerie — où le design fonctionne, ou ne fonctionne pas.</p>
-            </div>
+          <li class="story-item">
+            <h4 class="story-title">Industrie de l'imprimerie</h4>
+            <p class="story-meta">Divers postes<span class="story-sep" aria-hidden="true">·</span><span class="timeline-year">2018 — 2019</span></p>
+            <p class="story-desc">J'ai commencé sur le terrain, dans divers postes de production de l'industrie de l'imprimerie. C'est là que j'ai appris que le design fonctionne, ou ne fonctionne pas.</p>
           </li>
         </ol>
 
         <h3 class="timeline-group-title js-reveal">Formation</h3>
-        <ol class="timeline js-stagger" aria-label="Formation">
-          <li class="timeline-item">
-            <span class="timeline-year">2023 — 2026</span>
-            <div class="timeline-body">
-              <h4>Graphisme et design Web <small class="credential-badge">AEC</small></h4>
-              <p class="timeline-org">John Abbott College</p>
-              <p class="timeline-desc">Méthodes numériques, fondements du web, et communication visuelle contemporaine.</p>
-            </div>
+        <ol class="story-list story-list--edu js-stagger" aria-label="Formation">
+          <li class="story-item">
+            <h4 class="story-title">Graphisme et design Web <small class="credential-badge">AEC</small></h4>
+            <p class="story-meta">John Abbott College<span class="story-sep" aria-hidden="true">·</span><span class="timeline-year">2023 — 2026</span></p>
+            <p class="story-desc">Méthodes numériques, fondements du web, et communication visuelle contemporaine.</p>
           </li>
-          <li class="timeline-item">
-            <span class="timeline-year">2020 — 2023</span>
-            <div class="timeline-body">
-              <h4>Gestion de projet et communication graphique <small class="credential-badge">DEC</small></h4>
-              <p class="timeline-org">Collège Ahuntsic</p>
-              <p class="timeline-desc">Stratégie, flux de production, et le volet gestion du design — comment les projets se réalisent concrètement.</p>
-            </div>
+          <li class="story-item">
+            <h4 class="story-title">Gestion de projet et communication graphique <small class="credential-badge">DEC</small></h4>
+            <p class="story-meta">Collège Ahuntsic<span class="story-sep" aria-hidden="true">·</span><span class="timeline-year">2020 — 2023</span></p>
+            <p class="story-desc">Stratégie, flux de production, et le volet gestion du design — comment les projets se réalisent concrètement.</p>
           </li>
-          <li class="timeline-item">
-            <span class="timeline-year">2016 — 2018</span>
-            <div class="timeline-body">
-              <h4>Graphisme <small class="credential-badge">DEP</small></h4>
-              <p class="timeline-org">CBG Sorel-Tracy</p>
-              <p class="timeline-desc">Formation de base au métier du design, à la typographie, et à la discipline de la mise en page.</p>
-            </div>
+          <li class="story-item">
+            <h4 class="story-title">Graphisme <small class="credential-badge">DEP</small></h4>
+            <p class="story-meta">CBG Sorel-Tracy<span class="story-sep" aria-hidden="true">·</span><span class="timeline-year">2016 — 2018</span></p>
+            <p class="story-desc">Formation de base au métier du design, à la typographie, et à la discipline de la mise en page.</p>
           </li>
         </ol>
       </div>

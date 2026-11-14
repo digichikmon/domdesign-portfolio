@@ -10,6 +10,47 @@
   var lenis = null;
 
   /* ----------------------------------------------------------
+     0. THEME TOGGLE (light / dark)
+     The inline <head> script sets data-theme before paint. Here we
+     wire the header button, save the visitor's choice, and follow the
+     system setting until they make one.
+     ---------------------------------------------------------- */
+  (function () {
+    var root = document.documentElement;
+    var buttons = document.querySelectorAll('.theme-toggle');
+    var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+    function saved() {
+      try { return localStorage.getItem('theme'); } catch (e) { return null; }
+    }
+    function apply(theme) {
+      root.setAttribute('data-theme', theme);
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+      }
+    }
+
+    apply(root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        apply(next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    }
+
+    if (mq) {
+      var onChange = function (e) {
+        var s = saved();
+        if (s !== 'dark' && s !== 'light') apply(e.matches ? 'dark' : 'light');
+      };
+      if (mq.addEventListener) mq.addEventListener('change', onChange);
+      else if (mq.addListener) mq.addListener(onChange);
+    }
+  })();
+
+  /* ----------------------------------------------------------
      1. LENIS + GSAP SETUP
      ---------------------------------------------------------- */
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
