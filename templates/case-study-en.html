@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<!-- Copy this file to en/{{SLUG}}-project.html before editing. Links and image paths are written for that folder. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TEMPLATE ONLY: delete the next line when publishing the page -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <title>{{BRAND}} — {{CATEGORY}} · DomDesign</title>
+  <meta name="description" content="{{META DESCRIPTION, about 150 characters}}" />
+
+  <meta property="og:title" content="{{BRAND}} — {{CATEGORY}} · DomDesign" />
+  <meta property="og:description" content="{{META DESCRIPTION}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://domdesign.ca/en/{{SLUG}}-project.html" />
+  <meta property="og:image" content="https://domdesign.ca/images/{{SLUG}}/hero.jpg" />
+
+  <link rel="icon" type="image/jpeg" href="../images/IMG_0182.jpeg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../style.css?v=20261114-3" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="DomDesign — home">
+        <img class="brand-mark" src="../images/domdesign-logomark.png" alt="DomDesign logo mark" width="32" height="32" />
+        <span class="brand-name">DomDesign</span>
+      </a>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="client-experience.html">Client Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://projects.domdesign.ca" target="_blank" rel="noopener" class="nav-cta">Start Your Project</a>
+        <div class="lang-switch" aria-label="Language"><span class="lang-switch-current">EN</span><span class="lang-switch-sep">/</span><a class="lang-switch-link" href="../fr/{{SLUG}}-project.html">FR</a></div>
+        <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       CASE STUDY TEMPLATE (EN), based on Velmora.
+       How to use: see templates/README.md.
+       1. Replace every {{PLACEHOLDER}}.
+       2. Set the brand colours on <main> below. Also update the swatch blocks
+          in section 05 so they show the same colours.
+       3. Put images in images/{{SLUG}}/ and update the paths.
+       4. Delete any section you don't need, then renumber the sections.
+       ============================================================ -->
+  <main id="main" class="vm" style="--vm-oxblood: {{PRIMARY_DARK}}; --vm-ivory: {{PAPER}}; --vm-gold: {{ACCENT}}; --vm-ink: {{INK}}; --vm-stone: {{MUTED}}; --vm-bone: {{PANEL}}; --vm-accent-light: {{ACCENT_ON_DARK}};">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero-label js-reveal">{{TYPE e.g. Self-Directed Concept Case Study}} · {{DISCIPLINES e.g. Brand Identity · Web · Social}}</p>
+        <h1 class="page-hero-title js-reveal">{{BRAND}} — {{CATEGORY}}</h1>
+        <p class="page-hero-sub js-reveal">
+          {{ONE-SENTENCE SUMMARY: what you made, for whom, and the core idea.}}
+        </p>
+      </div>
+    </section>
+
+    <section class="case-page-section">
+      <div class="container">
+        <figure class="vm-hero-img js-reveal">
+          <img src="../images/{{SLUG}}/hero.jpg" alt="{{HERO IMAGE DESCRIPTION}}" />
+          <figcaption>Fig. 01 · {{CAPTION. If AI-generated, say so, e.g. "AI-generated product visualization for a fictional brand."}}</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 01 OVERVIEW ================================================ -->
+    <section class="case-page-section">
+      <div class="container">
+        <div class="section-head js-reveal">
+          <span class="section-number">01</span>
+          <h2 class="section-title">Overview &amp; my role</h2>
+        </div>
+
+        <p class="case-page-lede js-reveal">
+          {{LEDE: one or two sentences on what the project is.}}
+        </p>
+
+        <p class="case-page-text js-reveal">
+          {{CONTEXT: what's fictional vs. real, the central challenge, and what you were responsible for.}}
+        </p>
+
+        <ul class="case-page-list js-stagger">
+          <li>{{OBJECTIVE 1}}</li>
+          <li>{{OBJECTIVE 2}}</li>
+          <li>{{OBJECTIVE 3}}</li>
+          <li>{{OBJECTIVE 4}}</li>
+        </ul>
+
+        <dl class="case-meta js-reveal" style="margin-top: 2.5rem;">
+          <div><dt>Role</dt><dd>{{ROLE e.g. Brand &amp; Digital Designer}}</dd></div>
+          <div><dt>Tools</dt><dd>{{TOOLS}}</dd></div>
+          <div><dt>Type</dt><dd>{{TYPE e.g. Self-directed concept case study / Client project}}</dd></div>
+          <div><dt>Focus</dt><dd>{{FOCUS}}</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 02 BRIEF ===================================================
+         Paraphrase the brief. Leave out client names and NDA details. -->
+    <section class="case-page-section">
+      <div class="container">
+        <div class="section-head js-reveal">
+          <span class="section-number">02</span>
+          <h2 class="section-title">Design brief</h2>
+        </div>
+
+        <ul class="case-page-list js-stagger">
+          <li><strong>Product.</strong> {{WHAT IS SOLD, WHERE, TO WHOM}}</li>
+          <li><strong>Purpose.</strong> {{MISSION / POSITIONING}}</li>
+          <li><strong>Deliverables.</strong> {{LIST OF DELIVERABLES}}</li>
+          <li><strong>Feel.</strong> {{DESIRED MOOD}}</li>
+          <li><strong>Avoid.</strong> {{WHAT IT MUST NOT FEEL LIKE}}</li>
+        </ul>
+
+        <div class="case-callout js-reveal">
+          <p><strong>Design challenge:</strong> {{THE CORE TENSION TO RESOLVE, IN ONE OR TWO SENTENCES}}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 CONCEPT ================================================= -->
+    <section class="case-page-section">
+      <div class="container">
+        <div class="section-head js-reveal">
+          <span class="section-number">03</span>
+          <h2 class="section-title">Concept: {{CONCEPT NAME}}</h2>
+        </div>
+
+        <p class="case-page-text js-reveal">
+          {{THE BIG IDEA, AND HOW IT ANSWERS THE CHALLENGE}}
+        </p>
+
+        <div class="lost-cases js-stagger">
+          <details class="lost-project" open>
+            <summary><span class="lost-no">A.</span> {{PRINCIPLE A}}</summary>
+            <div class="lost-body"><p>{{EXPLANATION A}}</p></div>
+          </details>
+          <details class="lost-project">
+            <summary><span class="lost-no">B.</span> {{PRINCIPLE B}}</summary>
+            <div class="lost-body"><p>{{EXPLANATION B}}</p></div>
+          </details>
+          <details class="lost-project">
+            <summary><span class="lost-no">C.</span> {{PRINCIPLE C}}</summary>
+            <div class="lost-body"><p>{{EXPLANATION C}}</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 LOGO ====================================================
+         Board colours: --oxblood (dark), --ivory, --bone, --ink.
+         The .vm-hallmark badge and .vm-monogram are optional marks:
+         change the letters, or replace them with an <img> of the real logo. -->
+    <section class="case-page-section">
+      <div class="container">
+        <div class="section-head js-reveal">
+          <span class="section-number">04</span>
+          <h2 class="section-title">Logo &amp; wordmark</h2>
+        </div>
+
+        <p class="case-page-text js-reveal">
+          {{LOGO RATIONALE: typeface choice, the mark, where each version is used.}}
+        </p>
+
+        <div class="vm-boards js-stagger">
+          <div class="vm-board vm-board--oxblood vm-board--wide">
+            <span class="vm-board-label">Primary wordmark · on {{DARK COLOUR NAME}}</span>
+            <div class="vm-wordmark">{{BRAND IN CAPS}}</div>
+            <div class="vm-descriptor">{{DESCRIPTOR}}</div>
+          </div>
+          <div class="vm-board vm-board--ivory">
+            <span class="vm-board-label">Wordmark · on {{LIGHT COLOUR NAME}}</span>
+            <div class="vm-wordmark vm-wordmark--sm">{{BRAND IN CAPS}}</div>
+          </div>
+          <div class="vm-board vm-board--bone">
+            <span class="vm-board-label">{{LOGOMARK NAME}}</span>
+            <div class="vm-hallmark" aria-label="{{LOGOMARK DESCRIPTION}}">
+              <span class="vm-hallmark-v">{{INITIAL}}</span><span class="vm-hallmark-sep"></span><span class="vm-hallmark-num">{{SHORT CODE}}</span>
+            </div>
+          </div>
+          <div class="vm-board vm-board--ink">
+            <span class="vm-board-label">Monogram · {{USE}}</span>
+            <div class="vm-monogram" aria-label="{{INITIAL}} monogram">{{INITIAL}}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 COLOUR ==================================================
+         Use the same hex values as the variables on <main>.
+         Proportion bar: the flex numbers are percentages and should add up to 100. -->
+    <section class="case-page-section">
+      <div class="container">
+        <div class="section-head js-reveal">
+          <span class="section-number">05</span>
+          <h2 class="section-title">Colour palette</h2>
+        </div>
+
+        <p class="case-page-text js-reveal">
+          {{WHERE THE PALETTE COMES FROM AND HOW IT'S USED}}
+        </p>
+
+        <div class="vm-palette js-stagger">
+          <div class="vm-swatch"><div class="vm-swatch-chip" style="background:{{HEX1}}"></div><p class="vm-swatch-name">{{NAME1}}</p><p class="vm-swatch-meta">{{HEX1}}<br>{{ROLE1}}</p></div>
+          <div class="vm-swatch"><div class="vm-swatch-chip" style="background:{{HEX2}}"></div><p class="vm-swatch-name">{{NAME2}}</p><p class="vm-swatch-meta">{{HEX2}}<br>{{ROLE2}}</p></div>
+          <div class="vm-swatch"><div class="vm-swatch-chip" style="background:{{HEX3}}"></div><p class="vm-swatch-name">{{NAME3}}</p><p class="vm-swatch-meta">{{HEX3}}<br>{{ROLE3}}</p></div>
+          <div class="vm-swatch"><div class="vm-swatch-chip" style="background:{{HEX4}}"></div><p class="vm-swatch-name">{{NAME4}}</p><p class="vm-swatch-meta">{{HEX4}}<br>{{ROLE4}}</p></div>
+          <div class="vm-swatch"><div class="vm-swatch-chip" style="background:{{HEX5}}"></div><p class="vm-swatch-name">{{NAME5}}</p><p class="vm-swatch-meta">{{HEX5}}<br>{{ROLE5}}</p></div>
+          <div class="vm-swatch"><div class="vm-swatch-chip" style="background:{{HEX6}}"></div><p class="vm-swatch-name">{{NAME6}}</p><p class="vm-swatch-meta">{{HEX6}}<br>{{ROLE6}}</p></div>
+        </div>
+        <div class="vm-ratio js-reveal" aria-label="Recommended colour proportions">
+          <span style="flex:40;background:{{HEX2}}"></span><span style="flex:30;background:{{HEX1}}"></span><span style="flex:15;background:{{HEX3}}"></span><span style="flex:10;background:{{HEX4}}"></span><span style="flex:5;background:{{HEX6}}"></span>
+        </div>
+        <p class="vm-note js-reveal">Recommended proportions: {{NAME2}} 40 · {{NAME1}} 30 · {{NAME3}} 15 · {{NAME4}} 10 · {{NAME6}} 5</p>
+      </div>
+    </section>
+
+    <!-- 06 TYPE ====================================================
+         The samples use the site's fonts (Cormorant Garamond, Barlow, JetBrains Mono).
+         For other fonts, load them in <head> and set font-family inline on each sample. -->
+    <section class="case-page-section">
+      <div class="container">
+        <div class="section-head js-reveal">
+          <span class="section-number">06</span>
+          <h2 class="section-title">Typography</h2>
+        </div>
+
+        <p class="case-page-text js-reveal">
+          {{TYPE SYSTEM RATIONALE: one job per family.}}
+        </p>
+
+        <div class="vm-type js-stagger">
+          <div class="vm-type-card">
+            <p class="vm-type-role">Display · headlines</p>
+            <p class="vm-type-sample vm-type-sample--display">{{SHORT HEADLINE}}</p>
+            <p class="vm-type-name">{{DISPLAY FONT · WEIGHTS}}</p>
+          </div>
+          <div class="vm-type-card">
+            <p class="vm-type-role">Body · reading</p>
+            <p class="vm-type-sample vm-type-sample--body">{{ONE BODY SENTENCE IN THE BRAND VOICE}}</p>
+            <p class="vm-type-name">{{BODY FONT · WEIGHTS}}</p>
+          </div>
+          <div class="vm-type-card">
+            <p class="vm-type-role">{{THIRD ROLE e.g. Data · labels}}</p>
+            <p class="vm-type-sample vm-type-sample--mono">{{LINE 1}}<br>{{LINE 2}}<br>{{LINE 3}}</p>
+            <p class="vm-type-name">{{THIRD FONT · WEIGHT}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 WEBSITE =================================================
+         Set each photo with style="background-image:url(../images/{{SLUG}}/...)".
+         The product-page block is optional; delete it for non-retail brands. -->
+    <section class="case-page-section">
+      <div class="container">
+        <div class="section-head js-reveal">
+          <span class="section-number">07</span>
+          <h2 class="section-title">Website design</h2>
+        </div>
+
+        <p class="case-page-text js-reveal">
+          {{HOW THE WEBSITE EXPRESSES THE CONCEPT}}
+        </p>
+
+        <div class="vm-browser js-reveal" aria-label="{{BRAND}} homepage concept">
+          <div class="vm-browser-bar"><i></i><i></i><i></i><span>{{SLUG}}.example / home</span></div>
+          <div class="vm-site-nav">
+            <span class="vm-wordmark">{{BRAND IN CAPS}}</span>
+            <ul><li>{{NAV 1}}</li><li>{{NAV 2}}</li><li>{{NAV 3}}</li><li>{{NAV 4}}</li></ul>
+            <span>{{UTILITY e.g. Bag (0)}}</span>
+          </div>
+          <div class="vm-site-hero">
+            <div class="vm-site-hero-copy">
+              <p class="vm-site-kicker">{{KICKER}}</p>
+              <h3 class="vm-site-title">{{HEADLINE LINE 1}}<br>{{LINE 2 with an <em>accent</em> word}}</h3>
+              <p class="vm-site-lede">{{HERO SUPPORTING LINE}}</p>
+              <span class="vm-site-btn">{{CTA}}</span>
+            </div>
+            <div class="vm-site-hero-img" role="img" aria-label="{{IMAGE DESCRIPTION}}" style="background-image:url(../images/{{SLUG}}/hero.jpg)"></div>
+          </div>
+          <div class="vm-site-strip">
+            <div><b>01 · {{PROOF 1 TITLE}}</b>{{PROOF 1}}</div>
+            <div><b>02 · {{PROOF 2 TITLE}}</b>{{PROOF 2}}</div>
+            <div><b>03 · {{PROOF 3 TITLE}}</b>{{PROOF 3}}</div>
+          </div>
+        </div>
+
+        <div class="vm-browser js-reveal" aria-label="{{BRAND}} product page concept">
+          <div class="vm-browser-bar"><i></i><i></i><i></i><span>{{SLUG}}.example / {{PATH}}</span></div>
+          <div class="vm-pdp">
+            <div class="vm-pdp-img" role="img" aria-label="{{PRODUCT IMAGE DESCRIPTION}}" style="background-image:url(../images/{{SLUG}}/product.jpg); background-size:cover; background-position:center;"></div>
+            <div class="vm-pdp-info">
+              <p class="vm-pdp-plate">{{PRODUCT CODE · COLLECTION}}</p>
+              <h3 class="vm-pdp-name">{{PRODUCT NAME}}<em>{{SHORT DESCRIPTOR}}</em></h3>
+              <table class="vm-spec">
+                <tr><th>{{SPEC 1}}</th><td>{{VALUE 1}}</td></tr>
+                <tr><th>{{SPEC 2}}</th><td>{{VALUE 2}}</td></tr>
+                <tr><th>{{SPEC 3}}</th><td>{{VALUE 3}}</td></tr>
+                <tr><th>{{SPEC 4}}</th><td>{{VALUE 4}}</td></tr>
+              </table>
+              <div class="vm-price">
+                <p class="vm-price-title">{{PRICE PANEL TITLE}}</p>
+                <div class="vm-price-row"><span>{{LINE 1}}</span><span>{{AMOUNT 1}}</span></div>
+                <div class="vm-price-row"><span>{{LINE 2}}</span><span>{{AMOUNT 2}}</span></div>
+                <div class="vm-price-row vm-price-row--total"><span>Total · USD</span><span>{{TOTAL}}</span></div>
+              </div>
+              <span class="vm-site-btn" style="border-color: var(--vm-oxblood); color: var(--vm-oxblood);">{{CTA}}</span>
+            </div>
+          </div>
+        </div>
+        <p class="vm-note js-reveal">Concept screens. Product names, specifications and prices are illustrative.</p>
+      </div>
+    </section>
+
+    <!-- 08 SOCIAL ==================================================
+         Three post styles: reveal (dark + photo), detail (light + round crop), guide (ink + list). -->
+    <section class="case-page-section">
+      <div class="container">
+        <div class="section-head js-reveal">
+          <span class="section-number">08</span>
+          <h2 class="section-title">Social media guidelines &amp; templates</h2>
+        </div>
+
+        <p class="case-page-text js-reveal">
+          {{HOW THE THREE FORMATS WORK TOGETHER}}
+        </p>
+
+        <div class="vm-social js-stagger">
+          <div class="vm-post vm-post--reveal">
+            <div class="vm-post-head"><span>{{BRAND}}</span><span>{{CODE}}</span></div>
+            <div class="vm-post-photo" style="background-image:url(../images/{{SLUG}}/hero.jpg)"></div>
+            <p class="vm-post-title">{{PRODUCT NAME}}</p>
+            <div class="vm-post-foot"><span>{{FACT 1}}</span><span>{{FACT 2}}</span></div>
+          </div>
+          <div class="vm-post vm-post--detail">
+            <div class="vm-post-head"><span>Detail</span><span>{{FIG NO.}}</span></div>
+            <div class="vm-post-photo" style="background-image:url(../images/{{SLUG}}/detail.jpg); background-size:cover; background-position:center;"></div>
+            <p class="vm-post-title">{{DETAIL CAPTION}}</p>
+            <div class="vm-post-foot"><span>{{BRAND}}</span><span>{{PRODUCT}}</span></div>
+          </div>
+          <div class="vm-post vm-post--guide">
+            <div class="vm-post-head"><span>{{SERIES NAME}}</span><span>No. 01</span></div>
+            <p class="vm-post-title">{{GUIDE TITLE}}</p>
+            <ol>
+              <li>{{POINT 1}}</li>
+              <li>{{POINT 2}}</li>
+              <li>{{POINT 3}}</li>
+            </ol>
+            <div class="vm-post-foot"><span>{{BRAND}}</span><span>Save for later</span></div>
+          </div>
+        </div>
+
+        <ul class="case-page-list js-stagger" style="margin-top: 2.5rem;">
+          <li><strong>Photography.</strong> {{GUIDELINE}}</li>
+          <li><strong>Captions.</strong> {{GUIDELINE}}</li>
+          <li><strong>Colour.</strong> {{GUIDELINE}}</li>
+          <li><strong>Rhythm.</strong> {{GUIDELINE}}</li>
+          <li><strong>Tone.</strong> {{GUIDELINE}}</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 09 WHAT THIS CASE DEMONSTRATES ============================= -->
+    <section class="case-page-section">
+      <div class="container">
+        <div class="section-head js-reveal">
+          <span class="section-number">09</span>
+          <h2 class="section-title">What this case demonstrates</h2>
+        </div>
+
+        <div class="lost-cases js-stagger">
+          <details class="lost-project">
+            <summary><span class="lost-no">A.</span> {{SKILL A}}</summary>
+            <div class="lost-body"><p>{{EVIDENCE A}}</p></div>
+          </details>
+          <details class="lost-project">
+            <summary><span class="lost-no">B.</span> {{SKILL B}}</summary>
+            <div class="lost-body"><p>{{EVIDENCE B}}</p></div>
+          </details>
+          <details class="lost-project">
+            <summary><span class="lost-no">C.</span> {{SKILL C}}</summary>
+            <div class="lost-body"><p>{{EVIDENCE C}}</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA ================================================ -->
+    <section class="case-page-section" style="border-bottom: none;">
+      <div class="container">
+        <div class="case-page-cta js-reveal">
+          <div>
+            <h2>{{CTA QUESTION e.g. Launching a … brand?}}</h2>
+            <p>{{CTA SUPPORTING LINE}}</p>
+          </div>
+          <div class="cta-actions">
+            <a href="https://projects.domdesign.ca" target="_blank" rel="noopener" class="btn btn-primary">Start Your Project</a>
+            <a href="projects.html" class="btn btn-ghost">View more projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-brand">DomDesign &copy; <span id="year">2026</span></p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="client-experience.html">Client Experience</a>
+        <a href="contact.html">Contact</a>
+        <span class="footer-lang" aria-label="Language"><span class="lang-switch-current">EN</span><span class="lang-switch-sep">/</span><a class="lang-switch-link" href="../fr/{{SLUG}}-project.html">FR</a></span>
+      </nav>
+      <p class="footer-meta"><a href="#top">Back to top ↑</a></p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg class="back-to-top-ring" viewBox="0 0 44 44" aria-hidden="true">
+      <circle class="back-to-top-ring-track" cx="22" cy="22" r="19" />
+      <circle class="back-to-top-ring-progress" cx="22" cy="22" r="19" />
+    </svg>
+    <span class="back-to-top-arrow">↑</span>
+  </button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>

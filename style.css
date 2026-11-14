@@ -1754,6 +1754,20 @@ summary::-webkit-details-marker { display: none; }
 /* ============================================================
    VELMORA CASE STUDY — scoped visuals (.vm-*)
    ============================================================ */
+/* Reusable for other brand case studies (see templates/README.md).
+   Override any of these on <main class="vm" style="--vm-oxblood: …">.
+   Names are Velmora's, roles are generic:
+     --vm-oxblood       primary dark colour (hero panels, accents)
+     --vm-ivory         paper / light background
+     --vm-gold          accent colour (used sparingly)
+     --vm-ink           text and darkest surface
+     --vm-stone         muted captions and rules
+     --vm-bone          secondary light panel (spec boxes)
+     --vm-accent-light  accent shown on dark backgrounds
+     --vm-line          hairlines on light backgrounds
+     --vm-frame*        browser-mockup chrome
+   Photos: set background-image inline on .vm-site-hero-img, .vm-pdp-img
+   and .vm-post-photo; the url() defaults below are Velmora's. */
 .vm {
   --vm-oxblood: #431F24;
   --vm-ivory:   #F5ECDC;
@@ -1761,6 +1775,11 @@ summary::-webkit-details-marker { display: none; }
   --vm-ink:     #1E1A17;
   --vm-stone:   #8A7F72;
   --vm-bone:    #E7DCC8;
+  --vm-accent-light: #D9BF8F;
+  --vm-line:      rgba(67,31,36,.15);
+  --vm-frame:     #D8D0C2;
+  --vm-frame-bar: #E9E0CF;
+  --vm-frame-dot: #C9BEA9;
 }
 .vm-hero-img { margin: 0; }
 .vm-hero-img img { display: block; width: 100%; height: auto; }
@@ -1774,13 +1793,15 @@ summary::-webkit-details-marker { display: none; }
 }
 
 /* Logo boards */
-.vm-boards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; }
+.vm-boards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
 .vm-board {
   position: relative;
   min-height: 260px;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   padding: 2.5rem 1.5rem;
   text-align: center;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .vm-board--wide { grid-column: 1 / -1; min-height: 340px; }
 .vm-board--oxblood { background: var(--vm-oxblood); color: var(--vm-ivory); }
@@ -1852,14 +1873,14 @@ summary::-webkit-details-marker { display: none; }
 .vm-type-name { font-size: var(--fs-sm); color: var(--vm-stone); }
 
 /* Browser mockups */
-.vm-browser { margin-top: 2rem; border: 1px solid #d8d0c2; background: var(--vm-ivory); color: var(--vm-ink); overflow: hidden; }
-.vm-browser-bar { display: flex; align-items: center; gap: .4rem; padding: .6rem .9rem; background: #e9e0cf; border-bottom: 1px solid #d8d0c2; }
-.vm-browser-bar i { width: 9px; height: 9px; border-radius: 50%; background: #c9bea9; }
+.vm-browser { margin-top: 2rem; border: 1px solid var(--vm-frame); background: var(--vm-ivory); color: var(--vm-ink); overflow: hidden; }
+.vm-browser-bar { display: flex; align-items: center; gap: .4rem; padding: .6rem .9rem; background: var(--vm-frame-bar); border-bottom: 1px solid var(--vm-frame); }
+.vm-browser-bar i { width: 9px; height: 9px; border-radius: 50%; background: var(--vm-frame-dot); }
 .vm-browser-bar span { margin-left: .8rem; font-family: var(--ff-mono); font-size: .68rem; color: var(--vm-stone); }
 .vm-site-nav {
   display: flex; justify-content: space-between; align-items: center;
   padding: 1rem clamp(1rem, 3vw, 2.5rem);
-  border-bottom: 1px solid rgba(67,31,36,.15);
+  border-bottom: 1px solid var(--vm-line);
   font-family: var(--ff-label); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
 }
 .vm-site-nav .vm-wordmark { font-size: 1.35rem; color: var(--vm-oxblood); }
@@ -1870,9 +1891,9 @@ summary::-webkit-details-marker { display: none; }
   padding: clamp(1.5rem, 4vw, 3.5rem);
   display: flex; flex-direction: column; justify-content: space-between; gap: 2rem;
 }
-.vm-site-kicker { font-family: var(--ff-mono); font-size: .7rem; letter-spacing: .1em; color: #d9bf8f; }
+.vm-site-kicker { font-family: var(--ff-mono); font-size: .7rem; letter-spacing: .1em; color: var(--vm-accent-light); }
 .vm-site-title { font-family: var(--ff-display); font-weight: 400; font-size: clamp(2rem, 4.4vw, 3.9rem); line-height: 1.02; }
-.vm-site-title em { color: #d9bf8f; }
+.vm-site-title em { color: var(--vm-accent-light); }
 .vm-site-lede { font-weight: 300; font-size: .95rem; max-width: 34ch; opacity: .9; }
 .vm-site-btn {
   align-self: flex-start;
@@ -1882,10 +1903,10 @@ summary::-webkit-details-marker { display: none; }
 .vm-site-hero-img { background: url("images/velmora/editorial.jpg") center / cover no-repeat; min-height: 260px; }
 .vm-site-strip {
   display: grid; grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid rgba(67,31,36,.15);
+  border-top: 1px solid var(--vm-line);
 }
 .vm-site-strip div { padding: 1.1rem clamp(1rem, 3vw, 2.5rem); font-size: .82rem; }
-.vm-site-strip div + div { border-left: 1px solid rgba(67,31,36,.15); }
+.vm-site-strip div + div { border-left: 1px solid var(--vm-line); }
 .vm-site-strip b { display: block; font-family: var(--ff-mono); font-weight: 500; font-size: .68rem; letter-spacing: .1em; color: var(--vm-oxblood); margin-bottom: .3rem; }
 
 /* Product page */
@@ -1925,10 +1946,10 @@ summary::-webkit-details-marker { display: none; }
 }
 .vm-post--detail .vm-post-title { font-family: var(--ff-display); font-size: 1.35rem; text-align: center; margin-bottom: 1rem; }
 .vm-post--guide { background: var(--vm-ink); color: var(--vm-ivory); }
-.vm-post--guide .vm-post-title { font-family: var(--ff-display); font-size: 2rem; line-height: 1.05; margin: 1.5rem 0 1.2rem; color: #d9bf8f; }
+.vm-post--guide .vm-post-title { font-family: var(--ff-display); font-size: 2rem; line-height: 1.05; margin: 1.5rem 0 1.2rem; color: var(--vm-accent-light); }
 .vm-post--guide ol { list-style: none; counter-reset: g; display: grid; gap: .7rem; font-size: .8rem; font-weight: 300; }
 .vm-post--guide li { counter-increment: g; display: grid; grid-template-columns: 1.8rem 1fr; border-top: 1px solid rgba(245,236,220,.18); padding-top: .6rem; }
-.vm-post--guide li::before { content: "0" counter(g); font-family: var(--ff-mono); font-size: .65rem; color: #d9bf8f; padding-top: .15rem; }
+.vm-post--guide li::before { content: "0" counter(g); font-family: var(--ff-mono); font-size: .65rem; color: var(--vm-accent-light); padding-top: .15rem; }
 
 @media (max-width: 900px) {
   .vm-palette { grid-template-columns: repeat(3, 1fr); }
@@ -1938,8 +1959,8 @@ summary::-webkit-details-marker { display: none; }
   .vm-site-nav ul { display: none; }
 }
 @media (max-width: 600px) {
-  .vm-boards { grid-template-columns: 1fr; }
+  .vm-boards { grid-template-columns: minmax(0, 1fr); }
   .vm-palette { grid-template-columns: repeat(2, 1fr); }
   .vm-site-strip { grid-template-columns: 1fr; }
-  .vm-site-strip div + div { border-left: 0; border-top: 1px solid rgba(67,31,36,.15); }
+  .vm-site-strip div + div { border-left: 0; border-top: 1px solid var(--vm-line); }
 }
