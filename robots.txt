@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /templates/
+
+Sitemap: https://domdesign.ca/sitemap.xml
