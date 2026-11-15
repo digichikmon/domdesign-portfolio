@@ -2110,6 +2110,17 @@ summary::-webkit-details-marker { display: none; }
 
 .home-more { margin-top: 2rem; }
 
+/* Scope note: what the studio does not offer (SEO / AI classification) */
+.scope-note {
+  max-width: 60ch;
+  margin-top: 1.5rem;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-base);
+  letter-spacing: 0.02em;
+  color: var(--c-muted);
+}
+
 .text-link {
   font-family: var(--ff-label);
   font-size: var(--fs-sm);
